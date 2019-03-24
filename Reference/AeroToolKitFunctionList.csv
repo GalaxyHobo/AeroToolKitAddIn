@@ -1,0 +1,272 @@
+Function Type,Function Sub-Type,Function Name,Input 1,Input 2,Input 3,Input 4,# Inputs,Description,Units Input,Units Output
+AIRSPEED,COMP CORRECTION,AeroCompCorrnKcasMinusKeas_fHpKcas,hp,kcas,,,2,"Compressibility correction, KCAS - KEAS, f(Hp, KCAS)","feet, KCAS",knots
+AIRSPEED,COMP CORRECTION,AeroCompCorrnKcasMinusKeas_fHpKeas,hp,keas,,,2,"Compressibility correction, KCAS - KEAS, f(Hp, KEAS)","feet, KEAS",knots
+CONVERSION,TEMPERATURE,AeroConvCelsiusToFahrenheit,oatCelsius,,,,1,Convert øC to øF,øC,øF
+CONVERSION,TEMPERATURE,AeroConvCelsiusToKelvin,oatCelsius,,,,1,Convert øC to Kelvin,øC,K
+CONVERSION,TEMPERATURE,AeroConvCelsiusToRankine,oatCelsius,,,,1,Convert øC to Rankine,øC,R
+CONVERSION,ANGLE,AeroConvDegToRad,deg,,,,1,Convert degrees to radians,degrees,radians
+CONVERSION,TEMPERATURE,AeroConvFahrenheitToCelsius,oatFahrenheit,,,,1,Convert øF to øC,øF,øC
+CONVERSION,TEMPERATURE,AeroConvFahrenheitToKelvin,oatFahrenheit,,,,1,Convert øF to Kelvin,øF,Kelvin
+CONVERSION,TEMPERATURE,AeroConvFahrenheitToRankine,oatFahrenheit,,,,1,Convert øF to Rankine,øF,Rankine
+CONVERSION,SPEED,AeroConvFtPerSecToKts,ftPerSec,,,,1,Convert ft/sec to knots,ft/sec,knots
+CONVERSION,SPEED,AeroConvFtPerSecToMPerSec,ftPerSec,,,,1,Convert ft/sec to m/sec,ft/sec,meters/sec
+CONVERSION,DISTANCE,AeroConvFtToM,ft,,,,1,Convert feet to meters,feet,meters
+CONVERSION,DISTANCE,AeroConvFtToNm,ft,,,,1,Convert feet to nautical miles,feet,nautical  miles
+CONVERSION,GRADIENT,AeroConvGradFtPerNmToPct,ftPerNm,,,,1,Convert gradient: feet/nautical mile to %,feet/nautical mile,%
+CONVERSION,GRADIENT,AeroConvGradPctToFtPerNm,pct,,,,1,Convert gradient: % to feet/nautical mile,%,feet/nautical mile
+CONVERSION,GRADIENT,AeroConvGradPctToDeg,pct,,,,1,Convert gradient: % to degrees,%,degrees
+CONVERSION,GRADIENT,AeroConvGradDegToPct,deg,,,,1,Convert gradient: degrees to %,degrees,%
+CONVERSION,GRADIENT,AeroConvGradFtPerNmToDeg,ftPerNm,,,,1,Convert gradient: feet/nautical mile to degrees,feet/nautical  mile,degrees
+CONVERSION,GRADIENT,AeroConvGradDegToFtPerNm,deg,,,,1,Convert gradient: degrees to feet/nautical mile,degrees,feet/nautical mile
+CONVERSION,PRESSURE,AeroConvHPaToInHg,hPa,,,,1,Convert hPa to inches Hg,hPa,inches Hg
+CONVERSION,PRESSURE,AeroConvHPaToLbfPerFt2,hPa,,,,1,Convert hPa to lbf/sq.feet,hPa,lbf/sq.feet
+CONVERSION,PRESSURE,AeroConvHPaToLbfPerInch2,hPa,,,,1,Convert hPa to lbf/sq.inch,hPa,lbf/Inch2
+CONVERSION,PRESSURE,AeroConvInHgToHPa,inHg,,,,1,Convert inches Hg to hPa,inches Hg,hPa
+CONVERSION,PRESSURE,AeroConvInHgToLbfPerFt2,inHg,,,,1,Convert inches Hg to lbf/sq.feet,inches Hg,lbf/sq.feet
+CONVERSION,PRESSURE,AeroConvInHgToLbfPerInch2,inHg,,,,1,Convert inches Hg to lbf/sq.inch,inches Hg,lbf/Inch2
+CONVERSION,TEMPERATURE,AeroConvKelvinToCelsius,oatKelvin,,,,1,Convert Kelvin to øC,Kelvin,øC
+CONVERSION,TEMPERATURE,AeroConvKelvinToFahrenheit,oatKelvin,,,,1,Convert Kelvin to øF,Kelvin,øF
+CONVERSION,TEMPERATURE,AeroConvKelvinToRankine,oatKelvin,,,,1,Convert Kelvin to Rankine,Kelvin,Rankine
+CONVERSION,DENSITY,AeroConvKgPerM3ToSlugPerFt3,density,,,,1,Convert kg/cu.meter to slug/cu.ft,kg/cu.meter,slug/cu.ft
+CONVERSION,SPEED,AeroConvKtsToFtPerSec,kts,,,,1,Convert knots to feet/sec,knots,feet/sec
+CONVERSION,SPEED,AeroConvKtsToMPerSec,kts,,,,1,Convert knots to meters/sec,knots,meters/sec
+CONVERSION,PRESSURE,AeroConvLbfPerFt2ToHPa,lbfPerFt2,,,,1,Convert lbf/sq.feet to hPa,lbf/sq.feet,hPa
+CONVERSION,PRESSURE,AeroConvLbfPerFt2ToInHg,lbfPerFt2,,,,1,Convert lbf/sq.feet to inches Hg,lbf/sq.feet,inches Hg
+CONVERSION,PRESSURE,AeroConvLbfPerFt2ToLbfPerInch2,lbfPerFt2,,,,1,Convert lbf/sq.feet to lbf/sq.inch,lbf/sq.feet,lbf/Inch2
+CONVERSION,PRESSURE,AeroConvLbfPerInch2ToHPa,lbfPerInch2,,,,1,Convert lbf/sq.inch to hPa,lbf/sq.inch,hPa
+CONVERSION,PRESSURE,AeroConvLbfPerInch2ToInHg,lbfPerInch2,,,,1,Convert lbf/sq.inch to inches Hg,lbf/sq.inch,inches Hg
+CONVERSION,PRESSURE,AeroConvLbfPerInch2ToLbfPerFt2,lbfPerInch2,,,,1,Convert lbf/sq.inch to lbf/sq.feet,lbf/sq.inch,lbf/sq.feet
+CONVERSION,SPEED,AeroConvMPerSecToFtPerSec,mPerSec,,,,1,Convert meters/sec to feet/sec,meters/sec,feet/sec
+CONVERSION,SPEED,AeroConvMPerSecToKts,mPerSec,,,,1,Convert meters/sec to knots,meters/sec,Kts
+CONVERSION,DISTANCE,AeroConvMToFt,m,,,,1,Convert meters to feet,meters,feet
+CONVERSION,DISTANCE,AeroConvMToNm,m,,,,1,Convert meters to nautical miles,meters,nautical miles
+CONVERSION,DISTANCE,AeroConvNmToFt,nm,,,,1,Convert nautical miles to feet,nautical miles,feet
+CONVERSION,DISTANCE,AeroConvNmToM,nm,,,,1,Convert nautical miles to meters,nautical miles,meters
+CONVERSION,ANGLE,AeroConvRadToDeg,rad,,,,1,Convert radians to degrees,radians,degrees
+CONVERSION,TEMPERATURE,AeroConvRankineToCelsius,oatRankine,,,,1,Convert Rankine to øC,Rankine,øC
+CONVERSION,TEMPERATURE,AeroConvRankineToFahrenheit,oatRankine,,,,1,Convert Rankine to øF,Rankine,øF
+CONVERSION,TEMPERATURE,AeroConvRankineToKelvin,oatRankine,,,,1,Convert Rankine to Kelvin,Rankine,K
+CONVERSION,DENSITY,AeroConvSlugPerFt3ToKgPerM3,density,,,,1,Convert slug/cu.ft to kg/cu.meter,slug/cu.ft,kg/cu.meter
+STANDARD ATMOSPHERE,DELTA,AeroDelta_fHp,hp,,,,1,"Pressure ratio, delta, P/Po, f(Hp)",feet,NA
+ALTITUDE,DELTA  GEOPOTENTIAL,AeroDGeoPtlAlt_fDHpIsaDevCBaseHp,dHp, isaDevC, baseHp,,3,"?Geopotential altitude in ft, f(?Hp in ft, IsaDev in C, Base Hp in ft)","feet, øC, feet",feet
+ALTITUDE,DELTA PRESSURE,AeroDHp_fDGeoPtlAltIsaDevCBaseHp,dGeoPtlAlt, isaDevC, baseHp,,3,"?Hp in ft, f(?Hp in ft, IsaDev in C, Base Hp in ft)","feet, øC, feet",feet
+ALTITUDE,GEOPOTENTIAL,AeroGeoptlAlt_ft_fTapeAlt,htape,,,,1,Geopotential alt from tapeline alt (units feet),feet,feet
+ALTITUDE,GEOPOTENTIAL,AeroGeoptlAlt_m_fTapeAlt,htape,,,,1,Geopotential alt from tapeline alt (units meters),meters,meters
+ALTITUDE,PRESSURE ALTITUDE,AeroHp_fQnhHPaGeoPtlAlt,qnh, geoPtlAlt,,,2,"Pressure Altitude in ft, f(QNH in hPa, Geopotential Altitude in ft)","hPa, feet",feet
+ALTITUDE,PRESSURE ALTITUDE,AeroHp_fQnhInHgGeoPtlAlt,qnh, geoPtlAlt,,,2,"Pressure Altitude in ft, f(QNH in inches Hg, Geopotential Altitude in ft)","inches Hg, feet",feet
+ALTITUDE,PRESSURE ALTITUDE,AeroHp_fQnhLbfPerFt2GeoPtlAlt,qnh, geoPtlAlt,,,2,"Pressure Altitude in ft, f(QNH in lb/sq.feet, Geopotential Altitude in ft)","lb/sq.feet, feet",feet
+ALTITUDE,PRESSURE ALTITUDE,AeroHp_fQnhLbfPerInch2GeoPtlAlt,qnh, geoPtlAlt,,,2,"Pressure Altitude in ft, f(QNH in lb/sq.inch, Geopotential Altitude in ft)","lb/sq.inch, feet",feet
+STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fPstaticHPa,pstatic,,,,1,"Pressure Altitude in ft, f(Static Pressure in hPa)",hPa,feet
+STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fPstaticInHg,pstatic,,,,1,"Pressure Altitude in ft, f(Static Pressure in inches Hg)",inches Hg,feet
+STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fPstaticLbPerFt2,pstatic,,,,1,"Pressure Altitude in ft, f(Static Pressure in lb/sq.feet)",lb/sq.feet,feet
+STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fPstaticLbPerInch2,pstatic,,,,1,"Pressure Altitude in ft, f(Static Pressure in lb/sq.inch)",lb/sq.inch,feet
+STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fQfeHPa,qfe,,,,1,"Pressure Altitude in ft, f(QFE in hPa)",hPa,feet
+STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fQfeInHg,qfe,,,,1,"Pressure Altitude in ft, f(QFE in inches Hg)",inches Hg,feet
+STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fQfeLbPerFt2,qfe,,,,1,"Pressure Altitude in ft, f(QFE in lb/sq.feet)",lb/sq.feet,feet
+STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fQfeLbPerInch2,qfe,,,,1,"Pressure Altitude in ft, f(QFE in lb/sq.inch)",lb/sq.inch,feet
+ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fIsaDevFahrenheitHp,isaDevFahrenheit,,,,1,"ISA dev in øC, f(ISA dev in øF, Hp)","øF, feet",øC
+ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fOatCelsiusHp,oatCelsius, hp,,,2,"ISA dev in øC, f(OAT in øC, Hp)","øC, feet",øC
+ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fOatFahrenheitHp,oatFahrenheit, hp,,,2,"ISA dev in øC, f(OAT in øF, Hp)","øF, feet",øC
+ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fOatKelvinHp,oatKelvin, hp,,,2,"ISA dev in øC, f(OAT in Kelvin, Hp)","K, feet",øC
+ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fOatRankineHp,oatRankine, hp,,,2,"ISA dev in øC, f(OAT in Rankine, Hp)","R, feet",øC
+ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fIsaDevCelsius,isaDevCelsius,,,,1,"ISA dev in øF, f(ISA dev in øC, Hp)","øC, feet",øF
+ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fOatCelsiusHp,oatCelsius, hp,,,2,"ISA dev in øF, f(OAT in øC, Hp)","øC, feet",øF
+ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fOatFahrenheitHp,oatFahrenheit, hp,,,2,"ISA dev in øF, f(OAT in øF, Hp)","øF, feet",øF
+ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fOatKelvinHp,oatKelvin, hp,,,2,"ISA dev in øF, f(OAT in Kelvin, Hp)","K, feet",øF
+ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fOatRankineHp,oatRankine, hp,,,2,"ISA dev in øF, f(OAT in Rankine, Hp)","R, feet",øF
+AIRSPEED,KCAS,AeroKcas_fHpKeas,hp, keas,,,2,"KCAS, f(Hp, KEAS)","feet, KEAS",KCAS
+AIRSPEED,KCAS,AeroKcas_fHpKtasIsaDevCelsius,hp, ktas, isaDevCelsius,,3,"KCAS, f(Hp, KTAS, ISA dev in øC)","feet, KTAS, øC",KCAS
+AIRSPEED,KCAS,AeroKcas_fHpKtasIsaDevFahrenheit,hp, ktas, isaDevFahrenheit,,3,"KCAS, f(Hp, KTAS, ISA dev in øF)","feet, KTAS, øF",KCAS
+AIRSPEED,KCAS,AeroKcas_fHpKtasOatCelsius,hp, ktas, oatCelsius,,3,"KCAS, f(Hp, KTAS, OAT in øC)","feet, KTAS, øC",KCAS
+AIRSPEED,KCAS,AeroKcas_fHpKtasOatFahrenheit,hp, ktas, oatFahrenheit,,3,"KCAS, f(Hp, KTAS, OAT in øF)","feet, KTAS, øF",KCAS
+AIRSPEED,KCAS,AeroKcas_fHpKtasOatKelvin,hp, ktas, oatKelvin,,3,"KCAS, f(Hp, KTAS, OAT in Kelvin)","feet, KTAS, K",KCAS
+AIRSPEED,KCAS,AeroKcas_fHpKtasOatRankine,hp, ktas, oatRankine,,3,"KCAS, f(Hp, KTAS, OAT in Rankine)","feet, KTAS, R",KCAS
+AIRSPEED,KCAS,AeroKcas_fHpMach,hp, mach,,,2,"KCAS f(Hp, Mach)","feet, NA",KCAS
+AIRSPEED,KCAS,AeroKcas_fHpQ,hp, q,,,2,"KCAS, f(Hp, dynamic pressure)","feet, lb/sq.ft",KCAS
+AIRSPEED,KCAS,AeroKcas_fQc,qc,,,,1,"KCAS, f(Hp, compressible Q)","feet, lb/sq.ft",KCAS
+AIRSPEED,KCAS,AeroKcasStdDay_fHpKtas,hp, ktas,,,2,"KCAS (standard day only), f(Hp, KTAS)","feet, KTAS",KCAS
+AIRSPEED,KCAS,AeroKeas_fHpKcas,hp, kcas,,,2,"KEAS, f(Hp, KCAS)","feet, KCAS",KEAS
+AIRSPEED,KCAS,AeroKeas_fHpKtasIsaDevCelsius,hp, ktas, isaDevCelsius,,3,"KEAS, f(Hp, KTAS, ISA dev in øC)","feet, KTAS, øC",KEAS
+AIRSPEED,KCAS,AeroKeas_fHpKtasIsaDevFahrenheit,hp, ktas, isaDevFahrenheit,,3,"KEAS, f(Hp, KTAS, ISA dev in øF)","feet, KTAS, øF",KEAS
+AIRSPEED,KCAS,AeroKeas_fHpKtasOatCelsius,hp, ktas, oatCelsius,,3,"KEAS, f(Hp, KTAS, OAT in øC)","feet, KTAS, øC",KEAS
+AIRSPEED,KCAS,AeroKeas_fHpKtasOatFahrenheit,hp, ktas, oatFahrenheit,,3,"KEAS, f(Hp, KTAS, OAT in øF)","feet, KTAS, øF",KEAS
+AIRSPEED,KCAS,AeroKeas_fHpKtasOatKelvin,hp, ktas, oatKelvin,,3,"KEAS, f(Hp, KTAS, OAT in Kelvin)","feet, KTAS, K",KEAS
+AIRSPEED,KCAS,AeroKeas_fHpKtasOatRankine,hp, ktas, oatRankine,,3,"KEAS, f(Hp, KTAS, OAT in Rankine)","feet, KTAS, R",KEAS
+AIRSPEED,KCAS,AeroKeas_fHpMach,hp, mach,,,2,"KEAS f(Hp, Mach)","feet, NA",KEAS
+AIRSPEED,KCAS,AeroKeas_fHpQc,hp, qc,,,2,"KEAS, f(Hp, compressible Q)","feet, lb/sq.ft",KEAS
+AIRSPEED,KCAS,AeroKeas_fQ,q,,,,1,"KEAS, f(Hp, dynamic pressure)","feet, lb/sq.ft",KEAS
+AIRSPEED,KCAS,AeroKeasStdDay_fHpKtas,hp, ktas,,,2,"KEAS (standard day only), f(Hp, KTAS)","feet, KTAS",KEAS
+AIRSPEED,KTAS,AeroKtas_fHpKcasIsaDevCelsius,hp, kcas, isaDevCelsius,,3,"KTAS, f(Hp, KCAS, ISA dev in øC)","feet, KCAS, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKcasIsaDevFahrenheit,hp, kcas, isaDevFahrenheit,,3,"KTAS, f(Hp, KCAS, ISA dev in øF)","feet, KCAS, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKcasOatCelsius,hp, kcas, oatCelsius,,3,"KTAS, f(Hp, KCAS, OAT in øC)","feet, KCAS, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKcasOatFahrenheit,hp, kcas, oatFahrenheit,,3,"KTAS, f(Hp, KCAS, OAT in øF)","feet, KCAS, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKcasOatKelvin,hp, kcas, oatKelvin,,3,"KTAS, f(Hp, KCAS, OAT in Kelvin)","feet, KCAS, K",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKcasOatRankine,hp, kcas, oatRankine,,3,"KTAS, f(Hp, KCAS, OAT in Rankine)","feet, KCAS, R",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKeasIsaDevCelsius,hp, keas, isaDevCelsius,,3,"KTAS, f(Hp, KEAS, ISA dev in øC)","feet, KEAS, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKeasIsaDevFahrenheit,hp, keas, isaDevFahrenheit,,3,"KTAS, f(Hp, KEAS, ISA dev in øF)","feet, KEAS, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKeasOatCelsius,hp, keas, oatCelsius,,3,"KTAS, f(Hp, KEAS, OAT in øC)","feet, KEAS, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKeasOatFahrenheit,hp, keas, oatFahrenheit,,3,"KTAS, f(Hp, KEAS, OAT in øF)","feet, KEAS, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKeasOatKelvin,hp, keas, oatKelvin,,3,"KTAS, f(Hp, KEAS, OAT in Kelvin)","feet, KEAS, K",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpKeasOatRankine,hp, keas, oatRankine,,3,"KTAS, f(Hp, KEAS, OAT in Rankine)","feet, KEAS, R",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQcIsaDevCelsius,hp, qc, isaDevCelsius,,3,"KTAS, f(Hp, compressible Q, ISA dev in øC)","NA, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQcIsaDevFahrenheit,hp, qc, isaDevFahrenheit,,3,"KTAS, f(Hp, compressible Q, ISA dev in øF)","NA, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQcOatCelsius,hp, qc, oatCelsius,,3,"KTAS, f(Hp, compressible Q, OAT in øC)","NA, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQcOatFahrenheit,hp, qc, oatFahrenheit,,3,"KTAS, f(Hp, compressible Q, OAT in øF)","NA, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQcOatKelvin,hp, qc, oatKelvin,,3,"KTAS, f(Hp, compressible Q, OAT in Kelvin)","NA, K",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQcOatRankine,hp, qc, oatRankine,,3,"KTAS, f(Hp, compressible Q, OAT in Rankine)","NA, R",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQIsaDevCelsius,hp, q, isaDevCelsius,,3,"KTAS, f(Hp, dynamic pressure, ISA dev in øC)","NA, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQIsaDevFahrenheit,hp, q, isaDevFahrenheit,,3,"KTAS, f(Hp, dynamic pressure, ISA dev in øF)","NA, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQOatCelsius,hp, q, oatCelsius,,3,"KTAS, f(Hp, dynamic pressure, OAT in øC)","NA, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQOatFahrenheit,hp, q, oatFahrenheit,,3,"KTAS, f(Hp, dynamic pressure, OAT in øF)","NA, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQOatKelvin,hp, q, oatKelvin,,3,"KTAS, f(Hp, dynamic pressure, OAT in Kelvin)","NA, K",KTAS
+AIRSPEED,KTAS,AeroKtas_fHpQOatRankine,hp, q, oatRankine,,3,"KTAS, f(Hp, dynamic pressure, OAT in Rankine)","NA, R",KTAS
+AIRSPEED,KTAS,AeroKtas_fMachHpIsaDevCelsius,mach, hp, isaDevCelsius,,3,"KTAS, f(Mach, Hp, ISA dev in øC)","NA, feet, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fMachHpIsaDevFahrenheit,mach, hp, isaDevFahrenheit,,3,"KTAS, f(Mach, Hp, ISA dev in øF)","NA, feet, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fMachOatCelsius,mach, oatCelsius,,,2,"KTAS, f(NA, OAT in øC)","NA, øC",KTAS
+AIRSPEED,KTAS,AeroKtas_fMachOatFahrenheit,mach, oatFahrenheit,,,2,"KTAS, f(NA, OAT in øF)","NA, øF",KTAS
+AIRSPEED,KTAS,AeroKtas_fMachOatKelvin,mach, oatKelvin,,,2,"KTAS, f(NA, OAT in Kelvin)","NA, K",KTAS
+AIRSPEED,KTAS,AeroKtas_fMachOatRankine,mach, oatRankine,,,2,"KTAS, f(NA, OAT in Rankine)","NA, R",KTAS
+AIRSPEED,KTAS,AeroKtasStdDay_fHpKcas,hp, kcas,,,2,"KTAS (standard day only), f(Hp, KCAS)","ft, KCAS",KTAS
+AIRSPEED,KTAS,AeroKtasStdDay_fHpKeas,hp, keas,,,2,"KTAS (standard day only), f(Hp, KEAS)","ft, KEAS",KTAS
+AIRSPEED,KTAS,AeroKtasStdDay_fHpMach,hp, mach,,,2,"KTAS (standard day only), f(Hp, Mach)","ft, NA",KTAS
+AIRSPEED,KTAS,AeroKtasStdDay_fHpQ,hp, q,,,2,"KTAS (standard day only), f(Hp, dynamic pressure)","feet, lb/sq.ft",KTAS
+AIRSPEED,KTAS,AeroKtasStdDay_fHpQc,hp, qc,,,2,"KTAS (standard day only), f(Hp, compressible Q)","feet, lb/sq.ft",KTAS
+AIRSPEED,MACH,AeroMach_fHpKcas,hp, kcas,,,2,"Mach, f(Hp, KCAS)","feet, KCAS",NA
+AIRSPEED,MACH,AeroMach_fHpKeas,hp, keas,,,2,"Mach, f(Hp, KEAS)","feet, KEAS",NA
+AIRSPEED,MACH,AeroMach_fHpKtasIsaDevCelsius,hp, ktas, isaDevCelsius,,3,"Mach, f(Hp, KTAS, ISA dev in øC)","feet, KTAS, øC",NA
+AIRSPEED,MACH,AeroMach_fHpKtasIsaDevFahrenheit,hp, ktas, isaDevFahrenheit,,3,"Mach, f(Hp, KTAS, ISA dev in øF)","feet, KTAS, øF",NA
+AIRSPEED,MACH,AeroMach_fHpQ,hp, q,,,2,"Mach, f(Hp, dynamic pressure)","feet, lb/sq.ft",NA
+AIRSPEED,MACH,AeroMach_fHpQc,hp, qc,,,2,"Mach, f(Hp, compressible Q)","feet, lb/sq.ft",NA
+AIRSPEED,MACH,AeroMach_fKtasOatCelsius,ktas, oatCelsius,,,2,"Mach, f(KTAS, OAT in øC)","KTAS, øC",NA
+AIRSPEED,MACH,AeroMach_fKtasOatFahrenheit,ktas, oatFahrenheit,,,2,"Mach, f(KTAS, OAT in øF)","KTAS, øF",NA
+AIRSPEED,MACH,AeroMach_fKtasOatKelvin,ktas, oatKelvin,,,2,"Mach, f(KTAS, OAT in Kelvin)","KTAS, K",NA
+AIRSPEED,MACH,AeroMach_fKtasOatRankine,ktas, oatRankine,,,2,"Mach, f(KTAS, OAT in Rankine)","KTAS, R",NA
+AIRSPEED,MACH,AeroMachStdDay_fHpKtas,hp, ktas,,,2,"Mach (standard day only), f(Hp, KTAS)","feet, KTAS",NA
+STANDARD ATMOSPHERE,OAT,AeroOat_Celsius_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"OAT in øC, f(ISA dev in øC, Hp)","øC, feet",øC
+STANDARD ATMOSPHERE,OAT,AeroOat_Celsius_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"OAT in øC, f(ISA dev in øF, Hp)","øF, feet",øC
+STANDARD ATMOSPHERE,OAT,AeroOat_Fahrenheit_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"OAT in øF, f(ISA dev in øC, Hp)","øC, feet",øF
+STANDARD ATMOSPHERE,OAT,AeroOat_Fahrenheit_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"OAT in øF, f(ISA dev in øF, Hp)","øF, feet",øF
+STANDARD ATMOSPHERE,OAT,AeroOat_Kelvin_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"OAT in Kelvin, f(ISA dev in øC, Hp)","øC, feet",K
+STANDARD ATMOSPHERE,OAT,AeroOat_Kelvin_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"OAT in Kelvin, f(ISA dev in øF, Hp)","øF, feet",K
+STANDARD ATMOSPHERE,OAT,AeroOat_Rankine_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"OAT in Rankine, f(ISA dev in øC, Hp)","øC, feet",R
+STANDARD ATMOSPHERE,OAT,AeroOat_Rankine_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"OAT in Rankine, f(ISA dev in øF, Hp)","øF, feet",R
+STANDARD ATMOSPHERE,OAT,AeroOatStdDay_Celsius_fHp,hp,,,,1,"Temperature in øC (standard day only), f(Hp)",feet,øC
+STANDARD ATMOSPHERE,OAT,AeroOatStdDay_Fahrenheit_fHp,hp,,,,1,"Temperature in øF (standard day only), f(Hp)",feet,øF
+STANDARD ATMOSPHERE,OAT,AeroOatStdDay_Kelvin_fHp,hp,,,,1,"Temperature in K (standard day only), f(Hp)",feet,K
+STANDARD ATMOSPHERE,OAT,AeroOatStdDay_Rankine_fHp,hp,,,,1,"Temperature in R (standard day only), f(Hp)",feet,R
+STANDARD ATMOSPHERE,PRESSURE,AeroPstatic_hPa_fHp,hp,,,,1,"Static pressure, Pstatic in hPa, f(Hp)",feet,hPa
+STANDARD ATMOSPHERE,PRESSURE,AeroPstatic_inHg_fHp,hp,,,,1,"Static pressure, Pstatic in InHg, f(Hp)",feet,inches Hg
+STANDARD ATMOSPHERE,PRESSURE,AeroPstatic_lbfPerFt2_fHp,hp,,,,1,"Static pressure, Pstatic in PSF, f(Hp)",feet,lb/sq.ft
+STANDARD ATMOSPHERE,PRESSURE,AeroPstatic_lbfPerInch2_fHp,hp,,,,1,"Static pressure, Pstatic in PSI, f(Hp)",feet,lb/sq.inch
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpKcas,hp, kcas,,,2,"Dynamic pressure in PSF, f(Hp, KCAS)","feet, KCAS",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpKtasIsaDevCelsius,hp, ktas, isaDevCelsius,,3,"Dynamic pressure in PSF, f(Hp, KTAS, ISA dev in øC)","feet, KTAS, øC",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpKtasIsaDevFahrenheit,hp, ktas, isaDevFahrenheit,,3,"Dynamic pressure in PSF, f(Hp, KTAS, ISA dev in øF)","feet, KTAS, øF",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpKtasOatCelsius,hp, ktas, oatCelsius,,3,"Dynamic pressure in PSF, f(Hp, KTAS, OAT in øC)","feet, KTAS, øC",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpKtasOatFahrenheit,hp, ktas, oatFahrenheit,,3,"Dynamic pressure in PSF, f(Hp, KTAS, OAT in øF)","feet, KTAS, øF",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpKtasOatKelvin,hp, ktas, oatKelvin,,3,"Dynamic pressure in PSF, f(Hp, KTAS, OAT in Kelvin)","feet, KTAS, K",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpKtasOatRankine,hp, ktas, oatRankine,,3,"Dynamic pressure in PSF, f(Hp, KTAS, OAT in Rankine)","feet, KTAS, R",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpMach,hp, mach,,,2,"Dynamic pressure in PSF, f(Hp, Mach)","feet, NA",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fHpQc,hp, qc,,,2,"Dynamic pressure in PSF, f(Hp, compressible Q)","feet, lb/sq.ft",lb/sq.ft
+AIRSPEED,DYNAMIC PRESSURE,AeroQ_lbfPerFt2_fKeas,keas,,,,1,"Dynamic pressure in PSF, f(KEAS)",KEAS,lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpKeas,hp, keas,,,2,"Compressible Q in PSF, f(Hp, KEAS)","feet, KEAS",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpKtasIsaDevCelsius,hp, ktas, isaDevCelsius,,3,"Compressible Q in PSF, f(Hp, KTAS, ISA dev in øC)","feet, KTAS, øC",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpKtasIsaDevFahrenheit,hp, ktas, isaDevFahrenheit,,3,"Compressible Q in PSF, f(Hp, KTAS, ISA dev in øF)","feet, KTAS, øF",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpKtasOatCelsius,hp, ktas, oatCelsius,,3,"Compressible Q in PSF, f(Hp, KTAS, OAT in øC)","feet, KTAS, øC",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpKtasOatFahrenheit,hp, ktas, oatFahrenheit,,3,"Compressible Q in PSF, f(Hp, KTAS, OAT in øF)","feet, KTAS, øF",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpKtasOatKelvin,hp, ktas, oatKelvin,,3,"Compressible Q in PSF, f(Hp, KTAS, OAT in Kelvin)","feet, KTAS, K",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpKtasOatRankine,hp, ktas, oatRankine,,3,"Compressible Q in PSF, f(Hp, KTAS, OAT in Rankine)","feet, KTAS, R",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpMach,hp, mach,,,2,"Compressible Q in PSF, f(Hp, Mach)","feet, NA",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fHpQ,hp, q,,,2,"Compressible Q in PSF, f(Hp, dynamic pressure)","feet, lb/sq.ft",lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQc_lbfPerFt2_fKcas,kcas,,,,1,"Compressible Q in PSF, f(KCAS)",KCAS,lb/sq.ft
+AIRSPEED,COMPRESSIBLE Q,AeroQcStdDay_lbfPerFt2_fHpKtas,hp, ktas,,,2,"Compressible Q (standard day only) in PSF, f(Hp, KTAS)","feet, KTAS",lb/sq.ft
+ALTITUDE,QNH,AeroQnh_hPa_fHpGeoPtlAlt,hp, geoPtlAlt,,,2,"QNH in hPa, f(Pressure Altitude in ft, Geopotential Altitude in ft)","feet, feet",hPa
+ALTITUDE,QNH,AeroQnh_inHg_fHpGeoPtlAlt,hp, geoPtlAlt,,,2,"QNH in inches Hg, f(Pressure Altitude in ft, Geopotential Altitude in ft)","feet, feet",inches Hg
+ALTITUDE,QNH,AeroQnh_lbPerFt2_fHpGeoPtlAlt,hp, geoPtlAlt,,,2,"QNH in lb/sq.feet, f(Pressure Altitude in ft, Geopotential Altitude in ft)","feet, feet",lb/sq.feet
+ALTITUDE,QNH,AeroQnh_lbPerInch2_fHpGeoPtlAlt,hp, geoPtlAlt,,,2,"QNH in lb/sq.inch, f(Pressure Altitude in ft, Geopotential Altitude in ft)","feet, feet",lb/sq.inch
+AIRSPEED,DYNAMIC PRESSURE,AeroQStdDay_lbfPerFt2_fHpKtas,hp, ktas,,,2,"Dynamic pressure (standard day only) in PSF, f(Hp, KTAS)","feet, KTAS",lb/sq.ft
+REYNOLDS,REYNOLDS,AeroRePerFt_fHpMachIsaDevCelsius,hp, mach, isaDevCelsius,,3,"Reynolds number per foot, f(Hp, Mach, ISA dev in øC)","feet, NA, øC",1/feet
+REYNOLDS,REYNOLDS,AeroRePerFt_fHpMachIsaDevFahrenheit,hp, mach, isaDevFahrenheit,,3,"Reynolds number per foot, f(Hp, Mach, ISA dev in øF)","feet, NA, øF",1/feet
+REYNOLDS,REYNOLDS,AeroRePerFt_fHpMachOatCelsius,hp, mach, oatCelsius,,3,"Reynolds number per foot, f(Hp, Mach, OAT in øC)","feet, NA, øC",1/feet
+REYNOLDS,REYNOLDS,AeroRePerFt_fHpMachOatFahrenheit,hp, mach, oatFahrenheit,,3,"Reynolds number per foot, f(Hp, Mach, OAT in øF)","feet, NA, øF",1/feet
+REYNOLDS,REYNOLDS,AeroRePerFt_fHpMachOatKelvin,hp, mach, oatKelvin,,3,"Reynolds number per foot, f(Hp, Mach, OAT in Kelvin)","feet, NA, K",1/feet
+REYNOLDS,REYNOLDS,AeroRePerFt_fHpMachOatRankine,hp, mach, oatRankine,,3,"Reynolds number per foot, f(Hp, Mach, OAT in Rankine)","feet, NA, R",1/feet
+REYNOLDS,REYNOLDS,AeroRePerFtStdDay_fHpMach,hp, mach,,,2,"Reynolds number per foot (standard day only), f(Hp, Mach)","feet, Mach",1/feet
+STANDARD ATMOSPHERE,DENSITY,AeroRho_slugPerFt3_fHpIsaDevCelsius,hp, isaDevCelsius,,,2,"Density in slug/cubic foot, f(Hp, ISA dev in øC)","feet, øC",slug/cu.ft
+STANDARD ATMOSPHERE,DENSITY,AeroRho_slugPerFt3_fHpIsaDevFahrenheit,hp, isaDevFahrenheit,,,2,"Density in slug/cubic foot, f(Hp, ISA dev in øF)","feet, øF",slug/cu.ft
+STANDARD ATMOSPHERE,DENSITY,AeroRho_slugPerFt3_fHpOatCelsius,hp, oatCelsius,,,2,"Density in slug/cubic foot, f(Hp, OAT in øC)","feet, øC",slug/cu.ft
+STANDARD ATMOSPHERE,DENSITY,AeroRho_slugPerFt3_fHpOatFahrenheit,hp, oatFahrenheit,,,2,"Density in slug/cubic foot, f(Hp, OAT in øF)","feet, øF",slug/cu.ft
+STANDARD ATMOSPHERE,DENSITY,AeroRho_slugPerFt3_fHpOatKelvin,hp, oatKelvin,,,2,"Density in slug/cubic foot, f(Hp, OAT in Kelvin)","feet, K",slug/cu.ft
+STANDARD ATMOSPHERE,DENSITY,AeroRho_slugPerFt3_fHpOatRankine,hp, oatRankine,,,2,"Density in slug/cubic foot, f(Hp, OAT in Rankine)","feet, R",slug/cu.ft
+STANDARD ATMOSPHERE,DENSITY,AeroRhoStdDay_slugPerFt3_fHp,hp,,,,1,"Density in slug/cubic foot (standard day only), f(Hp)",feet,slug/cu.ft
+RATE OF CLIMB,GRADIENT & KTAS,AeroRoc_HpFtPerMin_fHpIsaDevCGradFtPerNmKtas,hp, isaDevC, gradFtPerNm,ktas,4,"Rate Climb (Pressure Alt) in ft/min, f(Pressure Alt in ft, ISA dev in øC, Gradient in ft/nm, KTAS)","feet, øC, feet/nm, KTAS",feet/minute
+RATE OF CLIMB,GRADIENT & KCAS,AeroRoc_HpFtPerMin_fHpIsaDevCGradFtPerNmKcas,hp, isaDevC, gradFtPerNm,kcas,4,"Rate Climb (Pressure Alt) in ft/min, f(Pressure Alt in ft, ISA dev in øC, Gradient in ft/nm, KCAS)","feet, øC, feet/nm, KCAS",feet/minute
+STANDARD ATMOSPHERE,SIGMA,AeroSigma_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Density ratio, sigma, f(ISA dev in øC, Hp)","øC, feet",NA
+STANDARD ATMOSPHERE,SIGMA,AeroSigma_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Density ratio, sigma, f(ISA dev in øF, Hp)","øF, feet",NA
+STANDARD ATMOSPHERE,SIGMA,AeroSigma_fOatCelsiusHp,oatCelsius, hp,,,2,"Density ratio, sigma, f(OAT in øC, Hp)","øC, feet",NA
+STANDARD ATMOSPHERE,SIGMA,AeroSigma_fOatFahrenheitHp,oatFahrenheit, hp,,,2,"Density ratio, sigma, f(OAT in øF, Hp)","øF, feet",NA
+STANDARD ATMOSPHERE,SIGMA,AeroSigma_fOatKelvinHp,oatKelvin, hp,,,2,"Density ratio, sigma, f(OAT in Kelvin, Hp)","K, feet",NA
+STANDARD ATMOSPHERE,SIGMA,AeroSigma_fOatRankineHp,oatRankine, hp,,,2,"Density ratio, sigma, f(OAT in Rankine, Hp)","R, feet",NA
+STANDARD ATMOSPHERE,SIGMA,AeroSigmaStdDay_fHp,hp,,,,1,"Density ratio, sigma (standard day only), f(Hp)",feet,NA
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_ftPerSec_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Speed of sound in feet/sec, f(ISA dev in øC, Hp)","øC, feet",feet/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_ftPerSec_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Speed of sound in feet/sec, f(ISA dev in øF, Hp)","øF, feet",feet/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_ftPerSec_fOatCelsius,oatCelsius,,,,1,"Speed of sound in feet/sec, f(OAT in øC)",øC,feet/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_ftPerSec_fOatFahrenheit,oatFahrenheit,,,,1,"Speed of sound in feet/sec, f(OAT in øF)",øF,feet/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_ftPerSec_fOatKelvin,oatKelvin,,,,1,"Speed of sound in feet/sec, f(OAT in Kelvin)",K,feet/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_ftPerSec_fOatRankine,oatRankine,,,,1,"Speed of sound in feet/sec, f(OAT in Rankine)",R,feet/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kmPerHr_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Speed of sound in km/hr, f(ISA dev in øC, Hp)","øC, feet",km/hr
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kmPerHr_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Speed of sound in km/hr, f(ISA dev in øF, Hp)","øF, feet",km/hr
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kmPerHr_fOatCelsius,oatCelsius,,,,1,"Speed of sound in km/hr, f(OAT in øC)",øC,km/hr
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kmPerHr_fOatFahrenheit,oatFahrenheit,,,,1,"Speed of sound in km/hr, f(OAT in øF)",øF,km/hr
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kmPerHr_fOatKelvin,oatKelvin,,,,1,"Speed of sound in km/hr, f(OAT in Kelvin)",K,km/hr
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kmPerHr_fOatRankine,oatRankine,,,,1,"Speed of sound in km/hr, f(OAT in Rankine)",R,km/hr
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kts_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Speed of sound in knots, f(ISA dev in øC, Hp)","øC, feet",knots
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kts_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Speed of sound in knots, f(ISA dev in øF, Hp)","øF, feet",knots
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kts_fOatCelsius,oatCelsius,,,,1,"Speed of sound in knots, f(OAT in øC)",øC,knots
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kts_fOatFahrenheit,oatFahrenheit,,,,1,"Speed of sound in knots, f(OAT in øF)",øF,knots
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kts_fOatKelvin,oatKelvin,,,,1,"Speed of sound in knots, f(OAT in Kelvin)",K,knots
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_kts_fOatRankine,oatRankine,,,,1,"Speed of sound in knots, f(OAT in Rankine)",R,knots
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Speed of sound in meters/sec, f(ISA dev in øC, Hp)","øC, feet",meters/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Speed of sound in meters/sec, f(ISA dev in øF, Hp)","øF, feet",meters/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fOatCelsius,oatCelsius,,,,1,"Speed of sound in meters/sec, f(OAT in øC)",øC,meters/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fOatFahrenheit,oatFahrenheit,,,,1,"Speed of sound in meters/sec, f(OAT in øF)",øF,meters/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fOatKelvin,oatKelvin,,,,1,"Speed of sound in meters/sec, f(OAT in Kelvin)",K,meters/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fOatRankine,oatRankine,,,,1,"Speed of sound in meters/sec, f(OAT in Rankine)",R,meters/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Speed of sound in miles/hr, f(ISA dev in øC, Hp)","øC, feet",MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Speed of sound in miles/hr, f(ISA dev in øF, Hp)","øF, feet",MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fOatCelsius,oatCelsius,,,,1,"Speed of sound in miles/hr, f(OAT in øC)",øC,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fOatFahrenheit,oatFahrenheit,,,,1,"Speed of sound in miles/hr, f(OAT in øF)",øF,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fOatKelvin,oatKelvin,,,,1,"Speed of sound in miles/hr, f(OAT in Kelvin)",K,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fOatRankine,oatRankine,,,,1,"Speed of sound in miles/hr, f(OAT in Rankine)",R,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_ftPerSec_fHp,hp,,,,1,"Speed of sound in feet/sec (standard day only), f(Hp)",feet,feet/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_kmPerHr_fHp,hp,,,,1,"Speed of sound in km/hr (standard day only), f(Hp)",feet,km/hr
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_kts_fHp,hp,,,,1,"Speed of sound in knots (standard day only), f(Hp)",feet,knots
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_mPerSec_fHp,hp,,,,1,"Speed of sound in meters/sec (standard day only), f(Hp)",feet,meters/sec
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_statuteMilesPerHr_fHp,hp,,,,1,"Speed of sound in miles/hr (standard day only), f(Hp)",feet,MPH
+COMP CORRECTION,KEAS OVER KCAS,AeroSubsonicKeasOverKcas_fHpQc,hp, qc,,,2,"Ratio EAS to CAS (EAS/CAS), f(Hp, compressible Q)","feet, lb/sq.ft",NA
+ALTITUDE,TAPELINE,AeroTapeAlt_ft_fGeoptlAlt,hGeopotlInFt,,,,1,Tapeline alt from geopotential alt (units feet),feet,feet
+ALTITUDE,TAPELINE,AeroTapeAlt_m_fGeoptlAlt,hGeopotlInM,,,,1,Tapeline alt from geopotential alt (units meters),meters,meters
+STANDARD ATMOSPHERE,THETA,AeroTheta_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Temperature ratio, theta, T/To, f(ISA dev in øC, Hp)","øC, feet",NA
+STANDARD ATMOSPHERE,THETA,AeroTheta_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Temperature ratio, theta, T/To, f(ISA dev in øF, Hp)","øF, feet",NA
+STANDARD ATMOSPHERE,THETA,AeroTheta_fOatCelsius,oatCelsius,,,,1,"Temperature ratio, theta, T/To, f(OAT in øC)",øC,NA
+STANDARD ATMOSPHERE,THETA,AeroTheta_fOatFahrenheit,oatFahrenheit,,,,1,"Temperature ratio, theta, T/To, f(OAT in øF)",øF,NA
+STANDARD ATMOSPHERE,THETA,AeroTheta_fOatKelvin,oatKelvin,,,,1,"Temperature ratio, theta, T/To, f(OAT in Kelvin)",K,NA
+STANDARD ATMOSPHERE,THETA,AeroTheta_fOatRankine,oatRankine,,,,1,"Temperature ratio, theta, T/To, f(OAT in Rankine)",R,NA
+STANDARD ATMOSPHERE,THETA,AeroThetaStdDay_fHp,hp,,,,1,"Temperature ratio, theta, T/To (standard day only), f(Hp)",feet,NA
+TURNS,BANK ANGLE,AeroTurnBank_deg_fNz,nz,,,,1,"Bank Angle in Coordinated Turn in deg, f(Load Factor Nz)",NA,
+TURNS,BANK ANGLE,AeroTurnBank_deg_fRadiusKtas,radius, ktas,,,2,"Bank Angle in Coordinated Turn in deg, f(Turn Radius in ft, KTAS)",feet,KTAS
+TURNS,BANK ANGLE,AeroTurnBank_deg_fTurnRateDegPerSecKtas,turnRateDegPerSec, ktas,,,2,"Bank Angle in Coordinated Turn in deg, f(Turn Rate in deg/sec, KTAS)",deg/sec,KTAS
+TURNS,NZ,AeroTurnNz_fBankDeg,deg,,,,1,"Load Factor Nz in Coordinated Turn, f(Bank Angle in deg)",degrees,
+TURNS,NZ,AeroTurnNz_fRadiusFtKtas,radius, ktas,,,2,"Load Factor Nz in Coordinated Turn, f(Turn Radius in ft, KTAS)",ft,KTAS
+TURNS,NZ,AeroTurnNz_fTurnRateDegPerSecKtas,turnRateDegPerSec, ktas,,,2,"Load Factor Nz in Coordinated Turn, f(Turn Rate in deg/sec, KTAS)",deg/sec,KTAS
+TURNS,RADIUS,AeroTurnRadius_ft_fBankDegKtas,bankDeg, ktas,,,2,"Radius in Coordinated Turn in ft, f(Bank Angle in deg, KTAS)",degrees,KTAS
+TURNS,RADIUS,AeroTurnRadius_ft_fNzKtas,nz, ktas,,,2,"Radius in Coordinated Turn in ft, f(Load Factor Nz, KTAS)",NA,KTAS
+TURNS,RADIUS,AeroTurnRadius_ft_fTurnRateDegPerSecKtas,turnRateDegPerSec, ktas,,,2,"Radius in Coordinated Turn in ft, f(Turn Rate in deg/sec, KTAS)",deg/sec,KTAS
+TURNS,RATE,AeroTurnRate_degPerSec_fBankDegKtas,bankDeg, ktas,,,2,"Angular Rate in Coordinated Turn in deg/sec, f(Bank Angle in deg, KTAS)",degrees,KTAS
+TURNS,RATE,AeroTurnRate_degPerSec_fNzKtas,nz, ktas,,,2,"Angular Rate in Coordinated Turn in deg/sec, f(Load Factor Nz, KTAS)",NA,KTAS
+TURNS,RATE,AeroTurnRate_degPerSec_fRadiusFtKtas,radiusFt, ktas,,,2,"Angular Rate in Coordinated Turn in deg/sec, f(Turn Radius in ft, KTAS)",feet,KTAS
+VISCOSITY,DYNAMIC VISCOSITY (æ),AeroViscDyn_kgPerMSec_fTheta,theta,,,,1,"Dynamic viscosity in kg/(meter-sec), f(theta)",NA,kg/(meter-sec)
+VISCOSITY,DYNAMIC VISCOSITY (æ),AeroViscDyn_SlugPerFtSec_fTheta,theta,,,,1,"Dynamic viscosity in slug/(ft-sec), f(theta)",NA,slug/(ft-sec)
+VISCOSITY,KINEMATIC VISCOSITY (?),AeroViscKin_ft2PerSec_fSigmaTheta,sigma, theta,,,2,"Kinematic viscosity in sq.meter/sec, f(sigma, theta)","NA, NA",sq.meter/sec
+VISCOSITY,KINEMATIC VISCOSITY (?),AeroViscKin_M2PerSec_fSigmaTheta,sigma, theta,,,2,"Kinematic viscosity in sq.ft/sec, f(sigma, theta)","NA, NA",sq.ft/sec
+WINDS,CROSSWIND,AeroWndCross_fAcHdgWndHdgWndSpd,acHdg, wndHdg, wndSpd,,3,"Crosswind (input units), f(A/C heading in deg, Wind heading in deg, Wind Speed)","deg, deg, (user selection/arbitrary)",(user selection/arbitrary)
+WINDS,HEADWIND,AeroWndHead_fAcHdgWndHdgWndSpd,acHdg, wndHdg, wndSpd,,3,"Headwind (input units), f(A/C heading in deg, Wind heading in deg, Wind Speed)","deg, deg, (user selection/arbitrary)",(user selection/arbitrary)
