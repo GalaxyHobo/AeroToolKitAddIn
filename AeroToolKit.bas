@@ -70,13 +70,13 @@ Const constLapseTrop = -0.0019812 'From ICAO 7488 standard lapse rate in troposh
 Const constLapseStrat2 = 0.0003048 'From ICAO 7488, lapse rate from 20 km to 32 km +1.00°C/(1000 m) & 0.3048 m/ft
 Const constLapseStrat3 = 0.00085344 'From ICAO 7488, lapse rate from 32 km to 47 km +2.80°C/(1000 m) & 0.3048 m/ft
 'Geopotential altitudes (in feet) at breaks in temperature profile
-Const tropopausellkmInFt = 36089.2388451444 'From ICAO 7488, 11000 m / 0.3048 m/ft
+Const tropopause11kmInFt = 36089.2388451444 'From ICAO 7488, 11000 m / 0.3048 m/ft
 Const topIsoThermLayerStrat20kmInFt = 65616.7979002625
 Const toplstInverLayerStrat32kmInFt = 104986.87664042 'From ICAO 7488, 32000 m / 0.3048 m/ft
 Const stratopauseStart47kmInFt = 154199.475065617 'From ICAO 7488, 47000 m / 0.3048 m/ft
 Const stratopauseEnd51kmInFt = 167322.83464567 'From ICAO 7488, 51000 m / 0.3048 m/ft
 'Atmospheric temperature (in Kelvin) at breaks in temperature profile
-Const constOatIsoLayerStratllto20kmInK = 216.65 'From ICAO 7488, OAT in isothermal layer of lower stratosphere, K
+Const constOatIsoLayerStrat11to20kmInK = 216.65 'From ICAO 7488, OAT in isothermal layer of lower stratosphere, K
 Const constOatStrat32kmInK = 228.65 'From ICAO 7488, OAT at transition between first and second inversion layer, K
 Const constOatStratopause47to51kmInK = 270.65 'From ICAO 7488, OAT in stratopause (47 to 51 km), K
 'Atmospheric pressure ratios (deltas) at breaks in temperature profile
@@ -203,12 +203,12 @@ Function AeroSpdSndStdDay_mPerSec_fHp(hp)
 End Function
 
 Function AeroOatStdDay_Kelvin_fHp(hp)
-    If (hp < tropopausellkmInFt) Then 'Troposphere
+    If (hp < tropopause11kmInFt) Then 'Troposphere
         AeroOatStdDay_Kelvin_fHp = constTo + hp * constLapseTrop
     ElseIf (hp < topIsoThermLayerStrat20kmInFt) Then 'Isothermal layer of lower stratosphere
-        AeroOatStdDay_Kelvin_fHp = constOatIsoLayerStratllto20kmInK
+        AeroOatStdDay_Kelvin_fHp = constOatIsoLayerStrat11to20kmInK
     ElseIf (hp < toplstInverLayerStrat32kmInFt) Then 'First inversion layer of stratosphere
-        AeroOatStdDay_Kelvin_fHp = constOatIsoLayerStratllto20kmInK + (hp - topIsoThermLayerStrat20kmInFt) * constLapseStrat2
+        AeroOatStdDay_Kelvin_fHp = constOatIsoLayerStrat11to20kmInK + (hp - topIsoThermLayerStrat20kmInFt) * constLapseStrat2
     ElseIf (hp < stratopauseStart47kmInFt) Then 'Second inversion layer of stratosphere
         AeroOatStdDay_Kelvin_fHp = constOatStrat32kmInK + (hp - toplstInverLayerStrat32kmInFt) * constLapseStrat3
     ElseIf (hp <= stratopauseEnd51kmInFt) Then 'Stratopause (isothermal layer 47 to 51 km)
@@ -255,12 +255,12 @@ Function AeroSigmaStdDay_fHp(hp)
 End Function
 
 Function AeroDelta_fHp(hp)
-    If (hp < tropopausellkmInFt) Then
+    If (hp < tropopause11kmInFt) Then
         AeroDelta_fHp = (1 + hp * constLapseTrop / constTo) ^ (-constGo / constLapseTrop / constRAir)
     ElseIf (hp < topIsoThermLayerStrat20kmInFt) Then 'Isothermal layer of lower stratosphere
-        AeroDelta_fHp = constDeltaTropopause * Exp(constGo / constRAir / constOatIsoLayerStratllto20kmInK * (tropopausellkmInFt - hp))
+        AeroDelta_fHp = constDeltaTropopause * Exp(constGo / constRAir / constOatIsoLayerStrat11to20kmInK * (tropopause11kmInFt - hp))
     ElseIf (hp < toplstInverLayerStrat32kmInFt) Then 'First inversion layer of stratosphere
-        AeroDelta_fHp = constDeltaStrat20km * (1 + (hp - topIsoThermLayerStrat20kmInFt) * constLapseStrat2 / constOatIsoLayerStratllto20kmInK) ^ (-constGo / constLapseStrat2 / constRAir)
+        AeroDelta_fHp = constDeltaStrat20km * (1 + (hp - topIsoThermLayerStrat20kmInFt) * constLapseStrat2 / constOatIsoLayerStrat11to20kmInK) ^ (-constGo / constLapseStrat2 / constRAir)
     ElseIf (hp < stratopauseStart47kmInFt) Then 'Second inversion layer of stratosphere
         AeroDelta_fHp = constDeltaStrat32km * (1 + (hp - toplstInverLayerStrat32kmInFt) * constLapseStrat3 / constOatStrat32kmInK) ^ (-constGo / constLapseStrat3 / constRAir)
     ElseIf (hp < stratopauseEnd51kmInFt) Then 'Stratopause (isothermal layer 47 to 51 km)
@@ -1148,9 +1148,9 @@ Function AeroHp_ft_fPstaticLbPerFt2(pstaticLbPerFt2)
     If (pstaticLbPerFt2 > constDeltaTropopause * constPo) Then 'Troposphere, Hp < 11 km
         AeroHp_ft_fPstaticLbPerFt2 = constTo / constLapseTrop * ((pstaticLbPerFt2 / constPo) ^ (-constRAir * constLapseTrop / constGo) - 1)
     ElseIf (pstaticLbPerFt2 > constDeltaStrat20km * constPo) Then 'First layer stratosphere (isothermal layer), Hp < 20 km
-        AeroHp_ft_fPstaticLbPerFt2 = tropopausellkmInFt - constRAir * constOatIsoLayerStratllto20kmInK / constGo * Log(pstaticLbPerFt2 / (constDeltaTropopause * constPo))
+        AeroHp_ft_fPstaticLbPerFt2 = tropopause11kmInFt - constRAir * constOatIsoLayerStrat11to20kmInK / constGo * Log(pstaticLbPerFt2 / (constDeltaTropopause * constPo))
     ElseIf (pstaticLbPerFt2 > constDeltaStrat32km * constPo) Then 'Second layer stratosphere, Hp < 32 km
-        AeroHp_ft_fPstaticLbPerFt2 = constOatIsoLayerStratllto20kmInK / constLapseStrat2 * ((pstaticLbPerFt2 / (constDeltaStrat20km * constPo)) ^ (-constRAir * constLapseStrat2 / constGo) - 1) + topIsoThermLayerStrat20kmInFt
+        AeroHp_ft_fPstaticLbPerFt2 = constOatIsoLayerStrat11to20kmInK / constLapseStrat2 * ((pstaticLbPerFt2 / (constDeltaStrat20km * constPo)) ^ (-constRAir * constLapseStrat2 / constGo) - 1) + topIsoThermLayerStrat20kmInFt
     ElseIf (pstaticLbPerFt2 > constDeltaStrat47km * constPo) Then 'Third layer stratosphere, Hp < 47 km
         AeroHp_ft_fPstaticLbPerFt2 = constOatStrat32kmInK / constLapseStrat3 * ((pstaticLbPerFt2 / (constDeltaStrat32km * constPo)) ^ (-constRAir * constLapseStrat3 / constGo) - 1) + toplstInverLayerStrat32kmInFt
     Else 'Assume last layer stratosphere (isothermal layer), Hp < 51 km (and assign error value if greater than 51 km)
