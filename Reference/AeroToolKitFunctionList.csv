@@ -9,9 +9,13 @@ CONVERSION,TEMPERATURE,AeroConvFahrenheitToCelsius,oatFahrenheit,,,,1,Convert øF
 CONVERSION,TEMPERATURE,AeroConvFahrenheitToKelvin,oatFahrenheit,,,,1,Convert øF to Kelvin,øF,Kelvin
 CONVERSION,TEMPERATURE,AeroConvFahrenheitToRankine,oatFahrenheit,,,,1,Convert øF to Rankine,øF,Rankine
 CONVERSION,SPEED,AeroConvFtPerSecToKts,ftPerSec,,,,1,Convert ft/sec to knots,ft/sec,knots
-CONVERSION,SPEED,AeroConvFtPerSecToMPerSec,ftPerSec,,,,1,Convert ft/sec to m/sec,ft/sec,meters/sec
-CONVERSION,DISTANCE,AeroConvFtToM,ft,,,,1,Convert feet to meters,feet,meters
-CONVERSION,DISTANCE,AeroConvFtToNm,ft,,,,1,Convert feet to nautical miles,feet,nautical  miles
+CONVERSION,SPEED,AeroConvFtPerSecToMeterPerSec,ftPerSec,,,,1,Convert ft/sec to m/sec,ft/sec,meters/sec
+CONVERSION,SPEED,AeroConvFtPerSecToKmPerHr,ftPerSec,,,,1,Convert ft/sec to km/hr,ft/sec,km/hr
+CONVERSION,SPEED,AeroConvFtPerSecToMilePerHr,ftPerSec,,,,1,Convert ft/sec to statute miles/hr,ft/sec,miles/hr
+CONVERSION,DISTANCE,AeroConvFtToMeter,ft,,,,1,Convert feet to meters,feet,meters
+CONVERSION,DISTANCE,AeroConvFtToNm,ft,,,,1,Convert feet to nautical miles,feet,nautical miles
+CONVERSION,DISTANCE,AeroConvFtToKm,ft,,,,1,Convert feet to kilometers,feet,kilometers
+CONVERSION,DISTANCE,AeroConvFtToMile,ft,,,,1,Convert feet to statute miles,feet,statute miles
 CONVERSION,GRADIENT,AeroConvGradFtPerNmToPct,ftPerNm,,,,1,Convert gradient: feet/nautical mile to %,feet/nautical mile,%
 CONVERSION,GRADIENT,AeroConvGradPctToFtPerNm,pct,,,,1,Convert gradient: % to feet/nautical mile,%,feet/nautical mile
 CONVERSION,GRADIENT,AeroConvGradPctToDeg,pct,,,,1,Convert gradient: % to degrees,%,degrees
@@ -27,26 +31,42 @@ CONVERSION,PRESSURE,AeroConvInHgToLbfPerInch2,inHg,,,,1,Convert inches Hg to lbf
 CONVERSION,TEMPERATURE,AeroConvKelvinToCelsius,oatKelvin,,,,1,Convert Kelvin to øC,Kelvin,øC
 CONVERSION,TEMPERATURE,AeroConvKelvinToFahrenheit,oatKelvin,,,,1,Convert Kelvin to øF,Kelvin,øF
 CONVERSION,TEMPERATURE,AeroConvKelvinToRankine,oatKelvin,,,,1,Convert Kelvin to Rankine,Kelvin,Rankine
-CONVERSION,DENSITY,AeroConvKgPerM3ToSlugPerFt3,density,,,,1,Convert kg/cu.meter to slug/cu.ft,kg/cu.meter,slug/cu.ft
+CONVERSION,DENSITY,AeroConvKgPerMeter3ToSlugPerFt3,density,,,,1,Convert kg/cu.meter to slug/cu.ft,kg/cu.meter,slug/cu.ft
 CONVERSION,SPEED,AeroConvKtsToFtPerSec,kts,,,,1,Convert knots to feet/sec,knots,feet/sec
-CONVERSION,SPEED,AeroConvKtsToMPerSec,kts,,,,1,Convert knots to meters/sec,knots,meters/sec
+CONVERSION,SPEED,AeroConvKtsToMeterPerSec,kts,,,,1,Convert knots to meters/sec,knots,meters/sec
+CONVERSION,SPEED,AeroConvKtsToKmPerHr,kts,,,,1,Convert knots to km/hr,knots,km/hr
+CONVERSION,SPEED,AeroConvKtsToMilePerHr,kts,,,,1,Convert knots to statute miles/hr,knots,miles/hr
 CONVERSION,PRESSURE,AeroConvLbfPerFt2ToHPa,lbfPerFt2,,,,1,Convert lbf/sq.feet to hPa,lbf/sq.feet,hPa
 CONVERSION,PRESSURE,AeroConvLbfPerFt2ToInHg,lbfPerFt2,,,,1,Convert lbf/sq.feet to inches Hg,lbf/sq.feet,inches Hg
 CONVERSION,PRESSURE,AeroConvLbfPerFt2ToLbfPerInch2,lbfPerFt2,,,,1,Convert lbf/sq.feet to lbf/sq.inch,lbf/sq.feet,lbf/Inch2
 CONVERSION,PRESSURE,AeroConvLbfPerInch2ToHPa,lbfPerInch2,,,,1,Convert lbf/sq.inch to hPa,lbf/sq.inch,hPa
 CONVERSION,PRESSURE,AeroConvLbfPerInch2ToInHg,lbfPerInch2,,,,1,Convert lbf/sq.inch to inches Hg,lbf/sq.inch,inches Hg
 CONVERSION,PRESSURE,AeroConvLbfPerInch2ToLbfPerFt2,lbfPerInch2,,,,1,Convert lbf/sq.inch to lbf/sq.feet,lbf/sq.inch,lbf/sq.feet
-CONVERSION,SPEED,AeroConvMPerSecToFtPerSec,mPerSec,,,,1,Convert meters/sec to feet/sec,meters/sec,feet/sec
-CONVERSION,SPEED,AeroConvMPerSecToKts,mPerSec,,,,1,Convert meters/sec to knots,meters/sec,Kts
-CONVERSION,DISTANCE,AeroConvMToFt,m,,,,1,Convert meters to feet,meters,feet
-CONVERSION,DISTANCE,AeroConvMToNm,m,,,,1,Convert meters to nautical miles,meters,nautical miles
+CONVERSION,SPEED,AeroConvMeterPerSecToFtPerSec,mPerSec,,,,1,Convert meters/sec to feet/sec,meters/sec,feet/sec
+CONVERSION,SPEED,AeroConvMeterPerSecToKts,mPerSec,,,,1,Convert meters/sec to knots,meters/sec,knots
+CONVERSION,SPEED,AeroConvMeterPerSecToKmPerHr,mPerSec,,,,1,Convert meters/sec to km/hr,meters/sec,km/hr
+CONVERSION,SPEED,AeroConvMeterPerSecToMilePerHr,mPerSec,,,,1,Convert meters/sec to statute miles/hr,meters/sec,miles/hr
+CONVERSION,SPEED,AeroConvMilePerHrToKts,milePerHr,,,,1,Convert statute miles/hr to knots,miles/hr,knots
+CONVERSION,SPEED,AeroConvMilePerHrToMeterPerSec,milePerHr,,,,1,Convert statute miles/hr to meters/sec,miles/hr,meters/sec
+CONVERSION,SPEED,AeroConvMilePerHrToKmPerHr,milePerHr,,,,1,Convert statute miles/hr to km/hr,miles/hr,km/hr
+CONVERSION,SPEED,AeroConvMilePerHrToFtPerSec,milePerHr,,,,1,Convert statute miles/hr to ft/sec,miles/hr,feet/sec
+CONVERSION,SPEED,AeroConvKmPerHrToKts,kmPerHr,,,,1,Convert km/hr to knots,km/hr,knots
+CONVERSION,SPEED,AeroConvKmPerHrToMeterPerSec,kmPerHr,,,,1,Convert km/hr to meters/sec,km/hr,meters/sec
+CONVERSION,SPEED,AeroConvKmPerHrToMilePerHr,kmPerHr,,,,1,Convert km/hr to statute miles/hr,km/hr,miles/hr
+CONVERSION,SPEED,AeroConvKmPerHrToFtPerSec,kmPerHr,,,,1,Convert km/hr to feet/sec,km/hr,feet/sec
+CONVERSION,DISTANCE,AeroConvMeterToFt,m,,,,1,Convert meters to feet,meters,feet
+CONVERSION,DISTANCE,AeroConvMeterToNm,m,,,,1,Convert meters to nautical miles,meters,nautical miles
+CONVERSION,DISTANCE,AeroConvMeterToKm,m,,,,1,Convert meters to kilometers,meters,kilometers
+CONVERSION,DISTANCE,AeroConvMeterToMile,m,,,,1,Convert meters to statute miles,meters,statute miles
 CONVERSION,DISTANCE,AeroConvNmToFt,nm,,,,1,Convert nautical miles to feet,nautical miles,feet
-CONVERSION,DISTANCE,AeroConvNmToM,nm,,,,1,Convert nautical miles to meters,nautical miles,meters
+CONVERSION,DISTANCE,AeroConvNmToMeter,nm,,,,1,Convert nautical miles to meters,nautical miles,meters
+CONVERSION,DISTANCE,AeroConvNmToKm,nm,,,,1,Convert nautical miles to kilometers,nautical miles,kilometers
+CONVERSION,DISTANCE,AeroConvNmToMile,nm,,,,1,Convert nautical miles to statute miles,nautical miles,statute miles
 CONVERSION,ANGLE,AeroConvRadToDeg,rad,,,,1,Convert radians to degrees,radians,degrees
 CONVERSION,TEMPERATURE,AeroConvRankineToCelsius,oatRankine,,,,1,Convert Rankine to øC,Rankine,øC
 CONVERSION,TEMPERATURE,AeroConvRankineToFahrenheit,oatRankine,,,,1,Convert Rankine to øF,Rankine,øF
 CONVERSION,TEMPERATURE,AeroConvRankineToKelvin,oatRankine,,,,1,Convert Rankine to Kelvin,Rankine,K
-CONVERSION,DENSITY,AeroConvSlugPerFt3ToKgPerM3,density,,,,1,Convert slug/cu.ft to kg/cu.meter,slug/cu.ft,kg/cu.meter
+CONVERSION,DENSITY,AeroConvSlugPerFt3ToKgPerMeter3,density,,,,1,Convert slug/cu.ft to kg/cu.meter,slug/cu.ft,kg/cu.meter
 STANDARD ATMOSPHERE,DELTA,AeroDelta_fHp,hp,,,,1,"Pressure ratio, delta, P/Po, f(Hp)",feet,NA
 ALTITUDE,DELTA  GEOPOTENTIAL,AeroDGeoPtlAlt_fDHpIsaDevCBaseHp,dHp, isaDevC, baseHp,,3,"?Geopotential altitude in ft, f(?Hp in ft, IsaDev in C, Base Hp in ft)","feet, øC, feet",feet
 ALTITUDE,DELTA PRESSURE,AeroDHp_fDGeoPtlAltIsaDevCBaseHp,dGeoPtlAlt, isaDevC, baseHp,,3,"?Hp in ft, f(?Hp in ft, IsaDev in C, Base Hp in ft)","feet, øC, feet",feet
@@ -231,20 +251,20 @@ STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fOatCelsius,oatCelsius,,,,
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fOatFahrenheit,oatFahrenheit,,,,1,"Speed of sound in meters/sec, f(OAT in øF)",øF,meters/sec
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fOatKelvin,oatKelvin,,,,1,"Speed of sound in meters/sec, f(OAT in Kelvin)",K,meters/sec
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_mPerSec_fOatRankine,oatRankine,,,,1,"Speed of sound in meters/sec, f(OAT in Rankine)",R,meters/sec
-STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Speed of sound in miles/hr, f(ISA dev in øC, Hp)","øC, feet",MPH
-STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Speed of sound in miles/hr, f(ISA dev in øF, Hp)","øF, feet",MPH
-STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fOatCelsius,oatCelsius,,,,1,"Speed of sound in miles/hr, f(OAT in øC)",øC,MPH
-STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fOatFahrenheit,oatFahrenheit,,,,1,"Speed of sound in miles/hr, f(OAT in øF)",øF,MPH
-STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fOatKelvin,oatKelvin,,,,1,"Speed of sound in miles/hr, f(OAT in Kelvin)",K,MPH
-STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_statuteMilesPerHr_fOatRankine,oatRankine,,,,1,"Speed of sound in miles/hr, f(OAT in Rankine)",R,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_milePerHr_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Speed of sound in miles/hr, f(ISA dev in øC, Hp)","øC, feet",MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_milePerHr_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Speed of sound in miles/hr, f(ISA dev in øF, Hp)","øF, feet",MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_milePerHr_fOatCelsius,oatCelsius,,,,1,"Speed of sound in miles/hr, f(OAT in øC)",øC,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_milePerHr_fOatFahrenheit,oatFahrenheit,,,,1,"Speed of sound in miles/hr, f(OAT in øF)",øF,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_milePerHr_fOatKelvin,oatKelvin,,,,1,"Speed of sound in miles/hr, f(OAT in Kelvin)",K,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSnd_milePerHr_fOatRankine,oatRankine,,,,1,"Speed of sound in miles/hr, f(OAT in Rankine)",R,MPH
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_ftPerSec_fHp,hp,,,,1,"Speed of sound in feet/sec (standard day only), f(Hp)",feet,feet/sec
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_kmPerHr_fHp,hp,,,,1,"Speed of sound in km/hr (standard day only), f(Hp)",feet,km/hr
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_kts_fHp,hp,,,,1,"Speed of sound in knots (standard day only), f(Hp)",feet,knots
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_mPerSec_fHp,hp,,,,1,"Speed of sound in meters/sec (standard day only), f(Hp)",feet,meters/sec
-STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_statuteMilesPerHr_fHp,hp,,,,1,"Speed of sound in miles/hr (standard day only), f(Hp)",feet,MPH
+STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_milePerHr_fHp,hp,,,,1,"Speed of sound in miles/hr (standard day only), f(Hp)",feet,MPH
 COMP CORRECTION,KEAS OVER KCAS,AeroSubsonicKeasOverKcas_fHpQc,hp, qc,,,2,"Ratio EAS to CAS (EAS/CAS), f(Hp, compressible Q)","feet, lb/sq.ft",NA
 ALTITUDE,TAPELINE,AeroTapeAlt_ft_fGeoptlAlt,hGeopotlInFt,,,,1,Tapeline alt from geopotential alt (units feet),feet,feet
-ALTITUDE,TAPELINE,AeroTapeAlt_m_fGeoptlAlt,hGeopotlInM,,,,1,Tapeline alt from geopotential alt (units meters),meters,meters
+ALTITUDE,TAPELINE,AeroTapeAlt_m_fGeoptlAlt,hGeopotlInMeter,,,,1,Tapeline alt from geopotential alt (units meters),meters,meters
 STANDARD ATMOSPHERE,THETA,AeroTheta_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Temperature ratio, theta, T/To, f(ISA dev in øC, Hp)","øC, feet",NA
 STANDARD ATMOSPHERE,THETA,AeroTheta_fIsaDevFahrenheitHp,isaDevFahrenheit, hp,,,2,"Temperature ratio, theta, T/To, f(ISA dev in øF, Hp)","øF, feet",NA
 STANDARD ATMOSPHERE,THETA,AeroTheta_fOatCelsius,oatCelsius,,,,1,"Temperature ratio, theta, T/To, f(OAT in øC)",øC,NA
@@ -264,9 +284,9 @@ TURNS,RADIUS,AeroTurnRadius_ft_fTurnRateDegPerSecKtas,turnRateDegPerSec, ktas,,,
 TURNS,RATE,AeroTurnRate_degPerSec_fBankDegKtas,bankDeg, ktas,,,2,"Angular Rate in Coordinated Turn in deg/sec, f(Bank Angle in deg, KTAS)",degrees,KTAS
 TURNS,RATE,AeroTurnRate_degPerSec_fNzKtas,nz, ktas,,,2,"Angular Rate in Coordinated Turn in deg/sec, f(Load Factor Nz, KTAS)",NA,KTAS
 TURNS,RATE,AeroTurnRate_degPerSec_fRadiusFtKtas,radiusFt, ktas,,,2,"Angular Rate in Coordinated Turn in deg/sec, f(Turn Radius in ft, KTAS)",feet,KTAS
-VISCOSITY,DYNAMIC VISCOSITY (æ),AeroViscDyn_kgPerMSec_fTheta,theta,,,,1,"Dynamic viscosity in kg/(meter-sec), f(theta)",NA,kg/(meter-sec)
+VISCOSITY,DYNAMIC VISCOSITY (æ),AeroViscDyn_kgPerMeterSec_fTheta,theta,,,,1,"Dynamic viscosity in kg/(meter-sec), f(theta)",NA,kg/(meter-sec)
 VISCOSITY,DYNAMIC VISCOSITY (æ),AeroViscDyn_SlugPerFtSec_fTheta,theta,,,,1,"Dynamic viscosity in slug/(ft-sec), f(theta)",NA,slug/(ft-sec)
 VISCOSITY,KINEMATIC VISCOSITY (?),AeroViscKin_ft2PerSec_fSigmaTheta,sigma, theta,,,2,"Kinematic viscosity in sq.meter/sec, f(sigma, theta)","NA, NA",sq.meter/sec
-VISCOSITY,KINEMATIC VISCOSITY (?),AeroViscKin_M2PerSec_fSigmaTheta,sigma, theta,,,2,"Kinematic viscosity in sq.ft/sec, f(sigma, theta)","NA, NA",sq.ft/sec
+VISCOSITY,KINEMATIC VISCOSITY (?),AeroViscKin_meter2PerSec_fSigmaTheta,sigma, theta,,,2,"Kinematic viscosity in sq.ft/sec, f(sigma, theta)","NA, NA",sq.ft/sec
 WINDS,CROSSWIND,AeroWndCross_fAcHdgWndHdgWndSpd,acHdg, wndHdg, wndSpd,,3,"Crosswind (input units), f(A/C heading in deg, Wind heading in deg, Wind Speed)","deg, deg, (user selection/arbitrary)",(user selection/arbitrary)
 WINDS,HEADWIND,AeroWndHead_fAcHdgWndHdgWndSpd,acHdg, wndHdg, wndSpd,,3,"Headwind (input units), f(A/C heading in deg, Wind heading in deg, Wind Speed)","deg, deg, (user selection/arbitrary)",(user selection/arbitrary)
