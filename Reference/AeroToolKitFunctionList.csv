@@ -84,12 +84,12 @@ STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fQfeHPa,qfe,,,,1,"Pressure Altit
 STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fQfeInHg,qfe,,,,1,"Pressure Altitude in ft, f(QFE in inches Hg)",inches Hg,feet
 STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fQfeLbPerFt2,qfe,,,,1,"Pressure Altitude in ft, f(QFE in lb/sq.feet)",lb/sq.feet,feet
 STANDARD ATMOSPHERE,PRESSURE ALTITUDE,AeroHp_ft_fQfeLbPerInch2,qfe,,,,1,"Pressure Altitude in ft, f(QFE in lb/sq.inch)",lb/sq.inch,feet
-ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fIsaDevFahrenheitHp,isaDevFahrenheit,,,,1,"ISA dev in °C, f(ISA dev in °F, Hp)","°F, feet",°C
+ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fIsaDevFahrenheit,isaDevFahrenheit,,,,1,"ISA dev in °C, f(ISA dev in °F)","°F, feet",°C
 ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fOatCelsiusHp,oatCelsius, hp,,,2,"ISA dev in °C, f(OAT in °C, Hp)","°C, feet",°C
 ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fOatFahrenheitHp,oatFahrenheit, hp,,,2,"ISA dev in °C, f(OAT in °F, Hp)","°F, feet",°C
 ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fOatKelvinHp,oatKelvin, hp,,,2,"ISA dev in °C, f(OAT in Kelvin, Hp)","K, feet",°C
 ISA DEVIATION,CELSIUS,AeroIsaDev_Celsius_fOatRankineHp,oatRankine, hp,,,2,"ISA dev in °C, f(OAT in Rankine, Hp)","R, feet",°C
-ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fIsaDevCelsius,isaDevCelsius,,,,1,"ISA dev in °F, f(ISA dev in °C, Hp)","°C, feet",°F
+ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fIsaDevCelsius,isaDevCelsius,,,,1,"ISA dev in °F, f(ISA dev in °C)","°C, feet",°F
 ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fOatCelsiusHp,oatCelsius, hp,,,2,"ISA dev in °F, f(OAT in °C, Hp)","°C, feet",°F
 ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fOatFahrenheitHp,oatFahrenheit, hp,,,2,"ISA dev in °F, f(OAT in °F, Hp)","°F, feet",°F
 ISA DEVIATION,FAHRENHEIT,AeroIsaDev_Fahrenheit_fOatKelvinHp,oatKelvin, hp,,,2,"ISA dev in °F, f(OAT in Kelvin, Hp)","K, feet",°F

@@ -644,8 +644,8 @@ Function AeroSigma_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
     AeroSigma_fIsaDevFahrenheitHp = AeroDelta_fHp(hp) / AeroTheta_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
 End Function
 
-Function AeroIsaDev_Celsius_fIsaDevFahrenheitHp(isaDevFahrenheit)
-    AeroIsaDev_Celsius_fIsaDevFahrenheitHp = isaDevFahrenheit / constConvKelvinToRankine
+Function AeroIsaDev_Celsius_fIsaDevFahrenheit(isaDevFahrenheit)
+    AeroIsaDev_Celsius_fIsaDevFahrenheit = isaDevFahrenheit / constConvKelvinToRankine
 End Function
 
 Function AeroSigma_fOatCelsiusHp(oatCelsius, hp)
