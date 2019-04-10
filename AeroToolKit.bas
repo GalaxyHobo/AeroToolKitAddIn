@@ -47,18 +47,18 @@ Attribute VB_Name = "AeroToolKit"
 '
 '***************************************************************************
 'Program execution constants
-Const constMaxAeroIter = 10 'Maximum iterations in supersonic convergence of Mach and KCAS
-Const constMachEpsilon = 0.000001 'Arbitrary convergence epsilon for Mach convergence at supersonic speeds
-Const constKcasEpsilon = 0.0001 'Arbitrary convergence epsilon for KCAS convergence at supersonic speeds
-Const constAeroErr = -99999999.9999999 'Initialization value, an arbitrary large-magnitude, oddball, negative value
-Const constMinDAlt = 100 'Altitude step for geopotential-pressure altitude conversions
+Const constMaxIter = 100 'Maximum iterations to converge solution (i.e., supersonic Mach = f(hp, kcas))
+Const constMachEpsilon = 0.000001 'Arbitrary epsilon for Mach convergence at supersonic speeds
+Const constKcasEpsilon = 0.0001 'Arbitrary epsilon for KCAS convergence at supersonic speeds
+Const constAeroErr = -99999999.9999999 'Initialization value, a large-magnitude, oddball, negative value
+Const constMinDAlt = 100 'Altitude step for geopotential-pressure altitude conversions, ft
 'Physical constants defining the standard atmosphere
 Const constGammaAir = 1.4 'From ICAO 7488, ratio of specific heats for air
-Const constGo = 32.1740485564304  'From ICAO 7488 go=9.80665, standard acceleration due to gravity at latitude 45°32’33’’ using Lambert’s equation of the acceleration due to gravity function latitude (PER ICAO 7488 SEE: U.S. Committee Extension Standard Atmosphere: U.S. Standard Atmosphere, 1962. U.S. Government)
+Const constGo = 32.1740485564304  'From ICAO 7488 go=9.80665, standard acceleration due to gravity at latitude 45 deg 32' 33'' using Lambert's equation of the acceleration due to gravity function latitude (PER ICAO 7488 SEE: U.S. Committee Extension Standard Atmosphere: U.S. Standard Atmosphere, 1962. U.S. Government)
 Const constRAir = 3089.81137753942 'From ICAO 7488, R=287.05287 m2/(s2 K) converted with 0.3048 m/ft, gas constant, dry air, ft2/s2/K
 Const constRadiusEarth = 20855531.496063 'From ICAO 7488, r=6356766 m, 0.3048 m/ft, nominal radius earth, feet
 Const constBetaVisc = 0.000001458 'From ICAO 7488, Reynolds calculation constant, N-sec/(sq.m-sqrt(kelvins))
-Const constSuth = 110.4 'From ICAO 7488, Sutherland’s constant, Kelvin
+Const constSuth = 110.4 'From ICAO 7488, Sutherland's constant, Kelvin
 'Characteristics at sea level
 Const constTo = 288.15 'From ICAO 7488, sea level value of absolute temperature in standard atmosphere, K (518.67 R)
 Const constAo = 661.478594435162 'Derived from From ICAO 7488 values for To, R. Uses 1852 m/nm. Speed of sound at sea level, knots
@@ -71,7 +71,7 @@ Const constLapseStrat2 = 0.0003048 'From ICAO 7488, lapse rate from 20 km to 32 
 Const constLapseStrat3 = 0.00085344 'From ICAO 7488, lapse rate from 32 km to 47 km +2.80°C/(1000 m) & 0.3048 m/ft
 'Geopotential altitudes (in feet) at breaks in temperature profile
 Const constTropopause11kmInFt = 36089.2388451444 'From ICAO 7488, 11000 m / 0.3048 m/ft
-Const constTopIsoThermLayerStrat20kmInFt = 65616.7979002625
+Const constTopIsoThermLayerStrat20kmInFt = 65616.7979002625 'From ICAO 7488, 20000 m / 0.3048 m/ft
 Const constTop1stInverLayerStrat32kmInFt = 104986.87664042 'From ICAO 7488, 32000 m / 0.3048 m/ft
 Const constStratopauseStart47kmInFt = 154199.475065617 'From ICAO 7488, 47000 m / 0.3048 m/ft
 Const constStratopauseEnd51kmInFt = 167322.83464567 'From ICAO 7488, 51000 m / 0.3048 m/ft
@@ -79,23 +79,23 @@ Const constStratopauseEnd51kmInFt = 167322.83464567 'From ICAO 7488, 51000 m / 0
 Const constOatIsoLayerStrat11to20kmInK = 216.65 'From ICAO 7488, OAT in isothermal layer of lower stratosphere, K
 Const constOatStrat32kmInK = 228.65 'From ICAO 7488, OAT at transition between first and second inversion layer, K
 Const constOatStratopause47to51kmInK = 270.65 'From ICAO 7488, OAT in stratopause (47 to 51 km), K
-'Atmospheric pressure ratios (deltas) at breaks in temperature profile
-Const constDeltaTropopause = 0.223360869430129   '0.22336086943012873
-Const constDeltaStrat20km = 0.054032839124412    '0.054032839124412
-Const constDeltaStrat32km = 8.5666496582306E-03  '0.008566649658230598
-Const constDeltaStrat47km = 1.09455488149331E-03 '0.0010945548814933147
+'Pre-computed atmospheric pressure ratios (deltas) at breaks in temperature profile
+Const constDeltaTropopause = 0.223360869430129  
+Const constDeltaStrat20km = 0.054032839124412  
+Const constDeltaStrat32km = 8.5666496582306E-03 
+Const constDeltaStrat47km = 1.09455488149331E-03
 'Conversion Factors
 Const constConvLbfPerInch2ToLbfPerFt2 = 144 'lb/in2 to lb/ft2 (exact)
 Const constConvKelvinToRankine = 1.8 'Kelvin to Rankine (exact)
 Const constConvFtToMeter = 0.3048 'feet to meters (exact)
 Const constConvNmToMeter = 1852 'nm to meters (exact)
-Const constConvHrToSec = 3600 'Seconds per hour (exact)
-Const constConvMileToFt = 5280 'Statute miles to feet (exact)
+Const constConvHrToSec = 3600 'hour to seconds (exact)
+Const constConvMileToFt = 5280 'statute miles to feet (exact)
 Const constConvLbfToNewton = 4.4482216152605 'lb force to Newton
 Const constConvFtPerSecToKts = 0.592483801295896 'ft/sec to knots, derived from 1852 m/nm, 3600 sec/hr & 0.3048 m/ft
 Const constConvInHgToHectoPascal = 33.86389 'hPa to inHg, based on NIST Special Pub 811, 2008
 'Temperatures for zero deg C and zero deg F on absolute temperature scales
-Const constZeroDegCelsiusInKelvin = 273.15 'Temperature in Kelvin at zero Celisus, K
+Const constZeroDegCelsiusInKelvin = 273.15 'Temperature in Kelvin at zero Celsius, K
 Const constZeroDegFahrenheitInRankine = 459.67 'Temperature in Rankine at zero Fahrenheit, R
 
 Function AeroSpdSnd_ftPerSec_fOatKelvin(oatKelvin)
@@ -669,12 +669,19 @@ Function AeroMach_fHpKcas(hp, kcas)
     mach = (2 / (constGammaAir - 1) * ((1 / deltaPressureStatic * ((1 + (constGammaAir - 1) / 2 * (kcas / constAo) ^ 2) _
         ^ (constGammaAir / (constGammaAir - 1)) - 1) + 1) ^ ((constGammaAir - 1) / constGammaAir) - 1)) ^ 0.5
     If mach > 1 Then
+        count = 0 'Counter included as safety mechanism to prevent infinite loop in event of unconverged solution
         pStatic = deltaPressureStatic * constPo
         qc = AeroQc_lbfPerFt2_fKcas(kcas)
         Do
             machLast = mach
             mach = (2 / (constGammaAir + 1) * (qc / pStatic + 1) ^ ((constGammaAir - 1) / constGammaAir) * _
             ((1 - constGammaAir + 2 * constGammaAir * machLast ^ 2) / (constGammaAir + 1)) ^ (1 / constGammaAir)) ^ 0.5
+            count = count + 1 
+            If count > constMaxIter Then
+                'Set mach and machLast equal to constAeroErr; terminates loop and returns error-flag value
+                mach = constAeroErr
+                machLast = constAeroErr
+            End If
         Loop While Abs(mach - machLast) > constMachEpsilon
     End If
     AeroMach_fHpKcas = mach
@@ -685,10 +692,17 @@ Function AeroMach_fHpQc(hp, qc)
     pStatic = deltaPressureStatic * constPo
     mach = (2 / (constGammaAir - 1) * ((qc / pStatic + 1) ^ ((constGammaAir - 1) / constGammaAir) - 1)) ^ 0.5
     If mach > 1 Then
+        count = 0 'Counter included as safety mechanism to prevent infinite loop in event of unconverged solution
         Do
             machLast = mach
             mach = (2 / (constGammaAir + 1) * (qc / pStatic + 1) ^ ((constGammaAir - 1) / constGammaAir) * _
             ((1 - constGammaAir + 2 * constGammaAir * machLast ^ 2) / (constGammaAir + 1)) ^ (1 / constGammaAir)) ^ 0.5
+            count = count + 1 
+            If count > constMaxIter Then
+                'Set mach and machLast equal to constAeroErr; terminates loop and returns error-flag value
+                mach = constAeroErr
+                machLast = constAeroErr
+            End If
         Loop While Abs(mach - machLast) > constMachEpsilon
     End If
     AeroMach_fHpQc = mach
@@ -885,15 +899,16 @@ End Function
 Function AeroKcas_fQc(qc)
     kcas = constAo * (2 / (constGammaAir - 1) * ((qc / constPo + 1) ^ ((constGammaAir - 1) / constGammaAir) - 1)) ^ 0.5
     If (kcas > constAo) Then
-        Count = 0 'Counter included as safety mechanism to prevent infinite loop in event of unconverged solution
+        count = 0 'Counter included as safety mechanism to prevent infinite loop in event of unconverged solution
         kcasLast = kcas
         firstConstCoeff = ((constGammaAir + 1) / 2) ^ (0.5 * constGammaAir / (1 - constGammaAir)) * ((constGammaAir + 1) / 2 / constGammaAir) ^ (0.5 / (1 - constGammaAir))
         secondConstCoeff = 2 * constGammaAir / (constGammaAir - 1)
         Do
             kcasLast = kcas
             kcas = constAo * firstConstCoeff * ((qc / constPo + 1) * (1 - 1 / (secondConstCoeff * (kcasLast / constAo) ^ 2)) ^ (1 / (constGammaAir - 1))) ^ 0.5
-            If (Count > constMaxAeroIter) Then
-                'Set both kcas and kcasLast equal to constAeroErr; this will terminate loop and result in return of error-flag value
+            count = count + 1
+            If (count > constMaxIter) Then
+                'Set kcas and kcasLast equal to constAeroErr; terminates loop and returns error-flag value
                 kcas = constAeroErr
                 kcasLast = constAeroErr
             End If
