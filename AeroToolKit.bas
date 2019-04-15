@@ -114,12 +114,12 @@ Function AeroSpdSnd_milePerHr_fOatKelvin(oatKelvin)
     AeroSpdSnd_milePerHr_fOatKelvin = AeroSpdSnd_ftPerSec_fOatKelvin(oatKelvin) * constConvHrToSec / constConvMileToFt
 End Function
 
-Function AeroSpdSnd_kmPerHr_fOatKelvin(oatKelvin)
-    AeroSpdSnd_kmPerHr_fOatKelvin = AeroSpdSnd_ftPerSec_fOatKelvin(oatKelvin) * constConvHrToSec * constConvFtToMeter / 1000
-End Function
-
 Function AeroSpdSnd_meterPerSec_fOatKelvin(oatKelvin)
     AeroSpdSnd_meterPerSec_fOatKelvin = AeroSpdSnd_ftPerSec_fOatKelvin(oatKelvin) * constConvFtToMeter
+End Function
+
+Function AeroSpdSnd_kmPerHr_fOatKelvin(oatKelvin)
+    AeroSpdSnd_kmPerHr_fOatKelvin = AeroSpdSnd_ftPerSec_fOatKelvin(oatKelvin) * constConvHrToSec * constConvFtToMeter / 1000
 End Function
 
 Function AeroSpdSnd_ftPerSec_fOatCelsius(oatCelsius)
@@ -134,32 +134,12 @@ Function AeroSpdSnd_milePerHr_fOatCelsius(oatCelsius)
     AeroSpdSnd_milePerHr_fOatCelsius = AeroSpdSnd_milePerHr_fOatKelvin(AeroConvCelsiusToKelvin(oatCelsius))
 End Function
 
-Function AeroSpdSnd_kmPerHr_fOatCelsius(oatCelsius)
-    AeroSpdSnd_kmPerHr_fOatCelsius = AeroSpdSnd_kmPerHr_fOatKelvin(AeroConvCelsiusToKelvin(oatCelsius))
-End Function
-
 Function AeroSpdSnd_meterPerSec_fOatCelsius(oatCelsius)
     AeroSpdSnd_meterPerSec_fOatCelsius = AeroSpdSnd_meterPerSec_fOatKelvin(AeroConvCelsiusToKelvin(oatCelsius))
 End Function
 
-Function AeroSpdSnd_ftPerSec_fOatFahrenheit(oatFahrenheit)
-    AeroSpdSnd_ftPerSec_fOatFahrenheit = AeroSpdSnd_ftPerSec_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
-End Function
-
-Function AeroSpdSnd_kts_fOatFahrenheit(oatFahrenheit)
-    AeroSpdSnd_kts_fOatFahrenheit = AeroSpdSnd_kts_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
-End Function
-
-Function AeroSpdSnd_milePerHr_fOatFahrenheit(oatFahrenheit)
-    AeroSpdSnd_milePerHr_fOatFahrenheit = AeroSpdSnd_milePerHr_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
-End Function
-
-Function AeroSpdSnd_kmPerHr_fOatFahrenheit(oatFahrenheit)
-    AeroSpdSnd_kmPerHr_fOatFahrenheit = AeroSpdSnd_kmPerHr_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
-End Function
-
-Function AeroSpdSnd_meterPerSec_fOatFahrenheit(oatFahrenheit)
-    AeroSpdSnd_meterPerSec_fOatFahrenheit = AeroSpdSnd_meterPerSec_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
+Function AeroSpdSnd_kmPerHr_fOatCelsius(oatCelsius)
+    AeroSpdSnd_kmPerHr_fOatCelsius = AeroSpdSnd_kmPerHr_fOatKelvin(AeroConvCelsiusToKelvin(oatCelsius))
 End Function
 
 Function AeroSpdSnd_ftPerSec_fOatRankine(oatRankine)
@@ -174,12 +154,32 @@ Function AeroSpdSnd_milePerHr_fOatRankine(oatRankine)
     AeroSpdSnd_milePerHr_fOatRankine = AeroSpdSnd_milePerHr_fOatKelvin(AeroConvRankineToKelvin(oatRankine))
 End Function
 
+Function AeroSpdSnd_meterPerSec_fOatRankine(oatRankine)
+    AeroSpdSnd_meterPerSec_fOatRankine = AeroSpdSnd_meterPerSec_fOatKelvin(AeroConvRankineToKelvin(oatRankine))
+End Function
+
 Function AeroSpdSnd_kmPerHr_fOatRankine(oatRankine)
     AeroSpdSnd_kmPerHr_fOatRankine = AeroSpdSnd_kmPerHr_fOatKelvin(AeroConvRankineToKelvin(oatRankine))
 End Function
 
-Function AeroSpdSnd_meterPerSec_fOatRankine(oatRankine)
-    AeroSpdSnd_meterPerSec_fOatRankine = AeroSpdSnd_meterPerSec_fOatKelvin(AeroConvRankineToKelvin(oatRankine))
+Function AeroSpdSnd_ftPerSec_fOatFahrenheit(oatFahrenheit)
+    AeroSpdSnd_ftPerSec_fOatFahrenheit = AeroSpdSnd_ftPerSec_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
+End Function
+
+Function AeroSpdSnd_kts_fOatFahrenheit(oatFahrenheit)
+    AeroSpdSnd_kts_fOatFahrenheit = AeroSpdSnd_kts_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
+End Function
+
+Function AeroSpdSnd_milePerHr_fOatFahrenheit(oatFahrenheit)
+    AeroSpdSnd_milePerHr_fOatFahrenheit = AeroSpdSnd_milePerHr_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
+End Function
+
+Function AeroSpdSnd_meterPerSec_fOatFahrenheit(oatFahrenheit)
+    AeroSpdSnd_meterPerSec_fOatFahrenheit = AeroSpdSnd_meterPerSec_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
+End Function
+
+Function AeroSpdSnd_kmPerHr_fOatFahrenheit(oatFahrenheit)
+    AeroSpdSnd_kmPerHr_fOatFahrenheit = AeroSpdSnd_kmPerHr_fOatKelvin(AeroConvFahrenheitToKelvin(oatFahrenheit))
 End Function
 
 Function AeroSpdSndStdDay_ftPerSec_fHp(hp)
@@ -194,12 +194,12 @@ Function AeroSpdSndStdDay_milePerHr_fHp(hp)
     AeroSpdSndStdDay_milePerHr_fHp = AeroSpdSndStdDay_ftPerSec_fHp(hp) * constConvHrToSec / constConvMileToFt
 End Function
 
-Function AeroSpdSndStdDay_kmPerHr_fHp(hp)
-    AeroSpdSndStdDay_kmPerHr_fHp = AeroSpdSndStdDay_ftPerSec_fHp(hp) * constConvHrToSec * constConvFtToMeter / 1000
-End Function
-
 Function AeroSpdSndStdDay_meterPerSec_fHp(hp)
     AeroSpdSndStdDay_meterPerSec_fHp = AeroSpdSndStdDay_ftPerSec_fHp(hp) * constConvFtToMeter
+End Function
+
+Function AeroSpdSndStdDay_kmPerHr_fHp(hp)
+    AeroSpdSndStdDay_kmPerHr_fHp = AeroSpdSndStdDay_ftPerSec_fHp(hp) * constConvHrToSec * constConvFtToMeter / 1000
 End Function
 
 Function AeroOatStdDay_Kelvin_fHp(hp)
@@ -222,12 +222,12 @@ Function AeroOatStdDay_Celsius_fHp(hp)
     AeroOatStdDay_Celsius_fHp = AeroConvKelvinToCelsius(AeroOatStdDay_Kelvin_fHp(hp))
 End Function
 
-Function AeroOatStdDay_Fahrenheit_fHp(hp)
-    AeroOatStdDay_Fahrenheit_fHp = AeroConvKelvinToFahrenheit(AeroOatStdDay_Kelvin_fHp(hp))
-End Function
-
 Function AeroOatStdDay_Rankine_fHp(hp)
     AeroOatStdDay_Rankine_fHp = AeroConvKelvinToRankine(AeroOatStdDay_Kelvin_fHp(hp))
+End Function
+
+Function AeroOatStdDay_Fahrenheit_fHp(hp)
+    AeroOatStdDay_Fahrenheit_fHp = AeroConvKelvinToFahrenheit(AeroOatStdDay_Kelvin_fHp(hp))
 End Function
 
 Function AeroTapeAlt_ft_fGeoptlAlt(hGeopotlInFt)
@@ -274,6 +274,10 @@ Function AeroPstatic_lbfPerFt2_fHp(hp)
     AeroPstatic_lbfPerFt2_fHp = constPo * AeroDelta_fHp(hp)
 End Function
 
+Function AeroPstatic_lbfPerInch2_fHp(hp)
+    AeroPstatic_lbfPerInch2_fHp = AeroPstatic_lbfPerFt2_fHp(hp) / constConvLbfPerInch2ToLbfPerFt2
+End Function
+
 Function AeroPstatic_inHg_fHp(hp)
     AeroPstatic_inHg_fHp = AeroPstatic_hPa_fHp(hp) / constConvInHgToHectoPascal
 End Function
@@ -282,20 +286,12 @@ Function AeroPstatic_hPa_fHp(hp)
     AeroPstatic_hPa_fHp = AeroPstatic_lbfPerFt2_fHp(hp) / constConvFtToMeter ^ 2 * constConvLbfToNewton / 100
 End Function
 
-Function AeroPstatic_lbfPerInch2_fHp(hp)
-    AeroPstatic_lbfPerInch2_fHp = AeroPstatic_lbfPerFt2_fHp(hp) / constConvLbfPerInch2ToLbfPerFt2
-End Function
-
-Function AeroRhoStdDay_slugPerFt3_fHp(hp)
-    AeroRhoStdDay_slugPerFt3_fHp = constRhoo * AeroSigmaStdDay_fHp(hp)
+Function AeroRho_slugPerFt3_fHpOatKelvin(hp, oatKelvin)
+    AeroRho_slugPerFt3_fHpOatKelvin = constRhoo * AeroSigma_fOatKelvinHp(oatKelvin, hp)
 End Function
 
 Function AeroRho_slugPerFt3_fHpOatCelsius(hp, oatCelsius)
     AeroRho_slugPerFt3_fHpOatCelsius = constRhoo * AeroSigma_fOatCelsiusHp(oatCelsius, hp)
-End Function
-
-Function AeroRho_slugPerFt3_fHpOatKelvin(hp, oatKelvin)
-    AeroRho_slugPerFt3_fHpOatKelvin = constRhoo * AeroSigma_fOatKelvinHp(oatKelvin, hp)
 End Function
 
 Function AeroRho_slugPerFt3_fHpOatRankine(hp, oatRankine)
@@ -306,12 +302,16 @@ Function AeroRho_slugPerFt3_fHpOatFahrenheit(hp, oatFahrenheit)
     AeroRho_slugPerFt3_fHpOatFahrenheit = constRhoo * AeroSigma_fOatFahrenheitHp(oatFahrenheit, hp)
 End Function
 
+Function AeroRho_slugPerFt3_fHpIsaDevCelsius(hp, isaDevCelsius)
+    AeroRho_slugPerFt3_fHpIsaDevCelsius = constRhoo * AeroSigma_fIsaDevCelsiusHp(isaDevCelsius, hp)
+End Function
+
 Function AeroRho_slugPerFt3_fHpIsaDevFahrenheit(hp, isaDevFahrenheit)
     AeroRho_slugPerFt3_fHpIsaDevFahrenheit = constRhoo * AeroSigma_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
 End Function
 
-Function AeroRho_slugPerFt3_fHpIsaDevCelsius(hp, isaDevCelsius)
-    AeroRho_slugPerFt3_fHpIsaDevCelsius = constRhoo * AeroSigma_fIsaDevCelsiusHp(isaDevCelsius, hp)
+Function AeroRhoStdDay_slugPerFt3_fHp(hp)
+    AeroRhoStdDay_slugPerFt3_fHp = constRhoo * AeroSigmaStdDay_fHp(hp)
 End Function
 
 Function AeroTheta_fOatKelvin(oatKelvin)
@@ -338,12 +338,12 @@ Function AeroIsaDev_Celsius_fOatCelsiusHp(oatCelsius, hp)
     AeroIsaDev_Celsius_fOatCelsiusHp = oatCelsius - AeroOatStdDay_Celsius_fHp(hp)
 End Function
 
-Function AeroIsaDev_Celsius_fOatFahrenheitHp(oatFahrenheit, hp)
-    AeroIsaDev_Celsius_fOatFahrenheitHp = AeroConvFahrenheitToKelvin(oatFahrenheit) - AeroOatStdDay_Kelvin_fHp(hp)
-End Function
-
 Function AeroIsaDev_Celsius_fOatRankineHp(oatRankine, hp)
     AeroIsaDev_Celsius_fOatRankineHp = AeroConvRankineToKelvin(oatRankine) - AeroOatStdDay_Kelvin_fHp(hp)
+End Function
+
+Function AeroIsaDev_Celsius_fOatFahrenheitHp(oatFahrenheit, hp)
+    AeroIsaDev_Celsius_fOatFahrenheitHp = AeroConvFahrenheitToKelvin(oatFahrenheit) - AeroOatStdDay_Kelvin_fHp(hp)
 End Function
 
 Function AeroIsaDev_Fahrenheit_fOatKelvinHp(oatKelvin, hp)
@@ -354,28 +354,32 @@ Function AeroIsaDev_Fahrenheit_fOatCelsiusHp(oatCelsius, hp)
     AeroIsaDev_Fahrenheit_fOatCelsiusHp = AeroConvCelsiusToRankine(oatCelsius) - AeroOatStdDay_Rankine_fHp(hp)
 End Function
 
-Function AeroIsaDev_Fahrenheit_fOatFahrenheitHp(oatFahrenheit, hp)
-    AeroIsaDev_Fahrenheit_fOatFahrenheitHp = oatFahrenheit - AeroOatStdDay_Fahrenheit_fHp(hp)
-End Function
-
 Function AeroIsaDev_Fahrenheit_fOatRankineHp(oatRankine, hp)
     AeroIsaDev_Fahrenheit_fOatRankineHp = oatRankine - AeroOatStdDay_Rankine_fHp(hp)
 End Function
 
-Function AeroOat_Celsius_fIsaDevCelsiusHp(isaDevCelsius, hp)
-    AeroOat_Celsius_fIsaDevCelsiusHp = AeroOatStdDay_Celsius_fHp(hp) + isaDevCelsius
+Function AeroIsaDev_Fahrenheit_fOatFahrenheitHp(oatFahrenheit, hp)
+    AeroIsaDev_Fahrenheit_fOatFahrenheitHp = oatFahrenheit - AeroOatStdDay_Fahrenheit_fHp(hp)
 End Function
 
 Function AeroOat_Kelvin_fIsaDevCelsiusHp(isaDevCelsius, hp)
     AeroOat_Kelvin_fIsaDevCelsiusHp = AeroOatStdDay_Kelvin_fHp(hp) + isaDevCelsius
 End Function
 
-Function AeroOat_Fahrenheit_fIsaDevCelsiusHp(isaDevCelsius, hp)
-    AeroOat_Fahrenheit_fIsaDevCelsiusHp = AeroOatStdDay_Fahrenheit_fHp(hp) + isaDevCelsius * constConvKelvinToRankine
+Function AeroOat_Celsius_fIsaDevCelsiusHp(isaDevCelsius, hp)
+    AeroOat_Celsius_fIsaDevCelsiusHp = AeroOatStdDay_Celsius_fHp(hp) + isaDevCelsius
 End Function
 
 Function AeroOat_Rankine_fIsaDevCelsiusHp(isaDevCelsius, hp)
     AeroOat_Rankine_fIsaDevCelsiusHp = AeroOatStdDay_Rankine_fHp(hp) + isaDevCelsius * constConvKelvinToRankine
+End Function
+
+Function AeroOat_Fahrenheit_fIsaDevCelsiusHp(isaDevCelsius, hp)
+    AeroOat_Fahrenheit_fIsaDevCelsiusHp = AeroOatStdDay_Fahrenheit_fHp(hp) + isaDevCelsius * constConvKelvinToRankine
+End Function
+
+Function AeroSpdSnd_ftPerSec_fIsaDevCelsiusHp(isaDevCelsius, hp)
+    AeroSpdSnd_ftPerSec_fIsaDevCelsiusHp = AeroSpdSnd_ftPerSec_fOatKelvin(AeroOat_Kelvin_fIsaDevCelsiusHp(isaDevCelsius, hp))
 End Function
 
 Function AeroSpdSnd_kts_fIsaDevCelsiusHp(isaDevCelsius, hp)
@@ -386,16 +390,12 @@ Function AeroSpdSnd_milePerHr_fIsaDevCelsiusHp(isaDevCelsius, hp)
     AeroSpdSnd_milePerHr_fIsaDevCelsiusHp = AeroSpdSnd_milePerHr_fOatKelvin(AeroOat_Kelvin_fIsaDevCelsiusHp(isaDevCelsius, hp))
 End Function
 
-Function AeroSpdSnd_kmPerHr_fIsaDevCelsiusHp(isaDevCelsius, hp)
-    AeroSpdSnd_kmPerHr_fIsaDevCelsiusHp = AeroSpdSnd_kmPerHr_fOatKelvin(AeroOat_Kelvin_fIsaDevCelsiusHp(isaDevCelsius, hp))
-End Function
-
-Function AeroSpdSnd_ftPerSec_fIsaDevCelsiusHp(isaDevCelsius, hp)
-    AeroSpdSnd_ftPerSec_fIsaDevCelsiusHp = AeroSpdSnd_ftPerSec_fOatKelvin(AeroOat_Kelvin_fIsaDevCelsiusHp(isaDevCelsius, hp))
-End Function
-
 Function AeroSpdSnd_meterPerSec_fIsaDevCelsiusHp(isaDevCelsius, hp)
     AeroSpdSnd_meterPerSec_fIsaDevCelsiusHp = AeroSpdSnd_meterPerSec_fOatKelvin(AeroOat_Kelvin_fIsaDevCelsiusHp(isaDevCelsius, hp))
+End Function
+
+Function AeroSpdSnd_kmPerHr_fIsaDevCelsiusHp(isaDevCelsius, hp)
+    AeroSpdSnd_kmPerHr_fIsaDevCelsiusHp = AeroSpdSnd_kmPerHr_fOatKelvin(AeroOat_Kelvin_fIsaDevCelsiusHp(isaDevCelsius, hp))
 End Function
 
 Function AeroTheta_fIsaDevCelsiusHp(isaDevCelsius, hp)
@@ -410,20 +410,24 @@ Function AeroIsaDev_Fahrenheit_fIsaDevCelsius(isaDevCelsius)
     AeroIsaDev_Fahrenheit_fIsaDevCelsius = isaDevCelsius * constConvKelvinToRankine
 End Function
 
+Function AeroOat_Kelvin_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
+    AeroOat_Kelvin_fIsaDevFahrenheitHp = AeroOatStdDay_Kelvin_fHp(hp) + isaDevFahrenheit / constConvKelvinToRankine
+End Function
+
 Function AeroOat_Celsius_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
     AeroOat_Celsius_fIsaDevFahrenheitHp = AeroOatStdDay_Celsius_fHp(hp) + isaDevFahrenheit / constConvKelvinToRankine
 End Function
 
-Function AeroOat_Kelvin_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
-    AeroOat_Kelvin_fIsaDevFahrenheitHp = AeroOatStdDay_Kelvin_fHp(hp) + isaDevFahrenheit / constConvKelvinToRankine
+Function AeroOat_Rankine_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
+    AeroOat_Rankine_fIsaDevFahrenheitHp = AeroOatStdDay_Rankine_fHp(hp) + isaDevFahrenheit
 End Function
 
 Function AeroOat_Fahrenheit_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
     AeroOat_Fahrenheit_fIsaDevFahrenheitHp = AeroOatStdDay_Fahrenheit_fHp(hp) + isaDevFahrenheit
 End Function
 
-Function AeroOat_Rankine_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
-    AeroOat_Rankine_fIsaDevFahrenheitHp = AeroOatStdDay_Rankine_fHp(hp) + isaDevFahrenheit
+Function AeroSpdSnd_ftPerSec_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
+    AeroSpdSnd_ftPerSec_fIsaDevFahrenheitHp = AeroSpdSnd_ftPerSec_fOatRankine(AeroOat_Rankine_fIsaDevFahrenheitHp(isaDevFahrenheit, hp))
 End Function
 
 Function AeroSpdSnd_kts_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
@@ -434,16 +438,12 @@ Function AeroSpdSnd_milePerHr_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
     AeroSpdSnd_milePerHr_fIsaDevFahrenheitHp = AeroSpdSnd_milePerHr_fOatRankine(AeroOat_Rankine_fIsaDevFahrenheitHp(isaDevFahrenheit, hp))
 End Function
 
-Function AeroSpdSnd_kmPerHr_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
-    AeroSpdSnd_kmPerHr_fIsaDevFahrenheitHp = AeroSpdSnd_kmPerHr_fOatRankine(AeroOat_Rankine_fIsaDevFahrenheitHp(isaDevFahrenheit, hp))
-End Function
-
-Function AeroSpdSnd_ftPerSec_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
-    AeroSpdSnd_ftPerSec_fIsaDevFahrenheitHp = AeroSpdSnd_ftPerSec_fOatRankine(AeroOat_Rankine_fIsaDevFahrenheitHp(isaDevFahrenheit, hp))
-End Function
-
 Function AeroSpdSnd_meterPerSec_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
     AeroSpdSnd_meterPerSec_fIsaDevFahrenheitHp = AeroSpdSnd_meterPerSec_fOatRankine(AeroOat_Rankine_fIsaDevFahrenheitHp(isaDevFahrenheit, hp))
+End Function
+
+Function AeroSpdSnd_kmPerHr_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
+    AeroSpdSnd_kmPerHr_fIsaDevFahrenheitHp = AeroSpdSnd_kmPerHr_fOatRankine(AeroOat_Rankine_fIsaDevFahrenheitHp(isaDevFahrenheit, hp))
 End Function
 
 Function AeroTheta_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
@@ -458,20 +458,20 @@ Function AeroIsaDev_Celsius_fIsaDevFahrenheit(isaDevFahrenheit)
     AeroIsaDev_Celsius_fIsaDevFahrenheit = isaDevFahrenheit / constConvKelvinToRankine
 End Function
 
-Function AeroSigma_fOatCelsiusHp(oatCelsius, hp)
-    AeroSigma_fOatCelsiusHp = AeroDelta_fHp(hp) / AeroTheta_fOatCelsius(oatCelsius)
-End Function
-
 Function AeroSigma_fOatKelvinHp(oatKelvin, hp)
     AeroSigma_fOatKelvinHp = AeroDelta_fHp(hp) / AeroTheta_fOatKelvin(oatKelvin)
 End Function
 
-Function AeroSigma_fOatFahrenheitHp(oatFahrenheit, hp)
-    AeroSigma_fOatFahrenheitHp = AeroDelta_fHp(hp) / AeroTheta_fOatFahrenheit(oatFahrenheit)
+Function AeroSigma_fOatCelsiusHp(oatCelsius, hp)
+    AeroSigma_fOatCelsiusHp = AeroDelta_fHp(hp) / AeroTheta_fOatCelsius(oatCelsius)
 End Function
 
 Function AeroSigma_fOatRankineHp(oatRankine, hp)
     AeroSigma_fOatRankineHp = AeroDelta_fHp(hp) / AeroTheta_fOatRankine(oatRankine)
+End Function
+
+Function AeroSigma_fOatFahrenheitHp(oatFahrenheit, hp)
+    AeroSigma_fOatFahrenheitHp = AeroDelta_fHp(hp) / AeroTheta_fOatFahrenheit(oatFahrenheit)
 End Function
 
 Function AeroMach_fHpKcas(hp, kcas)
@@ -546,20 +546,20 @@ Function AeroKtasStdDay_fHpQ(hp, q)
     AeroKtasStdDay_fHpQ = constConvFtPerSecToKts * (2 * q / (AeroRhoStdDay_slugPerFt3_fHp(hp))) ^ 0.5
 End Function
 
-Function AeroKtas_fHpQOatCelsius(hp, q, oatCelsius)
-    AeroKtas_fHpQOatCelsius = AeroMach_fHpQ(hp, q) * AeroSpdSnd_kts_fOatCelsius(oatCelsius)
-End Function
-
 Function AeroKtas_fHpQOatKelvin(hp, q, oatKelvin)
     AeroKtas_fHpQOatKelvin = AeroMach_fHpQ(hp, q) * AeroSpdSnd_kts_fOatKelvin(oatKelvin)
 End Function
 
-Function AeroKtas_fHpQOatFahrenheit(hp, q, oatFahrenheit)
-    AeroKtas_fHpQOatFahrenheit = AeroMach_fHpQ(hp, q) * AeroSpdSnd_kts_fOatFahrenheit(oatFahrenheit)
+Function AeroKtas_fHpQOatCelsius(hp, q, oatCelsius)
+    AeroKtas_fHpQOatCelsius = AeroMach_fHpQ(hp, q) * AeroSpdSnd_kts_fOatCelsius(oatCelsius)
 End Function
 
 Function AeroKtas_fHpQOatRankine(hp, q, oatRankine)
     AeroKtas_fHpQOatRankine = AeroMach_fHpQ(hp, q) * AeroSpdSnd_kts_fOatRankine(oatRankine)
+End Function
+
+Function AeroKtas_fHpQOatFahrenheit(hp, q, oatFahrenheit)
+    AeroKtas_fHpQOatFahrenheit = AeroMach_fHpQ(hp, q) * AeroSpdSnd_kts_fOatFahrenheit(oatFahrenheit)
 End Function
 
 Function AeroKtas_fHpQIsaDevCelsius(hp, q, isaDevCelsius)
@@ -574,20 +574,20 @@ Function AeroKtasStdDay_fHpQc(hp, qc)
     AeroKtasStdDay_fHpQc = AeroMach_fHpQc(hp, qc) * AeroSpdSndStdDay_kts_fHp(hp)
 End Function
 
-Function AeroKtas_fHpQcOatCelsius(hp, qc, oatCelsius)
-    AeroKtas_fHpQcOatCelsius = AeroMach_fHpQc(hp, qc) * AeroSpdSnd_kts_fOatCelsius(oatCelsius)
-End Function
-
-Function AeroKtas_fHpQcOatFahrenheit(hp, qc, oatFahrenheit)
-    AeroKtas_fHpQcOatFahrenheit = AeroMach_fHpQc(hp, qc) * AeroSpdSnd_kts_fOatFahrenheit(oatFahrenheit)
-End Function
-
 Function AeroKtas_fHpQcOatKelvin(hp, qc, oatKelvin)
     AeroKtas_fHpQcOatKelvin = AeroMach_fHpQc(hp, qc) * AeroSpdSnd_kts_fOatKelvin(oatKelvin)
 End Function
 
+Function AeroKtas_fHpQcOatCelsius(hp, qc, oatCelsius)
+    AeroKtas_fHpQcOatCelsius = AeroMach_fHpQc(hp, qc) * AeroSpdSnd_kts_fOatCelsius(oatCelsius)
+End Function
+
 Function AeroKtas_fHpQcOatRankine(hp, qc, oatRankine)
     AeroKtas_fHpQcOatRankine = AeroMach_fHpQc(hp, qc) * AeroSpdSnd_kts_fOatRankine(oatRankine)
+End Function
+
+Function AeroKtas_fHpQcOatFahrenheit(hp, qc, oatFahrenheit)
+    AeroKtas_fHpQcOatFahrenheit = AeroMach_fHpQc(hp, qc) * AeroSpdSnd_kts_fOatFahrenheit(oatFahrenheit)
 End Function
 
 Function AeroKtas_fHpQcIsaDevCelsius(hp, qc, isaDevCelsius)
@@ -732,21 +732,21 @@ Function AeroKcas_fHpQ(hp, q)
     AeroKcas_fHpQ = AeroKcas_fHpMach(hp, mach)
 End Function
 
+Function AeroViscDyn_SlugPerFtSec_fTheta(theta)
+  AeroViscDyn_SlugPerFtSec_fTheta = AeroViscDyn_kgPerMeterSec_fTheta(theta) / (constConvLbfToNewton / constConvFtToMeter ^ 2)
+End Function
+
 Function AeroViscDyn_kgPerMeterSec_fTheta(theta)
   t = theta * constTo
   AeroViscDyn_kgPerMeterSec_fTheta = constBetaVisc * (t * t * t) ^ 0.5 / (t + constSuth) 'Dynamic viscosity, mu, in kg/(m-sec)
 End Function
 
-Function AeroViscDyn_SlugPerFtSec_fTheta(theta)
-  AeroViscDyn_SlugPerFtSec_fTheta = AeroViscDyn_kgPerMeterSec_fTheta(theta) / (constConvLbfToNewton / constConvFtToMeter ^ 2)
+Function AeroViscKin_ft2PerSec_fSigmaTheta(sigma, theta)
+  AeroViscKin_ft2PerSec_fSigmaTheta = AeroViscDyn_SlugPerFtSec_fTheta(theta) / (sigma * constRhoo)
 End Function
 
 Function AeroViscKin_meter2PerSec_fSigmaTheta(sigma, theta)
   AeroViscKin_meter2PerSec_fSigmaTheta = AeroViscDyn_kgPerMeterSec_fTheta(theta) / (sigma * constRhoo * constConvLbfToNewton / constConvFtToMeter ^ 4)
-End Function
-
-Function AeroViscKin_ft2PerSec_fSigmaTheta(sigma, theta)
-  AeroViscKin_ft2PerSec_fSigmaTheta = AeroViscDyn_SlugPerFtSec_fTheta(theta) / (sigma * constRhoo)
 End Function
 
 Function AeroRePerFtStdDay_fHpMach(hp, mach)
@@ -755,28 +755,28 @@ Function AeroRePerFtStdDay_fHpMach(hp, mach)
     AeroRePerFtStdDay_fHpMach = v / kinVisc
 End Function
 
-Function AeroRePerFt_fHpMachOatCelsius(hp, mach, oatCelsius)
-    v = mach * AeroSpdSnd_ftPerSec_fOatCelsius(oatCelsius)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatCelsiusHp(oatCelsius, hp), AeroTheta_fOatCelsius(oatCelsius))
-    AeroRePerFt_fHpMachOatCelsius = v / kinVisc
-End Function
-
 Function AeroRePerFt_fHpMachOatKelvin(hp, mach, oatKelvin)
     v = mach * AeroSpdSnd_ftPerSec_fOatKelvin(oatKelvin)
     kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatKelvinHp(oatKelvin, hp), AeroTheta_fOatKelvin(oatKelvin))
     AeroRePerFt_fHpMachOatKelvin = v / kinVisc
 End Function
 
-Function AeroRePerFt_fHpMachOatFahrenheit(hp, mach, oatFahrenheit)
-    v = mach * AeroSpdSnd_ftPerSec_fOatFahrenheit(oatFahrenheit)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatFahrenheitHp(oatFahrenheit, hp), AeroTheta_fOatFahrenheit(oatFahrenheit))
-    AeroRePerFt_fHpMachOatFahrenheit = v / kinVisc
+Function AeroRePerFt_fHpMachOatCelsius(hp, mach, oatCelsius)
+    v = mach * AeroSpdSnd_ftPerSec_fOatCelsius(oatCelsius)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatCelsiusHp(oatCelsius, hp), AeroTheta_fOatCelsius(oatCelsius))
+    AeroRePerFt_fHpMachOatCelsius = v / kinVisc
 End Function
 
 Function AeroRePerFt_fHpMachOatRankine(hp, mach, oatRankine)
     v = mach * AeroSpdSnd_ftPerSec_fOatRankine(oatRankine)
     kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatRankineHp(oatRankine, hp), AeroTheta_fOatRankine(oatRankine))
     AeroRePerFt_fHpMachOatRankine = v / kinVisc
+End Function
+
+Function AeroRePerFt_fHpMachOatFahrenheit(hp, mach, oatFahrenheit)
+    v = mach * AeroSpdSnd_ftPerSec_fOatFahrenheit(oatFahrenheit)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatFahrenheitHp(oatFahrenheit, hp), AeroTheta_fOatFahrenheit(oatFahrenheit))
+    AeroRePerFt_fHpMachOatFahrenheit = v / kinVisc
 End Function
 
 Function AeroRePerFt_fHpMachIsaDevCelsius(hp, mach, isaDevCelsius)
@@ -791,14 +791,19 @@ Function AeroRePerFt_fHpMachIsaDevFahrenheit(hp, mach, isaDevFahrenheit)
     AeroRePerFt_fHpMachIsaDevFahrenheit = v / kinVisc
 End Function
 
+Function AeroKtas_fHpKcasOatKelvin(hp, kcas, oatKelvin)
+    mach = AeroMach_fHpKcas(hp, kcas)
+    AeroKtas_fHpKcasOatKelvin = AeroKtas_fMachOatKelvin(mach, oatKelvin)
+End Function
+
 Function AeroKtas_fHpKcasOatCelsius(hp, kcas, oatCelsius)
     mach = AeroMach_fHpKcas(hp, kcas)
     AeroKtas_fHpKcasOatCelsius = AeroKtas_fMachOatCelsius(mach, oatCelsius)
 End Function
 
-Function AeroKtas_fHpKcasOatKelvin(hp, kcas, oatKelvin)
+Function AeroKtas_fHpKcasOatRankine(hp, kcas, oatRankine)
     mach = AeroMach_fHpKcas(hp, kcas)
-    AeroKtas_fHpKcasOatKelvin = AeroKtas_fMachOatKelvin(mach, oatKelvin)
+    AeroKtas_fHpKcasOatRankine = AeroKtas_fMachOatRankine(mach, oatRankine)
 End Function
 
 Function AeroKtas_fHpKcasOatFahrenheit(hp, kcas, oatFahrenheit)
@@ -818,9 +823,9 @@ Function AeroKtas_fHpKcasIsaDevFahrenheit(hp, kcas, isaDevFahrenheit)
     AeroKtas_fHpKcasIsaDevFahrenheit = AeroKtas_fMachOatRankine(mach, oatRankine)
 End Function
 
-Function AeroKtas_fHpKcasOatRankine(hp, kcas, oatRankine)
-    mach = AeroMach_fHpKcas(hp, kcas)
-    AeroKtas_fHpKcasOatRankine = AeroKtas_fMachOatRankine(mach, oatRankine)
+Function AeroKtas_fHpKeasOatKelvin(hp, keas, oatKelvin)
+    mach = AeroMach_fHpKeas(hp, keas)
+    AeroKtas_fHpKeasOatKelvin = AeroKtas_fMachOatKelvin(mach, oatKelvin)
 End Function
 
 Function AeroKtas_fHpKeasOatCelsius(hp, keas, oatCelsius)
@@ -828,9 +833,9 @@ Function AeroKtas_fHpKeasOatCelsius(hp, keas, oatCelsius)
     AeroKtas_fHpKeasOatCelsius = AeroKtas_fMachOatCelsius(mach, oatCelsius)
 End Function
 
-Function AeroKtas_fHpKeasOatKelvin(hp, keas, oatKelvin)
+Function AeroKtas_fHpKeasOatRankine(hp, keas, oatRankine)
     mach = AeroMach_fHpKeas(hp, keas)
-    AeroKtas_fHpKeasOatKelvin = AeroKtas_fMachOatKelvin(mach, oatKelvin)
+    AeroKtas_fHpKeasOatRankine = AeroKtas_fMachOatRankine(mach, oatRankine)
 End Function
 
 Function AeroKtas_fHpKeasOatFahrenheit(hp, keas, oatFahrenheit)
@@ -850,25 +855,20 @@ Function AeroKtas_fHpKeasIsaDevFahrenheit(hp, keas, isaDevFahrenheit)
     AeroKtas_fHpKeasIsaDevFahrenheit = AeroKtas_fMachOatRankine(mach, oatRankine)
 End Function
 
-Function AeroKtas_fHpKeasOatRankine(hp, keas, oatRankine)
-    mach = AeroMach_fHpKeas(hp, keas)
-    AeroKtas_fHpKeasOatRankine = AeroKtas_fMachOatRankine(mach, oatRankine)
+Function AeroKtas_fMachOatKelvin(mach, oatKelvin)
+    AeroKtas_fMachOatKelvin = mach * AeroSpdSnd_kts_fOatKelvin(oatKelvin)
 End Function
 
 Function AeroKtas_fMachOatCelsius(mach, oatCelsius)
     AeroKtas_fMachOatCelsius = mach * AeroSpdSnd_kts_fOatCelsius(oatCelsius)
 End Function
 
-Function AeroKtas_fMachOatKelvin(mach, oatKelvin)
-    AeroKtas_fMachOatKelvin = mach * AeroSpdSnd_kts_fOatKelvin(oatKelvin)
+Function AeroKtas_fMachOatRankine(mach, oatRankine)
+    AeroKtas_fMachOatRankine = mach * AeroSpdSnd_kts_fOatRankine(oatRankine)
 End Function
 
 Function AeroKtas_fMachOatFahrenheit(mach, oatFahrenheit)
     AeroKtas_fMachOatFahrenheit = mach * AeroSpdSnd_kts_fOatFahrenheit(oatFahrenheit)
-End Function
-
-Function AeroKtas_fMachOatRankine(mach, oatRankine)
-    AeroKtas_fMachOatRankine = mach * AeroSpdSnd_kts_fOatRankine(oatRankine)
 End Function
 
 Function AeroKtas_fMachHpIsaDevCelsius(mach, hp, isaDevCelsius)
@@ -879,12 +879,12 @@ Function AeroKtas_fMachHpIsaDevFahrenheit(mach, hp, isaDevFahrenheit)
     AeroKtas_fMachHpIsaDevFahrenheit = mach * AeroSpdSnd_kts_fOatRankine(AeroOatStdDay_Rankine_fHp(hp) + isaDevFahrenheit)
 End Function
 
-Function AeroMach_fKtasOatCelsius(ktas, oatCelsius)
-    AeroMach_fKtasOatCelsius = ktas / AeroSpdSnd_kts_fOatCelsius(oatCelsius)
-End Function
-
 Function AeroMach_fKtasOatKelvin(ktas, oatKelvin)
     AeroMach_fKtasOatKelvin = ktas / AeroSpdSnd_kts_fOatKelvin(oatKelvin)
+End Function
+
+Function AeroMach_fKtasOatCelsius(ktas, oatCelsius)
+    AeroMach_fKtasOatCelsius = ktas / AeroSpdSnd_kts_fOatCelsius(oatCelsius)
 End Function
 
 Function AeroMach_fKtasOatRankine(ktas, oatRankine)
@@ -905,14 +905,14 @@ Function AeroMach_fHpKtasIsaDevFahrenheit(hp, ktas, isaDevFahrenheit)
     AeroMach_fHpKtasIsaDevFahrenheit = ktas / AeroSpdSnd_kts_fOatFahrenheit(oatFahrenheit)
 End Function
 
-Function AeroKeas_fHpKtasOatCelsius(hp, ktas, oatCelsius)
-    mach = AeroMach_fKtasOatCelsius(ktas, oatCelsius)
-    AeroKeas_fHpKtasOatCelsius = AeroKeas_fHpMach(hp, mach)
-End Function
-
 Function AeroKeas_fHpKtasOatKelvin(hp, ktas, oatKelvin)
     mach = AeroMach_fKtasOatKelvin(ktas, oatKelvin)
     AeroKeas_fHpKtasOatKelvin = AeroKeas_fHpMach(hp, mach)
+End Function
+
+Function AeroKeas_fHpKtasOatCelsius(hp, ktas, oatCelsius)
+    mach = AeroMach_fKtasOatCelsius(ktas, oatCelsius)
+    AeroKeas_fHpKtasOatCelsius = AeroKeas_fHpMach(hp, mach)
 End Function
 
 Function AeroKeas_fHpKtasOatRankine(hp, ktas, oatRankine)
@@ -935,14 +935,14 @@ Function AeroKeas_fHpKtasIsaDevFahrenheit(hp, ktas, isaDevFahrenheit)
     AeroKeas_fHpKtasIsaDevFahrenheit = AeroKeas_fHpMach(hp, mach)
 End Function
 
-Function AeroKcas_fHpKtasOatCelsius(hp, ktas, oatCelsius)
-    mach = AeroMach_fKtasOatCelsius(ktas, oatCelsius)
-    AeroKcas_fHpKtasOatCelsius = AeroKcas_fHpMach(hp, mach)
-End Function
-
 Function AeroKcas_fHpKtasOatKelvin(hp, ktas, oatKelvin)
     mach = AeroMach_fKtasOatKelvin(ktas, oatKelvin)
     AeroKcas_fHpKtasOatKelvin = AeroKcas_fHpMach(hp, mach)
+End Function
+
+Function AeroKcas_fHpKtasOatCelsius(hp, ktas, oatCelsius)
+    mach = AeroMach_fKtasOatCelsius(ktas, oatCelsius)
+    AeroKcas_fHpKtasOatCelsius = AeroKcas_fHpMach(hp, mach)
 End Function
 
 Function AeroKcas_fHpKtasOatRankine(hp, ktas, oatRankine)
@@ -965,14 +965,14 @@ Function AeroKcas_fHpKtasIsaDevFahrenheit(hp, ktas, isaDevFahrenheit)
     AeroKcas_fHpKtasIsaDevFahrenheit = AeroKcas_fHpMach(hp, mach)
 End Function
 
-Function AeroQ_lbfPerFt2_fHpKtasOatCelsius(hp, ktas, oatCelsius)
-    mach = AeroMach_fKtasOatCelsius(ktas, oatCelsius)
-    AeroQ_lbfPerFt2_fHpKtasOatCelsius = AeroQ_lbfPerFt2_fHpMach(hp, mach)
-End Function
-
 Function AeroQ_lbfPerFt2_fHpKtasOatKelvin(hp, ktas, oatKelvin)
     mach = AeroMach_fKtasOatKelvin(ktas, oatKelvin)
     AeroQ_lbfPerFt2_fHpKtasOatKelvin = AeroQ_lbfPerFt2_fHpMach(hp, mach)
+End Function
+
+Function AeroQ_lbfPerFt2_fHpKtasOatCelsius(hp, ktas, oatCelsius)
+    mach = AeroMach_fKtasOatCelsius(ktas, oatCelsius)
+    AeroQ_lbfPerFt2_fHpKtasOatCelsius = AeroQ_lbfPerFt2_fHpMach(hp, mach)
 End Function
 
 Function AeroQ_lbfPerFt2_fHpKtasOatRankine(hp, ktas, oatRankine)
@@ -995,14 +995,14 @@ Function AeroQ_lbfPerFt2_fHpKtasIsaDevFahrenheit(hp, ktas, isaDevFahrenheit)
     AeroQ_lbfPerFt2_fHpKtasIsaDevFahrenheit = AeroQ_lbfPerFt2_fHpMach(hp, mach)
 End Function
 
-Function AeroQc_lbfPerFt2_fHpKtasOatCelsius(hp, ktas, oatCelsius)
-    mach = AeroMach_fKtasOatCelsius(ktas, oatCelsius)
-    AeroQc_lbfPerFt2_fHpKtasOatCelsius = AeroQc_lbfPerFt2_fHpMach(hp, mach)
-End Function
-
 Function AeroQc_lbfPerFt2_fHpKtasOatKelvin(hp, ktas, oatKelvin)
     mach = AeroMach_fKtasOatKelvin(ktas, oatKelvin)
     AeroQc_lbfPerFt2_fHpKtasOatKelvin = AeroQc_lbfPerFt2_fHpMach(hp, mach)
+End Function
+
+Function AeroQc_lbfPerFt2_fHpKtasOatCelsius(hp, ktas, oatCelsius)
+    mach = AeroMach_fKtasOatCelsius(ktas, oatCelsius)
+    AeroQc_lbfPerFt2_fHpKtasOatCelsius = AeroQc_lbfPerFt2_fHpMach(hp, mach)
 End Function
 
 Function AeroQc_lbfPerFt2_fHpKtasOatRankine(hp, ktas, oatRankine)
@@ -1261,40 +1261,12 @@ Function AeroConvFahrenheitToRankine(oatFahrenheit)
     AeroConvFahrenheitToRankine = oatFahrenheit + constZeroDegFahrenheitInRankine
 End Function
 
-Function AeroConvKtsToFtPerSec(kts)
-    AeroConvKtsToFtPerSec = kts / constConvFtPerSecToKts
-End Function
-
 Function AeroConvFtPerSecToKts(ftPerSec)
     AeroConvFtPerSecToKts = ftPerSec * constConvFtPerSecToKts
 End Function
 
-Function AeroConvKtsToMeterPerSec(kts)
-    AeroConvKtsToMeterPerSec = kts / constConvFtPerSecToKts * constConvFtToMeter
-End Function
-
-Function AeroConvKtsToKmPerHr(kts)
-    AeroConvKtsToKmPerHr = kts * constConvNmToMeter / 1000
-End Function
-
-Function AeroConvKtsToMilePerHr(kts)
-    AeroConvKtsToMilePerHr = kts / constConvFtPerSecToKts / constConvMileToFt * constConvHrToSec
-End Function
-
-Function AeroConvMeterPerSecToKts(mPerSec)
-    AeroConvMeterPerSecToKts = mPerSec * constConvFtPerSecToKts / constConvFtToMeter
-End Function
-
-Function AeroConvMeterPerSecToKmPerHr(mPerSec)
-    AeroConvMeterPerSecToKmPerHr = mPerSec * constConvHrToSec / 1000 
-End Function
-
-Function AeroConvMeterPerSecToMilePerHr(mPerSec)
-    AeroConvMeterPerSecToMilePerHr = mPerSec / constConvFtToMeter / constConvMileToFt * constConvHrToSec
-End Function
-
-Function AeroConvMeterPerSecToFtPerSec(mPerSec)
-    AeroConvMeterPerSecToFtPerSec = mPerSec / constConvFtToMeter
+Function AeroConvFtPerSecToMilePerHr(ftPerSec)
+    AeroConvFtPerSecToMilePerHr = ftPerSec * constConvHrToSec / constConvMileToFt
 End Function
 
 Function AeroConvFtPerSecToMeterPerSec(ftPerSec)
@@ -1305,8 +1277,24 @@ Function AeroConvFtPerSecToKmPerHr(ftPerSec)
     AeroConvFtPerSecToKmPerHr = ftPerSec * constConvHrToSec * constConvFtToMeter / 1000
 End Function
 
-Function AeroConvFtPerSecToMilePerHr(ftPerSec)
-    AeroConvFtPerSecToMilePerHr = ftPerSec * constConvHrToSec / constConvMileToFt
+Function AeroConvKtsToFtPerSec(kts)
+    AeroConvKtsToFtPerSec = kts / constConvFtPerSecToKts
+End Function
+
+Function AeroConvKtsToMilePerHr(kts)
+    AeroConvKtsToMilePerHr = kts / constConvFtPerSecToKts / constConvMileToFt * constConvHrToSec
+End Function
+
+Function AeroConvKtsToMeterPerSec(kts)
+    AeroConvKtsToMeterPerSec = kts / constConvFtPerSecToKts * constConvFtToMeter
+End Function
+
+Function AeroConvKtsToKmPerHr(kts)
+    AeroConvKtsToKmPerHr = kts * constConvNmToMeter / 1000
+End Function
+
+Function AeroConvMilePerHrToFtPerSec(milePerHr)
+    AeroConvMilePerHrToFtPerSec = milePerHr * constConvMileToFt / constConvHrToSec
 End Function
 
 Function AeroConvMilePerHrToKts(milePerHr)
@@ -1321,24 +1309,36 @@ Function AeroConvMilePerHrToKmPerHr(milePerHr)
     AeroConvMilePerHrToKmPerHr = milePerHr * constConvMileToFt * constConvFtToMeter / 1000
 End Function
 
-Function AeroConvMilePerHrToFtPerSec(milePerHr)
-    AeroConvMilePerHrToFtPerSec = milePerHr * constConvMileToFt / constConvHrToSec
+Function AeroConvMeterPerSecToFtPerSec(mPerSec)
+    AeroConvMeterPerSecToFtPerSec = mPerSec / constConvFtToMeter
+End Function
+
+Function AeroConvMeterPerSecToKts(mPerSec)
+    AeroConvMeterPerSecToKts = mPerSec * constConvFtPerSecToKts / constConvFtToMeter
+End Function
+
+Function AeroConvMeterPerSecToMilePerHr(mPerSec)
+    AeroConvMeterPerSecToMilePerHr = mPerSec / constConvFtToMeter / constConvMileToFt * constConvHrToSec
+End Function
+
+Function AeroConvMeterPerSecToKmPerHr(mPerSec)
+    AeroConvMeterPerSecToKmPerHr = mPerSec * constConvHrToSec / 1000 
+End Function
+
+Function AeroConvKmPerHrToFtPerSec(kmPerHr)
+    AeroConvKmPerHrToFtPerSec = kmPerHr * 1000 / constConvFtToMeter / constConvHrToSec
 End Function
 
 Function AeroConvKmPerHrToKts(kmPerHr)
     AeroConvKmPerHrToKts = kmPerHr * 1000 / constConvNmToMeter 
 End Function
 
-Function AeroConvKmPerHrToMeterPerSec(kmPerHr)
-    AeroConvKmPerHrToMeterPerSec = kmPerHr * 1000 / constConvHrToSec
-End Function
-
 Function AeroConvKmPerHrToMilePerHr(kmPerHr)
     AeroConvKmPerHrToMilePerHr = kmPerHr * 1000 / constConvFtToMeter / constConvMileToFt
 End Function
 
-Function AeroConvKmPerHrToFtPerSec(kmPerHr)
-    AeroConvKmPerHrToFtPerSec = kmPerHr * 1000 / constConvFtToMeter / constConvHrToSec
+Function AeroConvKmPerHrToMeterPerSec(kmPerHr)
+    AeroConvKmPerHrToMeterPerSec = kmPerHr * 1000 / constConvHrToSec
 End Function
 
 Function AeroConvSlugPerFt3ToKgPerMeter3(density)
@@ -1352,9 +1352,11 @@ End Function
 Function AeroConvLbfPerFt2ToLbfPerInch2(lbfPerFt2)
     AeroConvLbfPerFt2ToLbfPerInch2 = lbfPerFt2 / constConvLbfPerInch2ToLbfPerFt2
 End Function
+
 Function AeroConvLbfPerFt2ToInHg(lbfPerFt2)
     AeroConvLbfPerFt2ToInHg = AeroConvLbfPerFt2ToHPa(lbfPerFt2) / constConvInHgToHectoPascal
 End Function
+
 Function AeroConvLbfPerFt2ToHPa(lbfPerFt2)
     AeroConvLbfPerFt2ToHPa = lbfPerFt2 / constConvFtToMeter ^ 2 * constConvLbfToNewton / 100
 End Function
@@ -1407,6 +1409,10 @@ Function AeroConvGradFtPerNmToPct(ftPerNm)
     AeroConvGradFtPerNmToPct = AeroConvFtToNm(ftPerNm) * 100
 End Function
 
+Function AeroConvGradFtPerNmToDeg(ftPerNm)
+    AeroConvGradFtPerNmToDeg = AeroConvRadToDeg(Atn(AeroConvFtToNm(ftPerNm)))
+End Function
+
 Function AeroConvGradPctToFtPerNm(pct)
     AeroConvGradPctToFtPerNm = AeroConvNmToFt(pct / 100)
 End Function
@@ -1415,16 +1421,20 @@ Function AeroConvGradPctToDeg(pct)
     AeroConvGradPctToDeg = AeroConvRadToDeg(Atn(pct / 100))
 End Function
 
+Function AeroConvGradDegToFtPerNm(deg)
+    AeroConvGradDegToFtPerNm = AeroConvNmToFt(Tan(AeroConvDegToRad(deg)))
+End Function
+
 Function AeroConvGradDegToPct(deg)
     AeroConvGradDegToPct = Tan(AeroConvDegToRad(deg)) * 100
 End Function
 
-Function AeroConvGradFtPerNmToDeg(ftPerNm)
-    AeroConvGradFtPerNmToDeg = AeroConvRadToDeg(Atn(AeroConvFtToNm(ftPerNm)))
+Function AeroConvFtToNm(ft)
+    AeroConvFtToNm = ft * constConvFtToMeter / constConvNmToMeter
 End Function
 
-Function AeroConvGradDegToFtPerNm(deg)
-    AeroConvGradDegToFtPerNm = AeroConvNmToFt(Tan(AeroConvDegToRad(deg)))
+Function AeroConvFtToMile(ft)
+    AeroConvFtToMile = ft / constConvMileToFt
 End Function
 
 Function AeroConvFtToMeter(ft)
@@ -1435,24 +1445,12 @@ Function AeroConvFtToKm(ft)
     AeroConvFtToKm = AeroConvFtToMeter(ft) / 1000
 End Function
 
-Function AeroConvFtToMile(ft)
-    AeroConvFtToMile = ft / constConvMileToFt
+Function AeroConvNmToFt(nm)
+    AeroConvNmToFt = nm * constConvNmToMeter / constConvFtToMeter
 End Function
 
-Function AeroConvMeterToFt(meter)
-    AeroConvMeterToFt = meter / constConvFtToMeter
-End Function
-
-Function AeroConvMeterToNm(meter)
-    AeroConvMeterToNm = meter / constConvNmToMeter
-End Function
-
-Function AeroConvMeterToKm(meter)
-    AeroConvMeterToKm = meter / 1000
-End Function
-
-Function AeroConvMeterToMile(meter)
-    AeroConvMeterToMile = meter / constConvFtToMeter / constConvMileToFt
+Function AeroConvNmToMile(nm)
+    AeroConvNmToMile = AeroConvNmToFt(nm) / constConvMileToFt
 End Function
 
 Function AeroConvNmToMeter(nm)
@@ -1463,14 +1461,50 @@ Function AeroConvNmToKm(nm)
     AeroConvNmToKm = AeroConvNmToMeter(nm) / 1000
 End Function
 
-Function AeroConvNmToMile(nm)
-    AeroConvNmToMile = AeroConvNmToFt(nm) / constConvMileToFt
+Function AeroConvMileToFt(mile)
+	AeroConvMileToFt = mile * constConvMileToFt
 End Function
 
-Function AeroConvFtToNm(ft)
-    AeroConvFtToNm = ft * constConvFtToMeter / constConvNmToMeter
+Function AeroConvMileToNm(mile)
+	AeroConvMileToNm = AeroConvFtToNm(AeroConvMileToFt(mile))
 End Function
 
-Function AeroConvNmToFt(nm)
-    AeroConvNmToFt = nm * constConvNmToMeter / constConvFtToMeter
+Function AeroConvMileToMeter(mile)
+	AeroConvMileToMeter = AeroConvFtToMeter(AeroConvMileToFt(mile))
+End Function
+
+Function AeroConvMileToKm(mile)
+	AeroConvMileToKm = AeroConvFtToKm(AeroConvMileToFt(mile))
+End Function
+
+Function AeroConvMeterToFt(meter)
+    AeroConvMeterToFt = meter / constConvFtToMeter
+End Function
+
+Function AeroConvMeterToNm(meter)
+    AeroConvMeterToNm = meter / constConvNmToMeter
+End Function
+
+Function AeroConvMeterToMile(meter)
+    AeroConvMeterToMile = meter / constConvFtToMeter / constConvMileToFt
+End Function
+
+Function AeroConvMeterToKm(meter)
+    AeroConvMeterToKm = meter / 1000
+End Function
+
+Function AeroConvKmToFt(km)
+	AeroConvKmToFt = AeroConvMeterToFt(AeroConvKmToMeter(km)) 
+End Function
+
+Function AeroConvKmToNm(km)
+	AeroConvKmToNm = AeroConvMeterToNm(AeroConvKmToMeter(km))
+End Function
+
+Function AeroConvKmToMile(km)
+	AeroConvKmToMile = AeroConvMeterToMile(AeroConvKmToMeter(km))
+End Function
+
+Function AeroConvKmToMeter(km)
+	AeroConvKmToMeter = km * 1000
 End Function

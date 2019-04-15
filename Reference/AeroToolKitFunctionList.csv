@@ -62,6 +62,14 @@ CONVERSION,DISTANCE,AeroConvNmToFt,nm,,,,1,Convert nautical miles to feet,nautic
 CONVERSION,DISTANCE,AeroConvNmToMeter,nm,,,,1,Convert nautical miles to meters,nautical miles,meters
 CONVERSION,DISTANCE,AeroConvNmToKm,nm,,,,1,Convert nautical miles to kilometers,nautical miles,kilometers
 CONVERSION,DISTANCE,AeroConvNmToMile,nm,,,,1,Convert nautical miles to statute miles,nautical miles,statute miles
+CONVERSION,DISTANCE,AeroConvMileToFt,mile,,,,1,Convert statute miles to feet,statute miles,feet
+CONVERSION,DISTANCE,AeroConvMileToNm,mile,,,,1,Convert statute miles to nautical miles,statute miles,nautical miles
+CONVERSION,DISTANCE,AeroConvMileToMeter,mile,,,,1,Convert statute miles to meters,statute miles,meters
+CONVERSION,DISTANCE,AeroConvMileToKm,mile,,,,1,Convert statute miles to kilometers,statute miles,kilometers
+CONVERSION,DISTANCE,AeroConvKmToFt,km,,,,1,Convert kilometers to feet,kilometers,feet
+CONVERSION,DISTANCE,AeroConvKmToNm,km,,,,1,Convert kilometers to nautical miles,kilometers,nautical miles
+CONVERSION,DISTANCE,AeroConvKmToMile,km,,,,1,Convert kilometers to statute miles,kilometers,statute miles
+CONVERSION,DISTANCE,AeroConvKmToMeter,km,,,,1,Convert kilometers to meters,kilometers,meters
 CONVERSION,ANGLE,AeroConvRadToDeg,rad,,,,1,Convert radians to degrees,radians,degrees
 CONVERSION,TEMPERATURE,AeroConvRankineToCelsius,oatRankine,,,,1,Convert Rankine to °C,Rankine,°C
 CONVERSION,TEMPERATURE,AeroConvRankineToFahrenheit,oatRankine,,,,1,Convert Rankine to °F,Rankine,°F
