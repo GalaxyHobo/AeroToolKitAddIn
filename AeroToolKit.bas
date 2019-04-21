@@ -1,7 +1,7 @@
 Attribute VB_Name = "AeroToolKit"
 '***************************************************************************
 'Aero Toolkit Add-In for Excel
-'August 2018, Lance Bays, www.veranautics.com
+'Lance Bays, www.veranautics.com
 'Please direct questions, comments, requests, etc., to: veranautics@gmail.com
 '
 'ABOUT:
@@ -23,7 +23,7 @@ Attribute VB_Name = "AeroToolKit"
 'LICENSE:
 'By downloading or using this software you acknowledge the following:
 '
-'Copyright (c) 2018 Lance Bays
+'Copyright (c) 2019 Lance Bays
 '
 'Permission is hereby granted, free of charge, to any person obtaining a copy
 'of this software and associated documentation files (the "Software"), to deal
@@ -474,6 +474,65 @@ Function AeroSigma_fOatFahrenheitHp(oatFahrenheit, hp)
     AeroSigma_fOatFahrenheitHp = AeroDelta_fHp(hp) / AeroTheta_fOatFahrenheit(oatFahrenheit)
 End Function
 
+Function AeroViscDyn_SlugPerFtSec_fTheta(theta)
+  AeroViscDyn_SlugPerFtSec_fTheta = AeroViscDyn_kgPerMeterSec_fTheta(theta) / (constConvLbfToNewton / constConvFtToMeter ^ 2)
+End Function
+
+Function AeroViscDyn_kgPerMeterSec_fTheta(theta)
+  t = theta * constTo
+  AeroViscDyn_kgPerMeterSec_fTheta = constBetaVisc * (t * t * t) ^ 0.5 / (t + constSuth) 'Dynamic viscosity, mu, in kg/(m-sec)
+End Function
+
+Function AeroViscKin_ft2PerSec_fSigmaTheta(sigma, theta)
+  AeroViscKin_ft2PerSec_fSigmaTheta = AeroViscDyn_SlugPerFtSec_fTheta(theta) / (sigma * constRhoo)
+End Function
+
+Function AeroViscKin_meter2PerSec_fSigmaTheta(sigma, theta)
+  AeroViscKin_meter2PerSec_fSigmaTheta = AeroViscDyn_kgPerMeterSec_fTheta(theta) / (sigma * constRhoo * constConvLbfToNewton / constConvFtToMeter ^ 4)
+End Function
+
+Function AeroRePerFtStdDay_fHpMach(hp, mach)
+    v = mach * AeroSpdSndStdDay_ftPerSec_fHp(hp)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigmaStdDay_fHp(hp), AeroThetaStdDay_fHp(hp))
+    AeroRePerFtStdDay_fHpMach = v / kinVisc
+End Function
+
+Function AeroRePerFt_fHpMachOatKelvin(hp, mach, oatKelvin)
+    v = mach * AeroSpdSnd_ftPerSec_fOatKelvin(oatKelvin)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatKelvinHp(oatKelvin, hp), AeroTheta_fOatKelvin(oatKelvin))
+    AeroRePerFt_fHpMachOatKelvin = v / kinVisc
+End Function
+
+Function AeroRePerFt_fHpMachOatCelsius(hp, mach, oatCelsius)
+    v = mach * AeroSpdSnd_ftPerSec_fOatCelsius(oatCelsius)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatCelsiusHp(oatCelsius, hp), AeroTheta_fOatCelsius(oatCelsius))
+    AeroRePerFt_fHpMachOatCelsius = v / kinVisc
+End Function
+
+Function AeroRePerFt_fHpMachOatRankine(hp, mach, oatRankine)
+    v = mach * AeroSpdSnd_ftPerSec_fOatRankine(oatRankine)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatRankineHp(oatRankine, hp), AeroTheta_fOatRankine(oatRankine))
+    AeroRePerFt_fHpMachOatRankine = v / kinVisc
+End Function
+
+Function AeroRePerFt_fHpMachOatFahrenheit(hp, mach, oatFahrenheit)
+    v = mach * AeroSpdSnd_ftPerSec_fOatFahrenheit(oatFahrenheit)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatFahrenheitHp(oatFahrenheit, hp), AeroTheta_fOatFahrenheit(oatFahrenheit))
+    AeroRePerFt_fHpMachOatFahrenheit = v / kinVisc
+End Function
+
+Function AeroRePerFt_fHpMachIsaDevCelsius(hp, mach, isaDevCelsius)
+    v = mach * AeroSpdSnd_ftPerSec_fIsaDevCelsiusHp(isaDevCelsius, hp)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fIsaDevCelsiusHp(isaDevCelsius, hp), AeroTheta_fIsaDevCelsiusHp(isaDevCelsius, hp))
+    AeroRePerFt_fHpMachIsaDevCelsius = v / kinVisc
+End Function
+
+Function AeroRePerFt_fHpMachIsaDevFahrenheit(hp, mach, isaDevFahrenheit)
+    v = mach * AeroSpdSnd_ftPerSec_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
+    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fIsaDevFahrenheitHp(isaDevFahrenheit, hp), AeroTheta_fIsaDevFahrenheitHp(isaDevFahrenheit, hp))
+    AeroRePerFt_fHpMachIsaDevFahrenheit = v / kinVisc
+End Function
+
 Function AeroMach_fHpKcas(hp, kcas)
     deltaPressureStatic = AeroDelta_fHp(hp)
     mach = (2 / (constGammaAir - 1) * ((1 / deltaPressureStatic * ((1 + (constGammaAir - 1) / 2 * (kcas / constAo) ^ 2) _
@@ -723,65 +782,6 @@ End Function
 Function AeroKcas_fHpQ(hp, q)
     mach = AeroMach_fHpQ(hp, q)
     AeroKcas_fHpQ = AeroKcas_fHpMach(hp, mach)
-End Function
-
-Function AeroViscDyn_SlugPerFtSec_fTheta(theta)
-  AeroViscDyn_SlugPerFtSec_fTheta = AeroViscDyn_kgPerMeterSec_fTheta(theta) / (constConvLbfToNewton / constConvFtToMeter ^ 2)
-End Function
-
-Function AeroViscDyn_kgPerMeterSec_fTheta(theta)
-  t = theta * constTo
-  AeroViscDyn_kgPerMeterSec_fTheta = constBetaVisc * (t * t * t) ^ 0.5 / (t + constSuth) 'Dynamic viscosity, mu, in kg/(m-sec)
-End Function
-
-Function AeroViscKin_ft2PerSec_fSigmaTheta(sigma, theta)
-  AeroViscKin_ft2PerSec_fSigmaTheta = AeroViscDyn_SlugPerFtSec_fTheta(theta) / (sigma * constRhoo)
-End Function
-
-Function AeroViscKin_meter2PerSec_fSigmaTheta(sigma, theta)
-  AeroViscKin_meter2PerSec_fSigmaTheta = AeroViscDyn_kgPerMeterSec_fTheta(theta) / (sigma * constRhoo * constConvLbfToNewton / constConvFtToMeter ^ 4)
-End Function
-
-Function AeroRePerFtStdDay_fHpMach(hp, mach)
-    v = mach * AeroSpdSndStdDay_ftPerSec_fHp(hp)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigmaStdDay_fHp(hp), AeroThetaStdDay_fHp(hp))
-    AeroRePerFtStdDay_fHpMach = v / kinVisc
-End Function
-
-Function AeroRePerFt_fHpMachOatKelvin(hp, mach, oatKelvin)
-    v = mach * AeroSpdSnd_ftPerSec_fOatKelvin(oatKelvin)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatKelvinHp(oatKelvin, hp), AeroTheta_fOatKelvin(oatKelvin))
-    AeroRePerFt_fHpMachOatKelvin = v / kinVisc
-End Function
-
-Function AeroRePerFt_fHpMachOatCelsius(hp, mach, oatCelsius)
-    v = mach * AeroSpdSnd_ftPerSec_fOatCelsius(oatCelsius)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatCelsiusHp(oatCelsius, hp), AeroTheta_fOatCelsius(oatCelsius))
-    AeroRePerFt_fHpMachOatCelsius = v / kinVisc
-End Function
-
-Function AeroRePerFt_fHpMachOatRankine(hp, mach, oatRankine)
-    v = mach * AeroSpdSnd_ftPerSec_fOatRankine(oatRankine)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatRankineHp(oatRankine, hp), AeroTheta_fOatRankine(oatRankine))
-    AeroRePerFt_fHpMachOatRankine = v / kinVisc
-End Function
-
-Function AeroRePerFt_fHpMachOatFahrenheit(hp, mach, oatFahrenheit)
-    v = mach * AeroSpdSnd_ftPerSec_fOatFahrenheit(oatFahrenheit)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fOatFahrenheitHp(oatFahrenheit, hp), AeroTheta_fOatFahrenheit(oatFahrenheit))
-    AeroRePerFt_fHpMachOatFahrenheit = v / kinVisc
-End Function
-
-Function AeroRePerFt_fHpMachIsaDevCelsius(hp, mach, isaDevCelsius)
-    v = mach * AeroSpdSnd_ftPerSec_fIsaDevCelsiusHp(isaDevCelsius, hp)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fIsaDevCelsiusHp(isaDevCelsius, hp), AeroTheta_fIsaDevCelsiusHp(isaDevCelsius, hp))
-    AeroRePerFt_fHpMachIsaDevCelsius = v / kinVisc
-End Function
-
-Function AeroRePerFt_fHpMachIsaDevFahrenheit(hp, mach, isaDevFahrenheit)
-    v = mach * AeroSpdSnd_ftPerSec_fIsaDevFahrenheitHp(isaDevFahrenheit, hp)
-    kinVisc = AeroViscKin_ft2PerSec_fSigmaTheta(AeroSigma_fIsaDevFahrenheitHp(isaDevFahrenheit, hp), AeroTheta_fIsaDevFahrenheitHp(isaDevFahrenheit, hp))
-    AeroRePerFt_fHpMachIsaDevFahrenheit = v / kinVisc
 End Function
 
 Function AeroKtas_fHpKcasOatKelvin(hp, kcas, oatKelvin)
@@ -1455,19 +1455,19 @@ Function AeroConvNmToKm(nm)
 End Function
 
 Function AeroConvMileToFt(mile)
-	AeroConvMileToFt = mile * constConvMileToFt
+    AeroConvMileToFt = mile * constConvMileToFt
 End Function
 
 Function AeroConvMileToNm(mile)
-	AeroConvMileToNm = AeroConvFtToNm(AeroConvMileToFt(mile))
+    AeroConvMileToNm = AeroConvFtToNm(AeroConvMileToFt(mile))
 End Function
 
 Function AeroConvMileToMeter(mile)
-	AeroConvMileToMeter = AeroConvFtToMeter(AeroConvMileToFt(mile))
+    AeroConvMileToMeter = AeroConvFtToMeter(AeroConvMileToFt(mile))
 End Function
 
 Function AeroConvMileToKm(mile)
-	AeroConvMileToKm = AeroConvFtToKm(AeroConvMileToFt(mile))
+    AeroConvMileToKm = AeroConvFtToKm(AeroConvMileToFt(mile))
 End Function
 
 Function AeroConvMeterToFt(meter)
@@ -1487,17 +1487,17 @@ Function AeroConvMeterToKm(meter)
 End Function
 
 Function AeroConvKmToFt(km)
-	AeroConvKmToFt = AeroConvMeterToFt(AeroConvKmToMeter(km)) 
+    AeroConvKmToFt = AeroConvMeterToFt(AeroConvKmToMeter(km)) 
 End Function
 
 Function AeroConvKmToNm(km)
-	AeroConvKmToNm = AeroConvMeterToNm(AeroConvKmToMeter(km))
+    AeroConvKmToNm = AeroConvMeterToNm(AeroConvKmToMeter(km))
 End Function
 
 Function AeroConvKmToMile(km)
-	AeroConvKmToMile = AeroConvMeterToMile(AeroConvKmToMeter(km))
+    AeroConvKmToMile = AeroConvMeterToMile(AeroConvKmToMeter(km))
 End Function
 
 Function AeroConvKmToMeter(km)
-	AeroConvKmToMeter = km * 1000
+    AeroConvKmToMeter = km * 1000
 End Function
