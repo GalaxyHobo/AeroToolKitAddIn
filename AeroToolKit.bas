@@ -676,13 +676,6 @@ Function AeroQ_lbfPerFt2_fHpQc(hp, qc)
     AeroQ_lbfPerFt2_fHpQc = AeroQ_lbfPerFt2_fHpMach(hp, mach)
 End Function
 
-Function AeroSubsonicKeasOverKcas_fHpQc(hp, qc)
-    pStatic = AeroPstatic_lbfPerFt2_fHp(hp)
-    'Ref Herrington, Ch. 1, eqn 2.18:
-    AeroSubsonicKeasOverKcas_fHpQc = ((((qc / pStatic + 1) ^ ((constGammaAir - 1) / constGammaAir) - 1) / _
-    ((qc / constPo + 1) ^ ((constGammaAir - 1) / constGammaAir) - 1)) * pStatic / constPo) ^ 0.5
-End Function
-
 Function AeroCompCorrnKcasMinusKeas_fHpKeas(hp, keas)
     AeroCompCorrnKcasMinusKeas_fHpKeas = AeroKcas_fHpKeas(hp, keas) - keas
 End Function

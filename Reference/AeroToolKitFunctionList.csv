@@ -270,7 +270,6 @@ STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_kmPerHr_fHp,hp,,,,1,"Speed o
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_kts_fHp,hp,,,,1,"Speed of sound in knots (standard day only), f(Hp)",feet,knots
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_meterPerSec_fHp,hp,,,,1,"Speed of sound in meters/sec (standard day only), f(Hp)",feet,meters/sec
 STANDARD ATMOSPHERE,SPEED OF SOUND,AeroSpdSndStdDay_milePerHr_fHp,hp,,,,1,"Speed of sound in miles/hr (standard day only), f(Hp)",feet,MPH
-COMP CORRECTION,KEAS OVER KCAS,AeroSubsonicKeasOverKcas_fHpQc,hp, qc,,,2,"Ratio EAS to CAS (EAS/CAS), f(Hp, compressible Q)","feet, lb/sq.ft",NA
 ALTITUDE,TAPELINE,AeroTapeAlt_ft_fGeoptlAlt,hGeopotlInFt,,,,1,Tapeline alt from geopotential alt (units feet),feet,feet
 ALTITUDE,TAPELINE,AeroTapeAlt_meter_fGeoptlAlt,hGeopotlInMeter,,,,1,Tapeline alt from geopotential alt (units meters),meters,meters
 STANDARD ATMOSPHERE,THETA,AeroTheta_fIsaDevCelsiusHp,isaDevCelsius, hp,,,2,"Temperature ratio, theta, T/To, f(ISA dev in °C, Hp)","°C, feet",NA
