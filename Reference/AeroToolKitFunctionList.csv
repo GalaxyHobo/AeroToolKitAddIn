@@ -31,7 +31,7 @@ CONVERSION,PRESSURE,AeroConvInHgToLbfPerInch2,inHg,,,,1,Convert inches Hg to lbf
 CONVERSION,TEMPERATURE,AeroConvKelvinToCelsius,oatKelvin,,,,1,Convert Kelvin to °C,Kelvin,°C
 CONVERSION,TEMPERATURE,AeroConvKelvinToFahrenheit,oatKelvin,,,,1,Convert Kelvin to °F,Kelvin,°F
 CONVERSION,TEMPERATURE,AeroConvKelvinToRankine,oatKelvin,,,,1,Convert Kelvin to Rankine,Kelvin,Rankine
-CONVERSION,DENSITY,AeroConvKgPerMeter3ToSlugPerFt3,density,,,,1,Convert kg/cu.meter to slug/cu.ft,kg/cu.meter,slug/cu.ft
+CONVERSION,DENSITY,AeroConvKgPerMeter3ToSlugPerFt3,kgPerMeter3,,,,1,Convert kg/cu.meter to slug/cu.ft,kg/cu.meter,slug/cu.ft
 CONVERSION,SPEED,AeroConvKtsToFtPerSec,kts,,,,1,Convert knots to feet/sec,knots,feet/sec
 CONVERSION,SPEED,AeroConvKtsToMeterPerSec,kts,,,,1,Convert knots to meters/sec,knots,meters/sec
 CONVERSION,SPEED,AeroConvKtsToKmPerHr,kts,,,,1,Convert knots to km/hr,knots,km/hr
@@ -74,7 +74,19 @@ CONVERSION,ANGLE,AeroConvRadToDeg,rad,,,,1,Convert radians to degrees,radians,de
 CONVERSION,TEMPERATURE,AeroConvRankineToCelsius,oatRankine,,,,1,Convert Rankine to °C,Rankine,°C
 CONVERSION,TEMPERATURE,AeroConvRankineToFahrenheit,oatRankine,,,,1,Convert Rankine to °F,Rankine,°F
 CONVERSION,TEMPERATURE,AeroConvRankineToKelvin,oatRankine,,,,1,Convert Rankine to Kelvin,Rankine,K
-CONVERSION,DENSITY,AeroConvSlugPerFt3ToKgPerMeter3,density,,,,1,Convert slug/cu.ft to kg/cu.meter,slug/cu.ft,kg/cu.meter
+CONVERSION,DENSITY,AeroConvSlugPerFt3ToKgPerMeter3,slugPerFt3,,,,1,Convert slug/cu.ft to kg/cu.meter,slug/cu.ft,kg/cu.meter
+CONVERSION,FORCE,AeroConvLbfToNewton,lbf,,,,1,Convert lbf to newton,lbf,newton
+CONVERSION,FORCE,AeroConvLbfToKiloNewton,lbf,,,,1,Convert lbf to kilonewton,lbf,kilonewton
+CONVERSION,FORCE,AeroConvNewtonToLbf,newton,,,,1,Convert newton to lbf,newton,lbf
+CONVERSION,FORCE,AeroConvNewtonToKiloNewton,newton,,,,1,Convert newton to kilonewton,newton,kilonewton
+CONVERSION,FORCE,AeroConvKiloNewtonToLbf,kilonewton,,,,1,Convert kilonewton to lbf,kilonewton,lbf
+CONVERSION,FORCE,AeroConvKiloNewtonToNewton,kilonewton,,,,1,Convert kilonewton to newton,kilonewton,newton
+CONVERSION,TORQUE,AeroConvLbfFtToLbfInch,lbfFt,,,,1,Convert lbf-ft to lbf-inch,lbf-ft,lbf-inch
+CONVERSION,TORQUE,AeroConvLbfFtToNewtonMeter,lbfFt,,,,1,Convert lbf-ft to newton-meter,lbf-ft,newton-meter
+CONVERSION,TORQUE,AeroConvLbfInchToLbfFt,lbfInch,,,,1,Convert lbf-inch to lbf-ft,lbf-Inch,lbf-ft
+CONVERSION,TORQUE,AeroConvLbfInchToNewtonMeter,lbfInch,,,,1,Convert lbf-inch to newton-meter,lbf-Inch,newton-meter
+CONVERSION,TORQUE,AeroConvNewtonMeterToLbfFt,NewtonMeter,,,,1,Convert newton-meter to lbf-ft,newton-meter,lbf-ft
+CONVERSION,TORQUE,AeroConvNewtonMeterToLbfInch,NewtonMeter,,,,1,Convert newton-meter to lbf-Inch,newton-meter,lbf-Inch
 STANDARD ATMOSPHERE,DELTA,AeroDelta_fHp,hp,,,,1,"Pressure ratio, delta, P/Po, f(Hp)",feet,NA
 ALTITUDE,DELTA  GEOPOTENTIAL,AeroDGeoPtlAlt_fDHpIsaDevCBaseHp,dHp, isaDevC, baseHp,,3,"ΔGeopotential altitude in ft, f(ΔHp in ft, IsaDev in C, Base Hp in ft)","feet, °C, feet",feet
 ALTITUDE,DELTA PRESSURE,AeroDHp_fDGeoPtlAltIsaDevCBaseHp,dGeoPtlAlt, isaDevC, baseHp,,3,"ΔHp in ft, f(ΔHp in ft, IsaDev in C, Base Hp in ft)","feet, °C, feet",feet

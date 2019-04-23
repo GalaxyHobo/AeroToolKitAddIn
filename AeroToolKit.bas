@@ -91,6 +91,7 @@ Const constConvFtToMeter = 0.3048 'feet to meters (exact)
 Const constConvNmToMeter = 1852 'nm to meters (exact)
 Const constConvHrToSec = 3600 'hour to seconds (exact)
 Const constConvMileToFt = 5280 'statute miles to feet (exact)
+Const constConvFtToInch = 12 'feet to inch (exact)
 Const constConvLbfToNewton = 4.4482216152605 'lb force to Newton
 Const constConvFtPerSecToKts = 0.592483801295896 'ft/sec to knots, derived from 1852 m/nm, 3600 sec/hr & 0.3048 m/ft
 Const constConvInHgToHectoPascal = 33.86389 'hPa to inHg, based on NIST Special Pub 811, 2008
@@ -1500,4 +1501,52 @@ End Function
 
 Function AeroConvKmToMeter(km)
     AeroConvKmToMeter = km * 1000
+End Function
+
+Function AeroConvLbfToNewton(lbf)
+    AeroConvLbfToNewton = lbf * constConvLbfToNewton
+End Function
+
+Function AeroConvLbfToKiloNewton(lbf)
+    AeroConvLbfToKiloNewton = AeroConvNewtonToKiloNewton(AeroConvLbfToNewton(lbf))
+End Function
+
+Function AeroConvNewtonToLbf(newton)
+    AeroConvNewtonToLbf = newton / constConvLbfToNewton
+End Function
+
+Function AeroConvNewtonToKiloNewton(newton)
+    AeroConvNewtonToKiloNewton = newton / 1000
+End Function
+
+Function AeroConvKiloNewtonToLbf(kilonewton)
+    AeroConvKiloNewtonToLbf = AeroConvNewtonToLbf(AeroConvKiloNewtonToNewton(kilonewton))
+End Function
+
+Function AeroConvKiloNewtonToNewton(kilonewton)
+    AeroConvKiloNewtonToNewton = kilonewton * 1000
+End Function
+
+Function AeroConvLbfFtToLbfInch(lbfFt)
+    AeroConvLbfFtToLbfInch = lbfFt * constConvFtToInch
+End Function
+
+Function AeroConvLbfFtToNewtonMeter(lbfFt)
+    AeroConvLbfFtToNewtonMeter = AeroConvFtToMeter(AeroConvLbfToNewton(lbfFt))
+End Function
+
+Function AeroConvLbfInchToLbfFt(lbfInch)
+    AeroConvLbfInchToLbfFt = lbfInch / constConvFtToInch
+End Function
+
+Function AeroConvLbfInchToNewtonMeter(lbfInch)
+    AeroConvLbfInchToNewtonMeter = AeroConvLbfFtToNewtonMeter(AeroConvLbfInchToLbfFt(lbfInch))
+End Function
+
+Function AeroConvNewtonMeterToLbfFt(newtonMeter)
+    AeroConvNewtonMeterToLbfFt = AeroConvMeterToFt(AeroConvNewtonToLbf(newtonMeter))
+End Function
+
+Function AeroConvNewtonMeterToLbfInch(newtonMeter)
+    AeroConvNewtonMeterToLbfInch = AeroConvLbfFtToLbfInch(AeroConvNewtonMeterToLbfFt(newtonMeter))
 End Function
