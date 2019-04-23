@@ -16,12 +16,12 @@ CONVERSION,DISTANCE,AeroConvFtToMeter,ft,,,,1,Convert feet to meters,feet,meters
 CONVERSION,DISTANCE,AeroConvFtToNm,ft,,,,1,Convert feet to nautical miles,feet,nautical miles
 CONVERSION,DISTANCE,AeroConvFtToKm,ft,,,,1,Convert feet to kilometers,feet,kilometers
 CONVERSION,DISTANCE,AeroConvFtToMile,ft,,,,1,Convert feet to statute miles,feet,statute miles
-CONVERSION,GRADIENT,AeroConvGradFtPerNmToPct,ftPerNm,,,,1,Convert gradient: feet/nautical mile to %,feet/nautical mile,%
-CONVERSION,GRADIENT,AeroConvGradPctToFtPerNm,pct,,,,1,Convert gradient: % to feet/nautical mile,%,feet/nautical mile
-CONVERSION,GRADIENT,AeroConvGradPctToDeg,pct,,,,1,Convert gradient: % to degrees,%,degrees
-CONVERSION,GRADIENT,AeroConvGradDegToPct,deg,,,,1,Convert gradient: degrees to %,degrees,%
-CONVERSION,GRADIENT,AeroConvGradFtPerNmToDeg,ftPerNm,,,,1,Convert gradient: feet/nautical mile to degrees,feet/nautical  mile,degrees
-CONVERSION,GRADIENT,AeroConvGradDegToFtPerNm,deg,,,,1,Convert gradient: degrees to feet/nautical mile,degrees,feet/nautical mile
+CONVERSION,GRADIENT,AeroConvFtPerNmToPctGrad,ftPerNm,,,,1,Convert gradient in feet/nautical mile to %,feet/nautical mile,%
+CONVERSION,GRADIENT,AeroConvPctGradToFtPerNm,pct,,,,1,Convert gradient in % to feet/nautical mile,%,feet/nautical mile
+CONVERSION,GRADIENT,AeroConvPctGradToDeg,pct,,,,1,Convert gradient in % to degrees,%,degrees
+CONVERSION,GRADIENT,AeroConvDegToPctGrad,deg,,,,1,Convert gradient in degrees to %,degrees,%
+CONVERSION,GRADIENT,AeroConvFtPerNmToDeg,ftPerNm,,,,1,Convert gradient in feet/nautical mile to degrees,feet/nautical  mile,degrees
+CONVERSION,GRADIENT,AeroConvDegToFtPerNm,deg,,,,1,Convert gradient in degrees to feet/nautical mile,degrees,feet/nautical mile
 CONVERSION,PRESSURE,AeroConvHPaToInHg,hPa,,,,1,Convert hPa to inches Hg,hPa,inches Hg
 CONVERSION,PRESSURE,AeroConvHPaToLbfPerFt2,hPa,,,,1,Convert hPa to lbf/sq.feet,hPa,lbf/sq.feet
 CONVERSION,PRESSURE,AeroConvHPaToLbfPerInch2,hPa,,,,1,Convert hPa to lbf/sq.inch,hPa,lbf/Inch2

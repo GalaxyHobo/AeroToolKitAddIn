@@ -1398,28 +1398,28 @@ Function AeroConvRadToDeg(rad)
     AeroConvRadToDeg = rad / WorksheetFunction.Pi * 180
 End Function
 
-Function AeroConvGradFtPerNmToPct(ftPerNm)
-    AeroConvGradFtPerNmToPct = AeroConvFtToNm(ftPerNm) * 100
+Function AeroConvFtPerNmToPctGrad(ftPerNm)
+    AeroConvFtPerNmToPctGrad = AeroConvFtToNm(ftPerNm) * 100
 End Function
 
-Function AeroConvGradFtPerNmToDeg(ftPerNm)
-    AeroConvGradFtPerNmToDeg = AeroConvRadToDeg(Atn(AeroConvFtToNm(ftPerNm)))
+Function AeroConvFtPerNmToDeg(ftPerNm)
+    AeroConvFtPerNmToDeg = AeroConvRadToDeg(Atn(AeroConvFtToNm(ftPerNm)))
 End Function
 
-Function AeroConvGradPctToFtPerNm(pct)
-    AeroConvGradPctToFtPerNm = AeroConvNmToFt(pct / 100)
+Function AeroConvPctGradToFtPerNm(pct)
+    AeroConvPctGradToFtPerNm = AeroConvNmToFt(pct / 100)
 End Function
 
-Function AeroConvGradPctToDeg(pct)
-    AeroConvGradPctToDeg = AeroConvRadToDeg(Atn(pct / 100))
+Function AeroConvPctGradToDeg(pct)
+    AeroConvPctGradToDeg = AeroConvRadToDeg(Atn(pct / 100))
 End Function
 
-Function AeroConvGradDegToFtPerNm(deg)
-    AeroConvGradDegToFtPerNm = AeroConvNmToFt(Tan(AeroConvDegToRad(deg)))
+Function AeroConvDegToFtPerNm(deg)
+    AeroConvDegToFtPerNm = AeroConvNmToFt(Tan(AeroConvDegToRad(deg)))
 End Function
 
-Function AeroConvGradDegToPct(deg)
-    AeroConvGradDegToPct = Tan(AeroConvDegToRad(deg)) * 100
+Function AeroConvDegToPctGrad(deg)
+    AeroConvDegToPctGrad = Tan(AeroConvDegToRad(deg)) * 100
 End Function
 
 Function AeroConvFtToNm(ft)
