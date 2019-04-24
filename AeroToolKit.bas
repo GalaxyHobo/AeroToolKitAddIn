@@ -93,6 +93,7 @@ Const constConvHrToSec = 3600 'hour to seconds (exact)
 Const constConvMileToFt = 5280 'statute miles to feet (exact)
 Const constConvFtToInch = 12 'feet to inch (exact)
 Const constConvLbfToNewton = 4.4482216152605 'lb force to Newton
+Const constConvHorsepowerTolbfFtPerSec = 550 'horsepower to lbf-ft/sec 
 Const constConvFtPerSecToKts = 0.592483801295896 'ft/sec to knots, derived from 1852 m/nm, 3600 sec/hr & 0.3048 m/ft
 Const constConvInHgToHectoPascal = 33.86389 'hPa to inHg, based on NIST Special Pub 811, 2008
 'Temperatures for zero deg C and zero deg F on absolute temperature scales
@@ -1549,4 +1550,52 @@ End Function
 
 Function AeroConvNewtonMeterToLbfInch(newtonMeter)
     AeroConvNewtonMeterToLbfInch = AeroConvLbfFtToLbfInch(AeroConvNewtonMeterToLbfFt(newtonMeter))
+End Function
+
+Function AeroConvFtLbfPerSecToHorsepower(ftLbfPerSec)
+    AeroConvFtLbfPerSecToHorsepower = ftLbfPerSec / constConvHorsepowerTolbfFtPerSec
+End Function
+
+Function AeroConvFtLbfPerSecToWatt(ftLbfPerSec)
+    AeroConvFtLbfPerSecToWatt = AeroConvLbfFtToNewtonMeter(ftLbfPerSec)
+End Function
+
+Function AeroConvFtLbfPerSecToKilowatt(ftLbfPerSec)
+    AeroConvFtLbfPerSecToKilowatt = AeroConvFtLbfPerSecToWatt(ftLbfPerSec) / 1000
+End Function
+
+Function AeroConvHorsepowerToFtLbfPerSec(horsepower)
+    AeroConvHorsepowerToFtLbfPerSec =  horsepower * constConvHorsepowerTolbfFtPerSec
+End Function
+
+Function AeroConvHorsepowerToWatt(horsepower)
+    AeroConvHorsepowerToWatt = AeroConvFtLbfPerSecToWatt(AeroConvHorsepowerToFtLbfPerSec(horsepower))
+End Function
+
+Function AeroConvHorsepowerToKilowatt(horsepower)
+    AeroConvHorsepowerToKilowatt = AeroConvHorsepowerToWatt(horsepower) / 1000
+End Function
+
+Function AeroConvWattToFtLbfPerSec(watt)
+    AeroConvWattToFtLbfPerSec = AeroConvNewtonMeterToLbfFt(watt)
+End Function
+
+Function AeroConvWattToHorsepower(watt)
+    AeroConvWattToHorsepower = AeroConvFtLbfPerSecToHorsepower(AeroConvWattToFtLbfPerSec(watt))
+End Function
+
+Function AeroConvWattToKilowatt(watt)
+    AeroConvWattToKilowatt = watt / 1000
+End Function
+
+Function AeroConvKilowattToFtLbfPerSec(kilowatt)
+    AeroConvKilowattToFtLbfPerSec = AeroConvWattToFtLbfPerSec(kilowatt * 1000)
+End Function
+
+Function AeroConvKilowattToHorsepower(kilowatt)
+    AeroConvKilowattToHorsepower = AeroConvWattToHorsepower(kilowatt * 1000)
+End Function
+
+Function AeroConvKilowattToWatt(kilowatt)
+    AeroConvKilowattToWatt = kilowatt * 1000
 End Function

@@ -87,6 +87,18 @@ CONVERSION,TORQUE,AeroConvLbfInchToLbfFt,lbfInch,,,,1,Convert lbf-inch to lbf-ft
 CONVERSION,TORQUE,AeroConvLbfInchToNewtonMeter,lbfInch,,,,1,Convert lbf-inch to newton-meter,lbf-Inch,newton-meter
 CONVERSION,TORQUE,AeroConvNewtonMeterToLbfFt,NewtonMeter,,,,1,Convert newton-meter to lbf-ft,newton-meter,lbf-ft
 CONVERSION,TORQUE,AeroConvNewtonMeterToLbfInch,NewtonMeter,,,,1,Convert newton-meter to lbf-Inch,newton-meter,lbf-Inch
+CONVERSION,POWER,AeroConvFtLbfPerSecToHorsepower,ftLbfPerSec,,,,1,Convert ft-lbf/sec to horsepower,ft-lbf/sec,horsepower
+CONVERSION,POWER,AeroConvFtLbfPerSecToWatt,ftLbfPerSec,,,,1,Convert ft-lbf/sec to watt,ft-lbf/sec,watt
+CONVERSION,POWER,AeroConvFtLbfPerSecToKilowatt,ftLbfPerSec,,,,1,Convert ft-lbf/sec to kilowatt,ft-lbf/sec,kilowatt
+CONVERSION,POWER,AeroConvHorsepowerToFtLbfPerSec,horsepower,,,,1,Convert horsepower to ft-lbf/sec,horsepower,ft-lbf/sec
+CONVERSION,POWER,AeroConvHorsepowerToWatt,horsepower,,,,1,Convert horsepower to watt,horsepower,watt
+CONVERSION,POWER,AeroConvHorsepowerToKilowatt,horsepower,,,,1,Convert horsepower to kilowatt,horsepower,kilowatt
+CONVERSION,POWER,AeroConvWattToFtLbfPerSec,watt,,,,1,Convert watt to ft-lbf/sec,watt,ft-lbf/sec
+CONVERSION,POWER,AeroConvWattToHorsepower,watt,,,,1,Convert watt to horsepower,watt,horsepower
+CONVERSION,POWER,AeroConvWattToKilowatt,watt,,,,1,Convert watt to kilowatt,watt,kilowatt
+CONVERSION,POWER,AeroConvKilowattToFtLbfPerSec,kilowatt,,,,1,Convert kilowatt to ft-lbf/sec,kilowatt,ft-lbf/sec
+CONVERSION,POWER,AeroConvKilowattToHorsepower,kilowatt,,,,1,Convert kilowatt to horsepower,kilowatt,horsepower
+CONVERSION,POWER,AeroConvKilowattToWatt,kilowatt,,,,1,Convert kilowatt to watt,kilowatt,watt
 STANDARD ATMOSPHERE,DELTA,AeroDelta_fHp,hp,,,,1,"Pressure ratio, delta, P/Po, f(Hp)",feet,NA
 ALTITUDE,DELTA  GEOPOTENTIAL,AeroDGeoPtlAlt_fDHpIsaDevCBaseHp,dHp, isaDevC, baseHp,,3,"ΔGeopotential altitude in ft, f(ΔHp in ft, IsaDev in C, Base Hp in ft)","feet, °C, feet",feet
 ALTITUDE,DELTA PRESSURE,AeroDHp_fDGeoPtlAltIsaDevCBaseHp,dGeoPtlAlt, isaDevC, baseHp,,3,"ΔHp in ft, f(ΔHp in ft, IsaDev in C, Base Hp in ft)","feet, °C, feet",feet
