@@ -95,6 +95,9 @@ Const constConvFtToInch = 12 'feet to inch (exact)
 Const constConvLbfToNewton = 4.4482216152605 'lb force to Newton
 Const constConvHorsepowerTolbfFtPerSec = 550 'horsepower to lbf-ft/sec 
 Const constConvFtPerSecToKts = 0.592483801295896 'ft/sec to knots, derived from 1852 m/nm, 3600 sec/hr & 0.3048 m/ft
+Const constConvLbmToKg = 0.45359237 'lb mass to kilogram, based on National Bureau of Standards 5348, 1959 (exact)
+Const constConvLbmToOunce = 16 'lb mass to ounces (exact)
+Const constConvShortTonToLbm = 2000 'short ton (i.e., US "ton") to lb mass (exact)
 Const constConvInHgToHectoPascal = 33.86389 'hPa to inHg, based on NIST Special Pub 811, 2008
 'Temperatures for zero deg C and zero deg F on absolute temperature scales
 Const constZeroDegCelsiusInKelvin = 273.15 'Temperature in Kelvin at zero Celsius, K
@@ -1598,4 +1601,172 @@ End Function
 
 Function AeroConvKilowattToWatt(kilowatt)
     AeroConvKilowattToWatt = kilowatt * 1000
+End Function
+
+Function AeroConvLbmToSlug(lbm)
+    AeroConvLbmToSlug = lbm / constGo
+End Function
+
+Function AeroConvLbmToOunce(lbm)
+    AeroConvLbmToOunce = lbm * constConvLbmToOunce
+End Function
+
+Function AeroConvLbmToUsTon(lbm)
+    AeroConvLbmToUsTon = lbm / constConvShortTonToLbm
+End Function
+
+Function AeroConvLbmToGram(lbm)
+    AeroConvLbmToGram = AeroConvKgToGram(AeroConvLbmToKg(lbm))
+End Function
+
+Function AeroConvLbmToKg(lbm)
+    AeroConvLbmToKg = lbm * constConvLbmToKg
+End Function
+
+Function AeroConvLbmToMetricTon(lbm)
+    AeroConvLbmToMetricTon = AeroConvKgToMetricTon(AeroConvLbmToKg(lbm))
+End Function
+
+Function AeroConvSlugToLbm(slug)
+    AeroConvSlugToLbm = slug * constGo
+End Function
+
+Function AeroConvSlugToOunce(slug)
+    AeroConvSlugToOunce = AeroConvLbmToOunce(AeroConvSlugToLbm(slug))
+End Function
+
+Function AeroConvSlugToUsTon(slug)
+    AeroConvSlugToUsTon = AeroConvLbmToUsTon(AeroConvSlugToLbm(slug))
+End Function
+
+Function AeroConvSlugToGram(slug)
+    AeroConvSlugToGram = AeroConvLbmToGram(AeroConvSlugToLbm(slug))
+End Function
+
+Function AeroConvSlugToKg(slug)
+    AeroConvSlugToKg = AeroConvLbmToKg(AeroConvSlugToLbm(slug))
+End Function
+
+Function AeroConvSlugToMetricTon(slug)
+    AeroConvSlugToMetricTon = AeroConvLbmToMetricTon(AeroConvSlugToLbm(slug))
+End Function
+
+Function AeroConvOunceToLbm(ounce)
+    AeroConvOunceToLbm = ounce / constConvLbmToOunce
+End Function
+
+Function AeroConvOunceToSlug(ounce)
+    AeroConvOunceToSlug = AeroConvLbmToSlug(AeroConvOunceToLbm(ounce))
+End Function
+
+Function AeroConvOunceToUsTon(ounce)
+    AeroConvOunceToUsTon = AeroConvLbmToUsTon(AeroConvOunceToLbm(ounce))
+End Function
+
+Function AeroConvOunceToGram(ounce)
+    AeroConvOunceToGram = AeroConvLbmToGram(AeroConvOunceToLbm(ounce))
+End Function
+
+Function AeroConvOunceToKg(ounce)
+    AeroConvOunceToKg = AeroConvLbmToKg(AeroConvOunceToLbm(ounce))
+End Function
+
+Function AeroConvOunceToMetricTon(ounce)
+    AeroConvOunceToMetricTon = AeroConvLbmToMetricTon(AeroConvOunceToLbm(ounce))
+End Function
+
+Function AeroConvUsTonToLbm(usTon)
+    AeroConvUsTonToLbm = usTon * constConvShortTonToLbm
+End Function
+
+Function AeroConvUsTonToSlug(usTon)
+    AeroConvUsTonToSlug = AeroConvLbmToSlug(AeroConvUsTonToLbm(usTon))
+End Function
+
+Function AeroConvUsTonToOunce(usTon)
+    AeroConvUsTonToOunce = AeroConvLbmToOunce(AeroConvUsTonToLbm(usTon))
+End Function
+
+Function AeroConvUsTonToGram(usTon)
+    AeroConvUsTonToGram = AeroConvLbmToGram(AeroConvUsTonToLbm(usTon))
+End Function
+
+Function AeroConvUsTonToKg(usTon)
+    AeroConvUsTonToKg = AeroConvLbmToKg(AeroConvUsTonToLbm(usTon))
+End Function
+
+Function AeroConvUsTonToMetricTon(usTon)
+    AeroConvUsTonToMetricTon = AeroConvLbmToMetricTon(AeroConvUsTonToLbm(usTon))
+End Function
+
+Function AeroConvGramToLbm(gram)
+    AeroConvGramToLbm = AeroConvKgToLbm(AeroConvGramToKg(gram))
+End Function
+
+Function AeroConvGramToSlug(gram)
+    AeroConvGramToSlug = AeroConvKgToSlug(AeroConvGramToKg(gram))
+End Function
+
+Function AeroConvGramToOunce(gram)
+    AeroConvGramToOunce = AeroConvKgToOunce(AeroConvGramToKg(gram))
+End Function
+
+Function AeroConvGramToUsTon(gram)
+    AeroConvGramToUsTon = AeroConvKgToUsTon(AeroConvGramToKg(gram))
+End Function
+
+Function AeroConvGramToKg(gram)
+    AeroConvGramToKg = gram / 1000
+End Function
+
+Function AeroConvGramToMetricTon(gram)
+    AeroConvGramToMetricTon = AeroConvKgToMetricTon(AeroConvGramToKg(gram))
+End Function
+
+Function AeroConvKgToLbm(kg)
+    AeroConvKgToLbm = kg / constConvLbmToKg
+End Function
+
+Function AeroConvKgToSlug(kg)
+    AeroConvKgToSlug = AeroConvLbmToSlug(AeroConvKgToLbm(kg))
+End Function
+
+Function AeroConvKgToOunce(kg)
+    AeroConvKgToOunce = AeroConvLbmToOunce(AeroConvKgToLbm(kg))
+End Function
+
+Function AeroConvKgToUsTon(kg)
+    AeroConvKgToUsTon = AeroConvLbmToUsTon(AeroConvKgToLbm(kg))
+End Function
+
+Function AeroConvKgToGram(kg)
+    AeroConvKgToGram = kg * 1000
+End Function
+
+Function AeroConvKgToMetricTon(kg)
+    AeroConvKgToMetricTon = kg / 1000
+End Function
+
+Function AeroConvMetricTonToLbm(metricTon)
+    AeroConvMetricTonToLbm = AeroConvKgToLbm(AeroConvMetricTonToKg(metricTon))
+End Function
+
+Function AeroConvMetricTonToSlug(metricTon)
+    AeroConvMetricTonToSlug = AeroConvLbmToSlug(AeroConvMetricTonToLbm(metricTon))
+End Function
+
+Function AeroConvMetricTonToOunce(metricTon)
+    AeroConvMetricTonToOunce = AeroConvLbmToOunce(AeroConvMetricTonToLbm(metricTon))
+End Function
+
+Function AeroConvMetricTonToUsTon(metricTon)
+    AeroConvMetricTonToUsTon = AeroConvLbmToUsTon(AeroConvMetricTonToLbm(metricTon))
+End Function
+
+Function AeroConvMetricTonToGram(metricTon)
+    AeroConvMetricTonToGram = AeroConvKgToGram(AeroConvMetricTonToKg(metricTon))
+End Function
+
+Function AeroConvMetricTonToKg(metricTon)
+    AeroConvMetricTonToKg = metricTon * 1000
 End Function

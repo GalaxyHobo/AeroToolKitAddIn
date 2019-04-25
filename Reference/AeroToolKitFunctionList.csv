@@ -99,6 +99,48 @@ CONVERSION,POWER,AeroConvWattToKilowatt,watt,,,,1,Convert watt to kilowatt,watt,
 CONVERSION,POWER,AeroConvKilowattToFtLbfPerSec,kilowatt,,,,1,Convert kilowatt to ft-lbf/sec,kilowatt,ft-lbf/sec
 CONVERSION,POWER,AeroConvKilowattToHorsepower,kilowatt,,,,1,Convert kilowatt to horsepower,kilowatt,horsepower
 CONVERSION,POWER,AeroConvKilowattToWatt,kilowatt,,,,1,Convert kilowatt to watt,kilowatt,watt
+CONVERSION,MASS,AeroConvLbmToSlug,lbm,,,,1,Convert lbm to slug,lbm,slug
+CONVERSION,MASS,AeroConvLbmToOunce,lbm,,,,1,Convert lbm to ounce,lbm,ounce
+CONVERSION,MASS,AeroConvLbmToUsTon,lbm,,,,1,"Convert lbm to US ton (""short ton"")",lbm,"US ton (""short ton"")"
+CONVERSION,MASS,AeroConvLbmToGram,lbm,,,,1,Convert lbm to gram,lbm,gram
+CONVERSION,MASS,AeroConvLbmToKg,lbm,,,,1,Convert lbm to kg,lbm,kg
+CONVERSION,MASS,AeroConvLbmToMetricTon,lbm,,,,1,"Convert lbm to metric ton (""tonne"")",lbm,"metric ton (""tonne"")"
+CONVERSION,MASS,AeroConvSlugToLbm,slug,,,,1,Convert slug to lbm,slug,lbm
+CONVERSION,MASS,AeroConvSlugToOunce,slug,,,,1,Convert slug to ounce,slug,ounce
+CONVERSION,MASS,AeroConvSlugToUsTon,slug,,,,1,"Convert slug to US ton (""short ton"")",slug,"US ton (""short ton"")"
+CONVERSION,MASS,AeroConvSlugToGram,slug,,,,1,Convert slug to gram,slug,gram
+CONVERSION,MASS,AeroConvSlugToKg,slug,,,,1,Convert slug to kg,slug,kg
+CONVERSION,MASS,AeroConvSlugToMetricTon,slug,,,,1,"Convert slug to metric ton (""tonne"")",slug,"metric ton (""tonne"")"
+CONVERSION,MASS,AeroConvOunceToLbm,ounce,,,,1,Convert ounce to lbm,ounce,lbm
+CONVERSION,MASS,AeroConvOunceToSlug,ounce,,,,1,Convert ounce to slug,ounce,slug
+CONVERSION,MASS,AeroConvOunceToUsTon,ounce,,,,1,"Convert ounce to US ton (""short ton"")",ounce,"US ton (""short ton"")"
+CONVERSION,MASS,AeroConvOunceToGram,ounce,,,,1,Convert ounce to gram,ounce,gram
+CONVERSION,MASS,AeroConvOunceToKg,ounce,,,,1,Convert ounce to kg,ounce,kg
+CONVERSION,MASS,AeroConvOunceToMetricTon,ounce,,,,1,"Convert ounce to metric ton (""tonne"")",ounce,"metric ton (""tonne"")"
+CONVERSION,MASS,AeroConvUsTonToLbm,usTon,,,,1,"Convert US ton (""short ton"") to lbm",usTon,lbm
+CONVERSION,MASS,AeroConvUsTonToSlug,usTon,,,,1,"Convert US ton (""short ton"") to slug",usTon,slug
+CONVERSION,MASS,AeroConvUsTonToOunce,usTon,,,,1,"Convert US ton (""short ton"") to ounce",usTon,ounce
+CONVERSION,MASS,AeroConvUsTonToGram,usTon,,,,1,"Convert US ton (""short ton"") to gram",usTon,gram
+CONVERSION,MASS,AeroConvUsTonToKg,usTon,,,,1,"Convert US ton (""short ton"") to kg",usTon,kg
+CONVERSION,MASS,AeroConvUsTonToMetricTon,usTon,,,,1,"Convert US ton (""short ton"") to metric ton (""tonne"")",usTon,"metric ton (""tonne"")"
+CONVERSION,MASS,AeroConvGramToLbm,gram,,,,1,Convert gram to lbm,gram,lbm
+CONVERSION,MASS,AeroConvGramToSlug,gram,,,,1,Convert gram to slug,gram,slug
+CONVERSION,MASS,AeroConvGramToOunce,gram,,,,1,Convert gram to ounce,gram,ounce
+CONVERSION,MASS,AeroConvGramToUsTon,gram,,,,1,"Convert gram to US ton (""short ton"")",gram,"US ton (""short ton"")"
+CONVERSION,MASS,AeroConvGramToKg,gram,,,,1,Convert gram to kg,gram,kg
+CONVERSION,MASS,AeroConvGramToMetricTon,gram,,,,1,"Convert gram to metric ton (""tonne"")",gram,"metric ton (""tonne"")"
+CONVERSION,MASS,AeroConvKgToLbm,kg,,,,1,Convert kg to lbm,kg,lbm
+CONVERSION,MASS,AeroConvKgToSlug,kg,,,,1,Convert kg to slug,kg,slug
+CONVERSION,MASS,AeroConvKgToOunce,kg,,,,1,Convert kg to ounce,kg,ounce
+CONVERSION,MASS,AeroConvKgToUsTon,kg,,,,1,"Convert kg to US ton (""short ton"")",kg,"US ton (""short ton"")"
+CONVERSION,MASS,AeroConvKgToGram,kg,,,,1,Convert kg to gram,kg,gram
+CONVERSION,MASS,AeroConvKgToMetricTon,kg,,,,1,"Convert kg to metric ton (""tonne"")",kg,"metric ton (""tonne"")"
+CONVERSION,MASS,AeroConvMetricTonToLbm,metricTon,,,,1,"Convert metric ton (""tonne"") to lbm",metricTon,lbm
+CONVERSION,MASS,AeroConvMetricTonToSlug,metricTon,,,,1,"Convert metric ton (""tonne"") to slug",metricTon,slug
+CONVERSION,MASS,AeroConvMetricTonToOunce,metricTon,,,,1,"Convert metric ton (""tonne"") to ounce",metricTon,ounce
+CONVERSION,MASS,AeroConvMetricTonToUsTon,metricTon,,,,1,"Convert metric ton (""tonne"") to US ton (""short ton"")",metricTon,"US ton (""short ton"")"
+CONVERSION,MASS,AeroConvMetricTonToGram,metricTon,,,,1,"Convert metric ton (""tonne"") to gram",metricTon,gram
+CONVERSION,MASS,AeroConvMetricTonToKg,metricTon,,,,1,"Convert metric ton (""tonne"") to kg",metricTon,kg
 STANDARD ATMOSPHERE,DELTA,AeroDelta_fHp,hp,,,,1,"Pressure ratio, delta, P/Po, f(Hp)",feet,NA
 ALTITUDE,DELTA  GEOPOTENTIAL,AeroDGeoPtlAlt_fDHpIsaDevCBaseHp,dHp, isaDevC, baseHp,,3,"ΔGeopotential altitude in ft, f(ΔHp in ft, IsaDev in C, Base Hp in ft)","feet, °C, feet",feet
 ALTITUDE,DELTA PRESSURE,AeroDHp_fDGeoPtlAltIsaDevCBaseHp,dGeoPtlAlt, isaDevC, baseHp,,3,"ΔHp in ft, f(ΔHp in ft, IsaDev in C, Base Hp in ft)","feet, °C, feet",feet
