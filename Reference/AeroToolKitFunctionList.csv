@@ -363,3 +363,15 @@ VISCOSITY,KINEMATIC VISCOSITY (ν),AeroViscKin_ft2PerSec_fSigmaTheta,sigma, thet
 VISCOSITY,KINEMATIC VISCOSITY (ν),AeroViscKin_meter2PerSec_fSigmaTheta,sigma, theta,,,2,"Kinematic viscosity in sq.ft/sec, f(sigma, theta)","NA, NA",sq.ft/sec
 WINDS,CROSSWIND,AeroWndCross_fAcHdgWndHdgWndSpd,acHdg, wndHdg, wndSpd,,3,"Crosswind (input units), f(A/C heading in deg, Wind heading in deg, Wind Speed)","deg, deg, (user selection/arbitrary)",(user selection/arbitrary)
 WINDS,HEADWIND,AeroWndHead_fAcHdgWndHdgWndSpd,acHdg, wndHdg, wndSpd,,3,"Headwind (input units), f(A/C heading in deg, Wind heading in deg, Wind Speed)","deg, deg, (user selection/arbitrary)",(user selection/arbitrary)
+POWER,POWER,AeroPower_ftLbfPerSec_fTorqueLbfFtRevPerMin,torqueLbfFt,revPerMin,,,2,"lbf-ft/sec, f(torque in lbf-ft, RPM)","lbf-ft, RPM",lbf-ft/sec
+POWER,POWER,AeroPower_ftLbfPerSec_fTorqueLbfFtRevPerSec,torqueLbfFt,revPerSec,,,2,"lbf-ft/sec, f(torque in lbf-ft, RPS)","lbf-ft, RPS",lbf-ft/sec
+POWER,POWER,AeroPower_ftLbfPerSec_fTorqueLbfInchRevPerMin,torqueLbfInch,revPerMin,,,2,"lbf-ft/sec, f(torque in lbf-inch, RPM)","lbf-inch, RPM",lbf-ft/sec
+POWER,POWER,AeroPower_ftLbfPerSec_fTorqueLbfInchRevPerSec,torqueLbfInch,revPerSec,,,2,"lbf-ft/sec, f(torque in lbf-inch, RPS)","lbf-inch, RPS",lbf-ft/sec
+POWER,POWER,AeroPower_horsepower_fTorqueLbfFtRevPerMin,torqueLbfFt,revPerMin,,,2,"lbf-ft/sec, f(torque in lbf-ft, RPM)","lbf-ft, RPM",horsepower
+POWER,POWER,AeroPower_horsepower_fTorqueLbfFtRevPerSec,torqueLbfFt,revPerSec,,,2,"horsepower, f(torque in lbf-ft, RPS)","lbf-ft, RPS",horsepower
+POWER,POWER,AeroPower_horsepower_fTorqueLbfInchRevPerMin,torqueLbfInch,revPerMin,,,2,"horsepower, f(torque in lbf-inch, RPM)","lbf-inch, RPM",horsepower
+POWER,POWER,AeroPower_horsepower_fTorqueLbfInchRevPerSec,torqueLbfInch,revPerSec,,,2,"horsepower, f(torque in lbf-inch, RPS)","lbf-inch, RPS",horsepower
+POWER,POWER,AeroPower_watts_fTorqueNewtonMeterRevPerMin,newtonMeter,revPerMin,,,2,"watts, f(torque in newton-meter, RPM)","newton-meter, RPM",watts
+POWER,POWER,AeroPower_watts_fTorqueNewtonMeterRevPerSec,newtonMeter,revPerSec,,,2,"watts, f(torque in newton-meter, RPS)","newton-meter, RPS",watts
+POWER,POWER,AeroPower_kilowatts_fTorqueNewtonMeterRevPerMin,newtonMeter,revPerMin,,,2,"kilowatts, f(torque in newton-meter, RPM)","newton-meter, RPM",kilowatts
+POWER,POWER,AeroPower_kilowatts_fTorqueNewtonMeterRevPerSec,newtonMeter,revPerSec,,,2,"kilowatts, f(torque in newton-meter, RPS)","newton-meter, RPS",kilowatts
