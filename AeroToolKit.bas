@@ -1259,6 +1259,54 @@ Function AeroPower_kilowatts_fTorqueNewtonMeterRevPerSec(torqueNewtonMeter, revP
     AeroPower_kilowatts_fTorqueNewtonMeterRevPerSec = AeroConvWattToKilowatt(AeroPower_watts_fTorqueNewtonMeterRevPerSec(torqueNewtonMeter, revPerSec))
 End Function
 
+Function AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerMin(powerFtLbfPerSec, revPerMin)
+    AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerMin = AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerSec(powerFtLbfPerSec, revPerMin / 60)
+End Function
+
+Function AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerSec(powerFtLbfPerSec, revPerSec)
+    AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerSec = powerFtLbfPerSec / (2 * WorksheetFunction.Pi * revPerSec)
+End Function
+
+Function AeroTorque_lbfFt_fPowerHorsepowerRevPerMin(powerHorsepower, revPerMin)
+    AeroTorque_lbfFt_fPowerHorsepowerRevPerMin = AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerMin(AeroConvHorsepowerToFtLbfPerSec(powerHorsepower), revPerMin)
+End Function
+
+Function AeroTorque_lbfFt_fPowerHorsepowerRevPerSec(powerHorsepower, revPerSec)
+    AeroTorque_lbfFt_fPowerHorsepowerRevPerSec = AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerSec(AeroConvHorsepowerToFtLbfPerSec(powerHorsepower), revPerSec)
+End Function
+
+Function AeroTorque_lbfInch_fPowerFtLbfPerSecRevPerMin(powerFtLbfPerSec, revPerMin)
+    AeroTorque_lbfInch_fPowerFtLbfPerSecRevPerMin = AeroConvLbfFtToLbfInch(AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerMin(powerFtLbfPerSec, revPerMin))
+End Function
+
+Function AeroTorque_lbfInch_fPowerFtLbfPerSecRevPerSec(powerFtLbfPerSec, revPerSec)
+    AeroTorque_lbfInch_fPowerFtLbfPerSecRevPerSec = AeroConvLbfFtToLbfInch(AeroTorque_lbfFt_fPowerFtLbfPerSecRevPerSec(powerFtLbfPerSec, revPerSec))
+End Function
+
+Function AeroTorque_lbfInch_fPowerHorsepowerRevPerMin(powerHorsepower, revPerMin)
+    AeroTorque_lbfInch_fPowerHorsepowerRevPerMin = AeroConvLbfFtToLbfInch(AeroTorque_lbfFt_fPowerHorsepowerRevPerMin(powerHorsepower, revPerMin))
+End Function
+
+Function AeroTorque_lbfInch_fPowerHorsepowerRevPerSec(powerHorsepower, revPerSec)
+    AeroTorque_lbfInch_fPowerHorsepowerRevPerSec = AeroConvLbfFtToLbfInch(AeroTorque_lbfFt_fPowerHorsepowerRevPerSec(powerHorsepower, revPerSec))
+End Function
+
+Function AeroTorque_newtonMeter_fPowerWattsRevPerMin(powerWatts, revPerMin)
+    AeroTorque_newtonMeter_fPowerWattsRevPerMin = AeroTorque_newtonMeter_fPowerWattsRevPerSec(powerWatts, revPerMin / 60)
+End Function
+
+Function AeroTorque_newtonMeter_fPowerWattsRevPerSec(powerWatts, revPerSec)
+    AeroTorque_newtonMeter_fPowerWattsRevPerSec = powerWatts / (2 * WorksheetFunction.Pi * revPerSec)
+End Function
+
+Function AeroTorque_newtonMeter_fPowerKilowattsRevPerMin(powerKilowatts, revPerMin)
+    AeroTorque_newtonMeter_fPowerKilowattsRevPerMin = AeroTorque_newtonMeter_fPowerWattsRevPerMin(AeroConvKilowattToWatt(powerKilowatts), revPerMin)
+End Function
+
+Function AeroTorque_newtonMeter_fPowerKilowattsRevPerSec(powerKilowatts, revPerSec)
+    AeroTorque_newtonMeter_fPowerKilowattsRevPerSec = AeroTorque_newtonMeter_fPowerWattsRevPerSec(AeroConvKilowattToWatt(powerKilowatts), revPerSec)
+End Function
+
 Function AeroConvKelvinToCelsius(oatKelvin)
     AeroConvKelvinToCelsius = oatKelvin - constZeroDegCelsiusInKelvin
 End Function

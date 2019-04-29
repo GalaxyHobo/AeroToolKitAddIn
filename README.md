@@ -1,6 +1,6 @@
 # AeroToolKitAddIn
 
-Excel add-in with common aeronautical engineering functions, including standard atmosphere, QNH, QFE, altimetry, obstacle clearance, airspeeds, climb gradients, turns and common aeronautical unit conversions. The atmospheric model is based on the ICAO standard (as documented in ICAO doc 7488, dated 1993). Altitude inputs up to the stratopause (51 km or 167,000 ft) are permitted. Non-standard atmospheric characteristics are available via ISA deviations.
+Excel add-in with common aeronautical engineering functions, including standard atmosphere, QNH, QFE, altimetry, obstacle clearance, airspeed, power, torque, climb gradient, steady turn and common aeronautical unit conversions. The atmospheric model is based on the ICAO standard (as documented in ICAO doc 7488, dated 1993). Altitude inputs up to the stratopause (51 km or 167,000 ft) are permitted. Non-standard atmospheric characteristics are available via ISA deviations.
 
 For reference, the ICAO standard atmosphere, the ISA standard atmosphere, and the US 1962 and 1976 standard atmospheres are identical to 32 km (105,000 ft).
 
